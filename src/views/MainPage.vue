@@ -65,8 +65,6 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 2;
         this.currentComponent = "main-sponsors";
-        console.log(this.currentPos);
-        console.log(this.targetPos);
       }
     },
     gotoContact() {
@@ -74,8 +72,6 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 3;
         this.currentComponent = "main-contact";
-        console.log(this.currentPos);
-        console.log(this.targetPos);
       }
     },
     checkCurrentPos() {
