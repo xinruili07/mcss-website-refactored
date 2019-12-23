@@ -1,6 +1,50 @@
 <template>
-  <div class="volunteers">
-    <h1 style="text-align: center;">Our Team</h1>
+  <div class="members">
+    <div class="intro-container-1">
+      <div class="intro-img"><b-img-lazy :src="require('../assets/recruiting.jpg')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
+      <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
+        <h1 style="text-align: center; font-size: 30px;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
+        <hr class="hr1">
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%;">MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
+          organization in Eastern Canada. With over 15 events per year and 40 years of history, we provide 
+          a variety of events to our over 1,500 active members and help our members succeed in school and life. 
+          Our short-term goal is to provide our students with valuable events to make their student life more 
+          meaningful, while our long-term goal is to motivate and encourage our students to give back to their 
+          community and excel academically by providing them with helpful services including seminars, lessons, 
+          and talks.
+          <br /><br />
+          MCSS is a non-profit organization registered under the Students' Society of McGill University. 
+          All our proceeds either go to charity or are used to provide our students with more valuable 
+          services. Our events range from largescale shows to career planning and information seminars. 
+          In addition, we organize dinner outings, networking opportunities and parties for our members.
+          </p>
+      </div>
+    </div>
+    <hr class="hr2">
+
+    <div class="intro-container-2">
+      <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
+        <h1 style="text-align: center; font-size: 30px;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
+        <hr class="hr1">
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%;">MCSS has had a long and storied history of amazing 
+          events, from our annual Ski and New York Trips, to Be There or Be Square and 
+          hosting Wong Fu Productions.
+          <br /><br /> 
+          With MCSS, you’ll create unforgettable memories, have a blast, and learn a thing or 
+          two about event planning in the process.
+          <br /><br /> 
+          MCSS is a fun, loving, and close-knit family away from home!
+          <br /><br /> 
+          We accept executives from all around the world; you don’t have to be Chinese or even Asian!
+          <br /><br /> 
+          </p>
+      </div>
+      <div class="intro-img"><b-img-lazy :src="require('../assets/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" /></div>
+    </div>
+    <hr class="hr2">
+
+    <h1 style="text-align: center; font-size: 30px;">OUR <span style="font-size: 30px; color: #be0819;">TEAM</span></h1>
+    <hr class="hr3">
     <br />
 
     <div class="board" >
@@ -8,12 +52,14 @@
       <div class="president">
         <b-row>
           <b-col sm="12" md="6" class="avatar">
-            <b-img-lazy :src="require('../assets/Members/owen.jpg')" :blank-src="require('../assets/placeholder.png')" alt="Co-President"/>
+            <b-img-lazy :src="require('../assets/Members/owen.jpg')"
+            :blank-src="require('../assets/placeholder.png')" alt="Co-President"/>
             <p class="name">Owen Bai</p>
             <p class="role">Co-President</p>
           </b-col>
           <b-col sm="12" md="6" class="avatar">
-            <b-img-lazy :src="require('../assets/Members/annie.jpg')" :blank-src="require('../assets/placeholder.png')" alt="Co-President"/>
+            <b-img-lazy :src="require('../assets/Members/annie.jpg')"
+            :blank-src="require('../assets/placeholder.png')" alt="Co-President"/>
             <p class="name">Annie Sun</p>
             <p class="role">Co-President</p>
           </b-col>
@@ -24,13 +70,15 @@
       <div class="internals">
         <b-row>
           <b-col sm="12" md="6" class="avatar">
-            <b-img-lazy :src="require('../assets/Members/emily_z.jpg')" :blank-src="require('../assets/placeholder.png')" alt="VP Internal"/>
+            <b-img-lazy :src="require('../assets/Members/emily_z.jpg')"
+            :blank-src="require('../assets/placeholder.png')" alt="VP Internal"/>
             <p class="name">Emily Zhang</p>
             <p class="role">VP Internal</p>
           </b-col>
 
           <b-col sm="12" md="6" class="avatar">
-            <b-img-lazy :src="require('../assets/Members/qian.jpg')" :blank-src="require('../assets/placeholder.png')" alt="VP Internal"/>
+            <b-img-lazy :src="require('../assets/Members/qian.jpg')"
+            :blank-src="require('../assets/placeholder.png')" alt="VP Internal"/>
             <p class="name">Qian Hui Sun </p>
             <p class="role">VP Internal</p>
           </b-col>
@@ -41,7 +89,8 @@
       <div class="restOfBoard">
         <b-row>
           <b-col sm="12" md="4" class="avatar" v-for="member in boardMembers" :key="member.name">
-            <b-img-lazy :src="member.image" :blank-src="require('../assets/placeholder.png')" offset="700" v-bind:alt="member.name"/>
+            <b-img-lazy :src="member.image" :blank-src="require('../assets/placeholder.png')"
+            offset="700" v-bind:alt="member.name"/>
             <p class="name">{{member.name}}</p>
             <p class="role">{{member.role}}</p>
             <br /><br />
@@ -138,7 +187,7 @@ export default {
           id: 'melody',
           role: 'Sponsorship Director',
           image: require('../assets/Members/melody.jpg'),
-        }, 
+        },
         {
           name: 'Tian Jing Li',
           id: 'tj',
@@ -212,9 +261,26 @@ export default {
 </script>
 
 <style scoped>
-.volunteers{
+.members{
   width: 90%;
   margin: auto;
+}
+.hr3{
+    background-color: #be0819;
+    width: 15%;
+    height: 1px;
+}
+.hr2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.hr1{
+    background-color: #be0819;
+    width: 30%;
+    height: 1px;
 }
 h2{
   background-color: #0c5fa8;
@@ -222,14 +288,12 @@ h2{
   padding: 10px;
   border-radius: 30px;
 }
-
 .president {
   margin-left: auto;
   margin-right: auto;
   display: block;
   text-align: center;
 }
-
 .internals, .restOfBoard {
   margin-left: auto;
   margin-right: auto;
@@ -237,7 +301,7 @@ h2{
   text-align: center;
 }
 .avatar img{
-  border-radius: 0%;
+  border-radius: 7px;
   width: 30vw;
   height: 44.97vw;
   margin-bottom: 20px;
@@ -257,6 +321,42 @@ h2{
   display: inline-grid;
   padding: 10px 20px 10px 20px;
   font-weight: bold;
+}
+@media screen and (min-width: 840px) {
+  .intro-container-1 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 7vw;
+  }
+
+  .intro-container-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 7vw;
+  }
+}
+@media screen and (max-width: 840px) {
+  .intro-container-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-container-1 .intro-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .intro-container-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro-container-2 .intro-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 992px) {
