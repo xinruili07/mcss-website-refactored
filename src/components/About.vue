@@ -1,7 +1,7 @@
 <template>
   <div class="members">
     <div class="intro-container-1">
-      <div class="intro-img"><b-img-lazy :src="require('../assets/recruiting.jpg')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
+      <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.jpg')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 style="text-align: center; font-size: 30px;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
@@ -39,7 +39,7 @@
           <br /><br /> 
           </p>
       </div>
-      <div class="intro-img"><b-img-lazy :src="require('../assets/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" /></div>
+      <div class="intro-img"><b-img-lazy :src="require('../assets/About/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" /></div>
     </div>
     <hr class="hr2">
 
@@ -53,13 +53,13 @@
         <b-row>
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/owen.jpg')"
-            :blank-src="require('../assets/placeholder.png')" alt="Co-President"/>
+            :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
             <p class="name">Owen Bai</p>
             <p class="role">Co-President</p>
           </b-col>
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/annie.jpg')"
-            :blank-src="require('../assets/placeholder.png')" alt="Co-President"/>
+            :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
             <p class="name">Annie Sun</p>
             <p class="role">Co-President</p>
           </b-col>
@@ -71,14 +71,14 @@
         <b-row>
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/emily_z.jpg')"
-            :blank-src="require('../assets/placeholder.png')" alt="VP Internal"/>
+            :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
             <p class="name">Emily Zhang</p>
             <p class="role">VP Internal</p>
           </b-col>
 
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/qian.jpg')"
-            :blank-src="require('../assets/placeholder.png')" alt="VP Internal"/>
+            :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
             <p class="name">Qian Hui Sun </p>
             <p class="role">VP Internal</p>
           </b-col>
@@ -89,7 +89,7 @@
       <div class="restOfBoard">
         <b-row>
           <b-col sm="12" md="4" class="avatar" v-for="member in boardMembers" :key="member.name">
-            <b-img-lazy :src="member.image" :blank-src="require('../assets/placeholder.png')"
+            <b-img-lazy :src="member.image" :blank-src="require('../assets/About/placeholder.png')"
             offset="700" v-bind:alt="member.name"/>
             <p class="name">{{member.name}}</p>
             <p class="role">{{member.role}}</p>
@@ -106,7 +106,7 @@
 
 <script>
 export default {
-  name: 'VolunteersPage',
+  name: 'about',
   data() {
     return {
       boardMembers: [
