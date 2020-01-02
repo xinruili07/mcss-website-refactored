@@ -305,6 +305,7 @@ h2{
   width: 80%;
   height: auto;
   margin-bottom: 20px;
+  max-width: 350px;
 }
 .avatar .name{
   font-weight: bold;
