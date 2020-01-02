@@ -6,10 +6,11 @@
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 30px; color: #be0819; font-weight: bold;">Want to know more about MCSS?</span></h1>
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: #be0819;">Looking for more awesome events?</span></h1>
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: rgba(0,0,0,.5); font-weight: bold;">Make sure to follow us on our social medias!</span></h1>
+        <modal v-show="isModalVisible" @close="closeModal" />
         <div class="social-btns">
           <a class="btn facebook" href="https://www.facebook.com/mcss.ca/" target="_blank"><i class="fa fa-facebook"></i></a>
           <a class="btn instagram" href="https://www.instagram.com/mcssfam/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
-          <a class="btn wechat" href="#" target="_blank"><i class="fa fa-wechat"></i></a>
+          <button type="button" class="btn wechat" @click="showModal" ><i class="fa fa-wechat"></i></button>
           <a class="btn youtube" href="https://www.youtube.com/user/MCSSvid" target="_blank"><i class="fa fa-youtube"></i></a>
           <a class="btn envelope" href="vpexternal@mcss.ca" target="_blank"><i class="fa fa-envelope"></i></a>
         </div>
@@ -20,9 +21,27 @@
 </template>
 
 <script>
-export default {
-  name: "contact",
-};
+  import modal from './modal.vue';
+
+  export default {
+    name: 'contact',
+    components: {
+      modal,
+    },
+    data () {
+      return {
+        isModalVisible: false,
+      };
+    },
+    methods: {
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
+      }
+    },
+  };
 </script>
 
 <style scoped>

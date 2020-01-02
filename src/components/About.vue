@@ -39,7 +39,7 @@
           <br /><br /> 
           </p>
       </div>
-      <div class="intro-img"><b-img-lazy :src="require('../assets/About/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" /></div>
+      <div class="intro-img"><b-img-lazy :src="require('../assets/About/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" class="group-pic" /></div>
     </div>
     <hr class="hr2">
 
@@ -302,8 +302,8 @@ h2{
 }
 .avatar img{
   border-radius: 7px;
-  width: 30vw;
-  height: 44.97vw;
+  width: 80%;
+  height: auto;
   margin-bottom: 20px;
 }
 .avatar .name{
@@ -357,6 +357,10 @@ h2{
     display: block;
     text-align: center;
   }
+  .group-pic {
+  width: 80%;
+  height: auto;
+}
 }
 
 @media screen and (max-width: 992px) {

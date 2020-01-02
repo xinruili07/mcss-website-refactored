@@ -316,5 +316,8 @@ h2{
   .sponsors li{
     width: 95%;
   }
+  iframe {
+    display: none;
+  }
 }
 </style>
