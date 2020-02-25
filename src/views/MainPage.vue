@@ -9,6 +9,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto navbar-links">
+            <b-nav-item class="nav-element" @click="gotoAnnouncements">Announcements</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoEvents">Events</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoAbout">About Us</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoSponsors">Sponsors</b-nav-item>
@@ -29,6 +30,7 @@
 export default {
   name: "mainPage",
   components: {
+    "main-announcements": () => import("../components/Announcements"),
     "main-events": () => import("../components/Events"),
     "main-about": () => import("../components/About"),
     "main-sponsors": () => import("../components/Sponsors"),
@@ -45,6 +47,13 @@ export default {
   methods: {
     gotoHome() {
       this.$router.push("/");
+    },
+    gotoAnnouncements() {
+      if (this.currentComponent !== "main-announcements") {
+        this.currentPos = this.checkCurrentPos();
+        this.targetPos = 0;
+        this.currentComponent = "main-announcements";
+      }
     },
     gotoEvents() {
       if (this.currentComponent !== "main-events") {
