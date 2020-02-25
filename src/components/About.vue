@@ -77,9 +77,9 @@
           </b-col>
 
           <b-col sm="12" md="6" class="avatar">
-            <b-img-lazy :src="require('../assets/Members/qian.jpg')"
+            <b-img-lazy :src="require('../assets/Members/amy.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
-            <p class="name" style="font-size: 2rem;">Qian Hui Sun </p>
+            <p class="name" style="font-size: 2rem;">Amy Li </p>
             <p class="role" style="font-size: 1.5rem;">VP Internal</p>
           </b-col>
         </b-row>
@@ -123,7 +123,7 @@ export default {
           image: require('../assets/Members/xiran.jpg'),
         },
         {
-          name: 'Dian Dian',
+          name: 'Dian Dian Dai',
           id: 'dian',
           role: 'VP Media',
           image: require('../assets/Members/dian.jpg'),
@@ -189,10 +189,10 @@ export default {
           image: require('../assets/Members/melody.jpg'),
         },
         {
-          name: 'Tian Jing Li',
-          id: 'tj',
+          name: 'Karist Ng',
+          id: 'karist',
           role: 'Project Manager',
-          image: require('../assets/Members/tj.jpg'),
+          image: require('../assets/Members/karist.jpg'),
         },
         {
           name: 'Jeremy Leung',
@@ -201,23 +201,12 @@ export default {
           image: require('../assets/Members/jeremy.jpg'),
         },
         {
-          name: 'Amy Li',
-          id: 'amy',
+          name: 'Sherry Chen',
+          id: 'sherry',
           role: 'Project Manager',
-          image: require('../assets/Members/amy.jpg'),
+          image: require('../assets/Members/sherry.jpg'),
         },
-        {
-          name: 'Janet Tang',
-          id: 'janet',
-          role: 'Project Manager',
-          image: require('../assets/Members/janet.jpg'),
-        },
-        {
-          name: 'Bowen Li',
-          id: 'bowen',
-          role: 'Photographer',
-          image: require('../assets/Members/bowen.jpg'),
-        },
+
         {
           name: 'Chris Gao',
           id: 'chris',
@@ -229,18 +218,6 @@ export default {
           id: 'youngrock',
           role: 'Tech Director',
           image: require('../assets/Members/youngrock.jpg'),
-        },
-        {
-          name: 'Karist Ng',
-          id: 'karist',
-          role: 'Tech Director',
-          image: require('../assets/Members/karist.jpg'),
-        },
-        {
-          name: 'Sherry Chen',
-          id: 'sherry',
-          role: 'First Year Representative',
-          image: require('../assets/Members/sherry.jpg'),
         },
         {
           name: 'Ivy Chen',

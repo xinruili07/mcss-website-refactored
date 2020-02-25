@@ -30,6 +30,18 @@ export default {
     font-family: Proxima;
     src: url("../assets/fonts/Proxima Nova Regular.otf") format("opentype");
 }
+@media screen and (max-width: 600px) {
+  .home {
+    background-position: -44rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .home {
+    background-position: 0 0;
+  }
+}
+
 .home {
   display: flex;
   justify-content: center;
@@ -43,7 +55,6 @@ export default {
     ),
     url(../assets/home.jpg);
   background-size: cover;
-  background-position: 0 0;
   .home-intro {
     width: 100vw;
     height: 80vh;
