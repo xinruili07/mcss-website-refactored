@@ -1,13 +1,13 @@
 <template>
   <div class="members">
     <div class="intro-container-1">
-      <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.jpg')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
+      <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.png')" alt="recruitment" width=300 height=300 style="border-radius: 7px; margin-top: 5%;" /></div>
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
-        <h1 style="text-align: center; font-size: 30px;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
+        <h1 class="about-us" style="text-align: center; font-size: 30px; font-family: IKEABold;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%;">MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
-          organization in Eastern Canada. With over 15 events per year and 40 years of history, we provide 
-          a variety of events to our over 1,500 active members and help our members succeed in school and life. 
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem;">MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
+          organization in Eastern Canada. With over <strong style="font-family: Proxima; font-size: 1.5rem;">15 events per year and 40 years of history</strong>, we provide 
+          a variety of events to our <strong style="font-family: Proxima; font-size: 1.5rem;">over 1,500 active members</strong> and help our members succeed in school and life. 
           Our short-term goal is to provide our students with valuable events to make their student life more 
           meaningful, while our long-term goal is to motivate and encourage our students to give back to their 
           community and excel academically by providing them with helpful services including seminars, lessons, 
@@ -15,8 +15,8 @@
           <br /><br />
           MCSS is a non-profit organization registered under the Students' Society of McGill University. 
           All our proceeds either go to charity or are used to provide our students with more valuable 
-          services. Our events range from largescale shows to career planning and information seminars. 
-          In addition, we organize dinner outings, networking opportunities and parties for our members.
+          services. <strong style="font-family: Proxima; font-size: 1.5rem;">Our events range from largescale shows to career planning and information seminars. 
+          In addition, we organize dinner outings, networking opportunities and parties for our members.</strong>
           </p>
       </div>
     </div>
@@ -24,18 +24,18 @@
 
     <div class="intro-container-2">
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
-        <h1 style="text-align: center; font-size: 30px;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
+        <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%;">MCSS has had a long and storied history of amazing 
-          events, from our annual Ski and New York Trips, to Be There or Be Square and 
-          hosting Wong Fu Productions.
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem;">MCSS has had a long and storied history of amazing 
+          events, from <strong style="font-family: Proxima; font-size: 1.5rem;">our annual Ski and New York Trips, to Be There or Be Square and 
+          hosting Wong Fu Productions.</strong>
           <br /><br /> 
           With MCSS, you’ll create unforgettable memories, have a blast, and learn a thing or 
           two about event planning in the process.
           <br /><br /> 
           MCSS is a fun, loving, and close-knit family away from home!
           <br /><br /> 
-          We accept executives from all around the world; you don’t have to be Chinese or even Asian!
+          We accept executives from all around the world; <strong style="font-family: Proxima; font-size: 1.5rem;">you don’t have to be Chinese or even Asian!</strong>
           <br /><br /> 
           </p>
       </div>
@@ -43,7 +43,7 @@
     </div>
     <hr class="hr2">
 
-    <h1 style="text-align: center; font-size: 30px;">OUR <span style="font-size: 30px; color: #be0819;">TEAM</span></h1>
+    <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">OUR <span style="font-size: 30px; color: #be0819;">TEAM</span></h1>
     <hr class="hr3">
     <br />
 
@@ -54,14 +54,14 @@
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/owen.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
-            <p class="name">Owen Bai</p>
-            <p class="role">Co-President</p>
+            <p class="name" style="font-size: 2rem;">Owen Bai</p>
+            <p class="role" style="font-size: 1.5rem;">Co-President</p>
           </b-col>
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/annie.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
-            <p class="name">Annie Sun</p>
-            <p class="role">Co-President</p>
+            <p class="name" style="font-size: 2rem;">Annie Sun</p>
+            <p class="role" style="font-size: 1.5rem;">Co-President</p>
           </b-col>
         </b-row>
       </div>
@@ -72,15 +72,15 @@
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/emily_z.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
-            <p class="name">Emily Zhang</p>
-            <p class="role">VP Internal</p>
+            <p class="name" style="font-size: 2rem;">Emily Zhang</p>
+            <p class="role" style="font-size: 1.5rem;">VP Internal</p>
           </b-col>
 
           <b-col sm="12" md="6" class="avatar">
             <b-img-lazy :src="require('../assets/Members/qian.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
-            <p class="name">Qian Hui Sun </p>
-            <p class="role">VP Internal</p>
+            <p class="name" style="font-size: 2rem;">Qian Hui Sun </p>
+            <p class="role" style="font-size: 1.5rem;">VP Internal</p>
           </b-col>
         </b-row>
       </div>
@@ -91,8 +91,8 @@
           <b-col sm="12" md="4" class="avatar" v-for="member in boardMembers" :key="member.name">
             <b-img-lazy :src="member.image" :blank-src="require('../assets/About/placeholder.png')"
             offset="700" v-bind:alt="member.name"/>
-            <p class="name">{{member.name}}</p>
-            <p class="role">{{member.role}}</p>
+            <p class="name" style="font-size: 2rem;">{{member.name}}</p>
+            <p class="role" style="font-size: 1.5rem;">{{member.role}}</p>
             <br /><br />
           </b-col>
         </b-row>
@@ -359,9 +359,12 @@ h2{
     text-align: center;
   }
   .group-pic {
-  width: 80%;
-  height: auto;
-}
+    width: 80%;
+    height: auto;
+  }
+  .about-us {
+    margin-top: 5%;
+  }
 }
 
 @media screen and (max-width: 992px) {

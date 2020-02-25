@@ -9,10 +9,10 @@
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto navbar-links">
-            <b-nav-item @click="gotoEvents">Events</b-nav-item>
-            <b-nav-item @click="gotoAbout">About US</b-nav-item>
-            <b-nav-item @click="gotoSponsors">Sponsors</b-nav-item>
-            <b-nav-item @click="gotoContact">Contact</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoEvents">Events</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoAbout">About Us</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoSponsors">Sponsors</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoContact">Contact</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -101,12 +101,33 @@ export default {
 <style lang="scss">
 .navbar {
   width: 100vw;
+  border-bottom: 3px solid #be0819;
+  margin-bottom: 30px;
+
+  .navbar-expand-sm {
+    border: none;
+    margin-bottom: 0;
+  }
   .navbar-logo {
     margin-left: -0.7rem;
-    width: 7rem;
+    width: 12rem;
+  }
+  .navbar-logo:hover {
+    transform: scale(1.2);
+    cursor: pointer;
   }
   .navbar-links {
     color: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: IKEABold;
+  }
+  .nav-link:hover {
+    opacity: 0.8;
   }
 }
 </style>

@@ -6,9 +6,9 @@
         <div class="intro-img"><b-img-lazy :src="require('../assets/About/card-back.png')" alt="Sponsorship Card" width=302 height=191 style="border-radius: 7px; margin-bottom: 1vw; border-style: solid; border-color: black;" /></div>
       </div>
       <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: center;">
-        <h1 style="text-align: center; font-size: 30px; color: #be0819;">MCSS 2019-2020 MEMBERSHIP CARD</span></h1>
+        <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2019-2020</span> MEMBERSHIP CARD</span></h1>
         <hr class="hr2">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%;">With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%; font-family: Proxima; font-size: 2rem;">With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
           <br /><br />
           We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.
           <br /><br />
@@ -17,7 +17,7 @@
       </div>
     </div>
     <hr class="hr2">
-    <h1 style="text-align: center; font-size: 30px;">OUR <span style="font-size: 30px; color: #be0819;">SPONSORS</span></h1>
+    <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">OUR <span style="font-size: 30px; color: #be0819;">SPONSORS</span></h1>
     <hr class="hr3">
     <br />
 
@@ -25,10 +25,10 @@
       <div class="restOfSponsors">
         <b-row>
           <b-col sm="12" md="4" class="avatar" v-for="sponsor in sponsorsList" :key="sponsor.name">
-            <b-img-lazy :src="require(`../assets/Sponsors/${sponsor.name}.png`)" :blank-src="require('../assets/About/placeholder.png')"
+            <b-img-lazy :src="require(`../assets/Sponsors/${sponsor.name}.png`)" :blank-src="require('../assets/About/food-placeholder.jpg')"
             offset="700" v-bind:alt="sponsor.name"/>
-            <p class="name">{{sponsor.name}}</p>
-            <p class="role">{{sponsor.address}}</p>
+            <p class="name" style="font-size: 2rem;">{{sponsor.name}}</p>
+            <p class="role" style="font-size: 1.5rem;">{{sponsor.address}}</p>
             <br /><br />
           </b-col>
         </b-row>
@@ -105,7 +105,7 @@ export default {
         },
         {
           name: 'GURU',
-          address: 'hello',
+          address: '',
         },
         {
           name: 'JCer',
@@ -211,7 +211,7 @@ iframe {
 }
 .hr3{
     background-color: #be0819;
-    width: 15%;
+    width: 22%;
     height: 1px;
 }
 .hr2 {
@@ -279,7 +279,7 @@ h2{
   }
 
   .intro-text {
-    margin-top: 6vw;
+    margin-top: 2vw;
   }
 }
 @media screen and (max-width: 840px) {
@@ -305,7 +305,7 @@ h2{
     text-align: center;
   }
   .intro-text {
-    margin-top: 6vw;
+    margin-top: 4vw;
   }
 }
 

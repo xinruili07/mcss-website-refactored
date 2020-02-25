@@ -3,7 +3,7 @@
     <section class="home-intro">
       <img src="../assets/logo.png" alt="mcss-logo" class="home-intro-logo" />
       <div class="home-intro-title">MCGILL CHINESE STUDENTS' SOCIETY</div>
-      <button class="home-intro-btn" @click="gotoMain">Get Started</button>
+      <button class="home-intro-btn" @click="gotoMain">Join the Fam</button>
     </section>
   </div>
 </template>
@@ -22,6 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+    font-family: IKEABold;
+    src: url("../assets/fonts/IKEA Sans Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Proxima;
+    src: url("../assets/fonts/Proxima Nova Regular.otf") format("opentype");
+}
 .home {
   display: flex;
   justify-content: center;
@@ -44,25 +52,27 @@ export default {
     justify-content: space-around;
     align-items: center;
     .home-intro-logo {
-      height: 7rem;
+      height: 9rem;
     }
     .home-intro-title {
-      width: 40vw;
+      font-family: IKEABold;
+      width: 85vw;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 5rem;
       color: aliceblue;
       font-weight: 600;
       letter-spacing: 0.8rem;
     }
     .home-intro-btn {
-      width: 15rem;
-      height: 4rem;
+      font-family: IKEABold;
+      width: 25rem;
+      height: 5rem;
       background: #fff;
-      color: #777373;
+      color: #be0819;
       border: none;
       border-radius: 2rem;
       outline: none;
-      font-size: 1.2rem;
+      font-size: 2rem;
       letter-spacing: 0.1rem;
       transition: all 0.3s ease-out;
     }
@@ -72,6 +82,8 @@ export default {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
       cursor: pointer;
+      background: #be0819;
+      color: white;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="members">
     <div class="intro-container-1">
-      <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.jpg')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
+      <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.png')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center; margin-top: 3vw;">
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 30px; color: #be0819; font-weight: bold;">Want to know more about MCSS?</span></h1>
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: #be0819;">Looking for more awesome events?</span></h1>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <hr class="hr2">
-  </div>
+    </div>
 </template>
 
 <script>
@@ -217,8 +217,8 @@ h2{
 .social-btns .btn {
   display: inline-block;
   background-color: #fff;
-  width: 80px;
-  height: 80px;
+  width: 77px;
+  height: 77px;
   line-height: 90px;
   margin: 0 10px;
   text-align: center;
