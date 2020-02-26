@@ -2,8 +2,16 @@
   <div class="sponsors">
     <div class="intro-container-1">
       <div>
-        <div class="intro-img"><b-img-lazy :src="require('../assets/About/card-front.png')" alt="Sponsorship Card" width=302 height=191 style="border-radius: 7px; margin-bottom: 1vw; border-style: solid; border-color: black;" /></div>
-        <div class="intro-img"><b-img-lazy :src="require('../assets/About/card-back.png')" alt="Sponsorship Card" width=302 height=191 style="border-radius: 7px; margin-bottom: 1vw; border-style: solid; border-color: black;" /></div>
+        <div id="f1_container">
+          <div id="f1_card">
+            <div class="front face">
+              <div class="intro-img"><b-img-lazy :src="require('../assets/About/card-front.png')" alt="Sponsorship Card" width=302 height=191 style="border-radius: 7px; margin-bottom: 1vw; border-style: solid; border-color: black;" /></div>
+            </div>
+            <div class="back face center">
+              <div class="intro-img"><b-img-lazy :src="require('../assets/About/card-back.png')" alt="Sponsorship Card" width=302 height=191 style="border-radius: 7px; margin-bottom: 1vw; border-style: solid; border-color: black;" /></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2019-2020</span> MEMBERSHIP CARD</span></h1>
@@ -318,6 +326,41 @@ h2{
   }
   iframe {
     display: none;
+  }
+}
+@media screen and (min-width: 840px) {
+  #f1_container {
+    margin-top: 30%;
+    position: relative;
+    width: 302px;
+    height: 191px;
+    z-index: 1;
+  }
+  #f1_container {
+    perspective: 1000;
+  }
+  #f1_card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+  }
+  #f1_container:hover #f1_card {
+    transform: rotateY(180deg);
+  }
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+
+    text-align: center;
   }
 }
 </style>
