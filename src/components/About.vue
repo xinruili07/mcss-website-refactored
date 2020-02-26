@@ -69,14 +69,19 @@
 
       <div class="internals">
         <b-row>
-          <b-col sm="12" md="6" class="avatar">
+          <b-col sm="12" md="4" class="avatar">
             <b-img-lazy :src="require('../assets/Members/emily_z.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
             <p class="name" style="font-size: 2rem;">Emily Zhang</p>
             <p class="role" style="font-size: 1.5rem;">VP Internal</p>
           </b-col>
-
-          <b-col sm="12" md="6" class="avatar">
+          <b-col sm="12" md="4" class="avatar">
+            <b-img-lazy :src="require('../assets/Members/felix.jpg')"
+            :blank-src="require('../assets/About/placeholder.png')" alt="VP External"/>
+            <p class="name" style="font-size: 2rem;">Felix Lu </p>
+            <p class="role" style="font-size: 1.5rem;">VP External</p>
+          </b-col>
+          <b-col sm="12" md="4" class="avatar">
             <b-img-lazy :src="require('../assets/Members/amy.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="VP Internal"/>
             <p class="name" style="font-size: 2rem;">Amy Li </p>
@@ -163,12 +168,6 @@ export default {
           id: 'danielle',
           role: 'Social Director',
           image: require('../assets/Members/danielle.jpg'),
-        },
-        {
-          name: 'Felix Lu',
-          id: 'felix',
-          role: 'VP External',
-          image: require('../assets/Members/felix.jpg'),
         },
         {
           name: 'Dimitri Yang',
