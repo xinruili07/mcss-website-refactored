@@ -27,7 +27,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 90%;
+    width: 80%;
     height: auto;
     background-image: url(../assets/sky-background.jpg);
   }
@@ -38,7 +38,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 90%;
+    width: 80%;
     height: auto;
   }
 

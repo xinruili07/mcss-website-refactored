@@ -16,9 +16,9 @@
       <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2019-2020</span> MEMBERSHIP CARD</span></h1>
         <hr class="hr2">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%; font-family: Proxima; font-size: 2rem;">With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%; font-family: Proxima; font-size: 1.8rem;">With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
           <br /><br />
-          We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.
+          We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold;">Click here to check out our sponsors map!</button>
           <br /><br />
           Get yours today! Grab one at our next upcoming event for only $5!
           </p>
@@ -41,7 +41,11 @@
           </b-col>
         </b-row>
       </div>
-      <iframe style="width: 80%;"src="https://www.google.com/maps/d/embed?mid=1MCocHjxAGO78uFDjn0fm486kqSkhqhs6" width="640" height="480"></iframe>
+      <hr class="hr2">
+      <h1 id="anchor" style="text-align: center; font-size: 30px; font-family: IKEABold;">SPONSORS <span style="font-size: 30px; color: #be0819;">MAP</span></h1>
+      <div style="width: 100%; overflow: hidden; height: 600px;">
+        <iframe style="width: 80%; margin-top: -46px;"src="https://www.google.com/maps/d/embed?mid=1MCocHjxAGO78uFDjn0fm486kqSkhqhs6" width="640" height="480"></iframe>
+      </div>
       <div class="divider"></div><br />
     </div>
 
@@ -49,9 +53,14 @@
 </template>
 
 <script>
-
 export default {
   name: 'sponsors',
+  methods: {
+    myFunction() {
+      var elmnt = document.getElementById("anchor");
+      elmnt.scrollIntoView({behavior: 'smooth'});
+    }
+  },
   data() {
     return {
       sponsorsList: [
@@ -206,6 +215,9 @@ export default {
 </script>
 
 <style scoped>
+.scroller-btn:hover {
+  opacity: 0.7;
+}
 .sponsors{
   width: 90%;
   margin: auto;
@@ -291,6 +303,9 @@ h2{
   }
 }
 @media screen and (max-width: 840px) {
+  .scroller-btn {
+    display: none;
+  }
   .intro-container-1 {
     display: flex;
     flex-direction: column;
