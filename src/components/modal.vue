@@ -39,7 +39,7 @@
         >
           <slot name="body">
             <div class="title">
-              FOLLOW US ON WECHAT!
+              <h1 style="font-family: IKEABold;">FOLLOW US ON WECHAT!</h1>
             </div>
             <b-img-lazy :src="require('../assets/wechat-qr.jpeg')" alt="wechat" style="border-radius: 7px;" class="wechat"/>
           </slot>
@@ -51,6 +51,7 @@
               class="btn-green"
               @click="close"
               aria-label="Close modal"
+              style="font-family: IKEABold; font-size: 15px;"
             >
               OK!
             </button>
@@ -61,6 +62,17 @@
   </transition>
 </template>
 <style>
+  @media screen and (max-width: 1000px) {
+    .modal {
+      max-width: 70%;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .modal {
+      max-width: 40%;
+    }
+  }
   .modal-backdrop {
     top: 0;
     bottom: 0;
@@ -81,7 +93,6 @@
     display: flex;
     flex-direction: column;
     max-height: 500px;
-    max-width: 70%;
     border-radius: 5px;
   }
 
@@ -146,6 +157,7 @@
     background: #be0819;
     border: 1px solid grey;
     border-radius: 2px;
+    transition: all 0.3s ease-out;
   }
 
   .modal-fade-enter,
@@ -156,5 +168,19 @@
   .modal-fade-enter-active,
   .modal-fade-leave-active {
     transition: opacity 0.5s ease;
+  }
+
+  .btn-green:hover {
+    color: #be0819;
+    background: white;
+    transform: translateY(-0.4rem);
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+  }
+
+  .btn-close:hover {
+    opacity:0.6;
   }
 </style>

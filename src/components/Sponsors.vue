@@ -41,7 +41,11 @@
           </b-col>
         </b-row>
       </div>
-      <iframe style="width: 80%;"src="https://www.google.com/maps/d/embed?mid=1MCocHjxAGO78uFDjn0fm486kqSkhqhs6" width="640" height="480"></iframe>
+      <hr class="hr2">
+      <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">SPONSORS <span style="font-size: 30px; color: #be0819;">MAP</span></h1>
+      <div style="width: 100%; overflow: hidden; height: 600px;">
+        <iframe style="width: 80%; margin-top: -46px;"src="https://www.google.com/maps/d/embed?mid=1MCocHjxAGO78uFDjn0fm486kqSkhqhs6" width="640" height="480"></iframe>
+      </div>
       <div class="divider"></div><br />
     </div>
 
