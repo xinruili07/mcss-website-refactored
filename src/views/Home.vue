@@ -3,7 +3,7 @@
     <section class="home-intro">
       <img src="../assets/logo.png" alt="mcss-logo" class="home-intro-logo" />
       <div class="home-intro-title">MCGILL CHINESE STUDENTS' SOCIETY</div>
-      <button class="home-intro-btn" @click="gotoMain">Join the Fam</button>
+      <button class="home-intro-btn" @click="gotoMain">GET STARTED</button>
     </section>
   </div>
 </template>
