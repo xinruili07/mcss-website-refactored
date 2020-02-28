@@ -1,10 +1,17 @@
 <template>
   <div class="events">
-    <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">NEW <span style="font-size: 30px; color: #be0819;">ANNOUNCEMENTS</span></h1>
+    <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">NEW <span style="font-size: 30px; color: #be0819;">RECRUITS</span></h1>
     <hr class="hr1">
     <div class="event2"><b-img-lazy :src="require('../assets/About/New Recruits Winter 2020.png')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
     
     <hr class="hr2">
+    <div id="sogaeting"><h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">SOGAETING -<span style="font-size: 30px; color: #be0819;"> FEB 14 2020</span></h1></div>
+    <hr class="hr1">
+    <div class="event2"><b-img-lazy :src="require('../assets/Sogaeting/pic1.jpg')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
+    <div class="event2"><b-img-lazy :src="require('../assets/Sogaeting/pic2.jpg')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
+    <div class="event2"><b-img-lazy :src="require('../assets/Sogaeting/pic3.jpg')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
+    <div class="event2"><b-img-lazy :src="require('../assets/Sogaeting/pic5.jpg')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
+    <div class="event2"><b-img-lazy :src="require('../assets/Sogaeting/pic4.jpg')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
   </div>
 </template>
 

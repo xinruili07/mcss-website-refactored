@@ -32,8 +32,7 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .home {
-    margin-left: 20px;
-    background-position: -44rem;
+    background-position: -40rem;
   }
 }
 
@@ -56,6 +55,10 @@ export default {
     ),
     url(../assets/home.jpg);
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
   .home-intro {
     width: 100vw;
     height: 80vh;

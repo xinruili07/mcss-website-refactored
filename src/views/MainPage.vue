@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      currentComponent: "main-events",
+      currentComponent: "main-announcements",
       currentPos: 0,
       targetPos: 0,
       transitionName: ""
