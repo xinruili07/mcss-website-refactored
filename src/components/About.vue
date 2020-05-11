@@ -284,7 +284,7 @@ export default {
           role: 'VP Media',
           image: require('../assets/Members/ivy.jpg'),
           hometown: 'Toronto, ON',
-          major: 'U0 Nursingg',
+          major: 'U0 Nursing',
           flipped: false,
         },
         {
@@ -459,6 +459,23 @@ export default {
       margin-left: 5px;
       margin-right: 5px;
     }
+    .card-container-pres {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: #be0819;
+      border-radius: 7px;
+      width: 60%;
+      padding-top: 90%; /* Aspect Ratio */
+      position: relative; /* If you want text inside of it */
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+      -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+      box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+      will-change: transform;
+    }
   }
   @media screen and (max-width: 840px) {
     .intro-container-1 {
@@ -508,6 +525,31 @@ export default {
     }
     .members li{
       width: 95%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 25px;
+    }
+    .members li{
+      width: 95%;
+    }
+    .card-container-pres {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: #be0819;
+      border-radius: 7px;
+      width: 80%;
+      padding-top: 120%; /* Aspect Ratio */
+      position: relative; /* If you want text inside of it */
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+      -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+      box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+      will-change: transform;
     }
   }
 </style>
