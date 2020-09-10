@@ -4,8 +4,9 @@
       <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.png')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center; margin-top: 3vw;">
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 30px; color: #be0819; font-weight: bold; font-family: IKEABold;">WANT TO KNOW MORE ABOUT MCSS?</span></h1>
-        <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: #be0819; font-family: IKEABold;">Looking for more awesome events?</span></h1>
-        <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: black; font-weight: bold; font-family: IKEABold;">Make sure to follow us on our social medias!</span></h1>
+        <hr class="hr2">
+        <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: #be0819; font-family: Proxima;">Looking for more awesome events?</span></h1>
+        <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: black; font-family: Proxima;">Make sure to follow us on our social medias!</span></h1>
         <modal v-show="isModalVisible" @close="closeModal" />
         <div class="social-btns">
           <a class="btn facebook" href="https://www.facebook.com/mcss.ca/" target="_blank"><i class="fa fa-facebook"></i></a>

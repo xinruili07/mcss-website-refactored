@@ -3,8 +3,8 @@
     <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">UPCOMING <span style="font-size: 30px; color: #be0819;">EVENTS</span></h1>
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="farewellToggle = !farewellToggle">
-      <b-img-lazy :src="require('../assets/farewell.jpg')" :class="{toggled: farewellToggle}" alt="Farewell my Concubine" style="border-radius: 7px;" />
-        <a class="event-redirect" v-if="farewellToggle" href="https://www.facebook.com/events/559381931328945/" target="_blank">
+      <b-img-lazy :src="require('../assets/welcome-party.jpg')" :class="{toggled: farewellToggle}" alt="MCSS Welcome Party" style="border-radius: 7px;" />
+        <a class="event-redirect" v-if="farewellToggle" href="https://www.facebook.com/events/728987484314861" target="_blank">
           <div class="middle">
             <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
           </div>
@@ -13,6 +13,7 @@
     <hr class="hr2">
     <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">PAST <span style="font-size: 30px; color: #be0819;">EVENTS</span></h1>
     <hr class="hr1">
+    <div class="event2"><b-img-lazy :src="require('../assets/farewell.jpg')" alt="Farewell My Concubine 2020" style="border-radius: 7px;" /></div>
     <div class="event2"><b-img-lazy :src="require('../assets/sogaeting.jpg')" alt="Sogaeting 2020" style="border-radius: 7px;" /></div>
     <div class="event1"><b-img-lazy :src="require('../assets/ski-trip-2020.png')" alt="Ski Trip 2020" style="border-radius: 7px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/></div>
     <div class="event2"><b-img-lazy :src="require('../assets/casino-night-2019.jpg')" alt="Casino Night: Red Carpet 2019" style="border-radius: 7px;" /></div>

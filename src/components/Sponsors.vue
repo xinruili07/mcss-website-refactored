@@ -13,12 +13,12 @@
           </div>
         </div>
       </div>
-      <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: center;">
+      <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: justify;">
         <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2019-2020</span> MEMBERSHIP CARD</span></h1>
         <hr class="hr2">
         <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%; font-family: Proxima; font-size: 1.8rem;">With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
           <br /><br />
-          We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold; color: #be0819;">Click here to check out our sponsors map!</button>
+          We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold; color: #be0819; padding: 0 !important;">Click here to check out our sponsors map!</button>
           <br /><br />
           Get yours today! Grab one at our next upcoming event for only $5!
           </p>

@@ -5,7 +5,7 @@
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 class="about-us" style="text-align: center; font-size: 30px; font-family: IKEABold;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem;">MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem; text-align: justify;">MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
           organization in Eastern Canada. With over <strong style="font-family: Proxima; font-size: 1.5rem;">15 events per year and 40 years of history</strong>, we provide 
           a variety of events to our <strong style="font-family: Proxima; font-size: 1.5rem;">over 1,500 active members</strong> and help our members succeed in school and life. 
           Our short-term goal is to provide our students with valuable events to make their student life more 
@@ -26,14 +26,12 @@
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem;">MCSS has had a long and storied history of amazing 
+        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem; text-align: justify;">MCSS has had a long and storied history of amazing 
           events, from <strong style="font-family: Proxima; font-size: 1.5rem;">our annual Ski and New York Trips, to Be There or Be Square and 
           hosting Wong Fu Productions.</strong>
           <br /><br /> 
           With MCSS, you’ll create unforgettable memories, have a blast, and learn a thing or 
-          two about event planning in the process.
-          <br /><br /> 
-          MCSS is a fun, loving, and close-knit family away from home!
+          two about event planning in the process. MCSS is a fun, loving, and close-knit family away from home!
           <br /><br /> 
           We accept executives from all around the world; <strong style="font-family: Proxima; font-size: 1.5rem;">you don’t have to be Chinese or even Asian!</strong>
           <br /><br /> 
