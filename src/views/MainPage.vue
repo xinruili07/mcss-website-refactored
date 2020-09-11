@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="navbar">
-      <b-navbar toggleable="sm" variant="faded">
+      <b-navbar toggleable="lg" variant="faded">
         <b-navbar-brand @click="gotoHome">
           <img src="../assets/redlogo.png" alt="redlogo" class="navbar-logo" />
         </b-navbar-brand>
@@ -14,6 +14,17 @@
             <b-nav-item class="nav-element" @click="gotoAbout">About Us</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoSponsors">Sponsors</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoContact">Contact</b-nav-item>
+            <stripe-checkout
+              ref="checkoutRef"
+              :pk="publishableKey"
+              :items="items"
+              :successUrl="successUrl"
+              :cancelUrl="cancelUrl"
+            >
+              <template slot="checkout-button">
+                <button class="checkout-button-redirect" @click="checkout">Purchase our Card</button>
+              </template>
+            </stripe-checkout>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -27,9 +38,12 @@
 </template>
 
 <script>
+import { StripeCheckout } from 'vue-stripe-checkout';
+
 export default {
   name: "mainPage",
   components: {
+    StripeCheckout,
     "main-announcements": () => import("../components/Announcements"),
     "main-events": () => import("../components/Events"),
     "main-about": () => import("../components/About"),
@@ -41,10 +55,23 @@ export default {
       currentComponent: "main-announcements",
       currentPos: 0,
       targetPos: 0,
-      transitionName: ""
+      transitionName: "",
+      loading: false,
+      publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
+      items: [
+        {
+          sku: 'sku_HwCsHFwKPLhYMW', 
+          quantity: 1
+        }
+      ],
+      successUrl: 'http://localhost:8080/#/',
+      cancelUrl: 'http://localhost:8080/#/main',
     };
   },
   methods: {
+    checkout () {
+      this.$refs.checkoutRef.redirectToCheckout();
+    },
     gotoHome() {
       this.$router.push("/");
     },
@@ -108,12 +135,36 @@ export default {
 </script>
 
 <style lang="scss">
+.checkout-button-redirect {
+  font-family: IKEABold;
+  width: 25rem;
+  height: 4rem;
+  background: #be0819;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease-out;
+}
+.checkout-button-redirect:hover {
+  transform: translateY(-0.4rem);
+  font-weight: 600;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  background: #be0819;
+  color: white;
+}
 .navbar {
   width: 100vw;
   border-bottom: 3px solid #be0819;
   margin-bottom: 30px;
-
-  .navbar-expand-sm {
+  .navbar-collapse {
+    text-align: center;
+  }
+  .navbar-expand-lg {
     border: none;
     margin-bottom: 0;
   }

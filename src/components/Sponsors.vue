@@ -22,6 +22,17 @@
           <br /><br />
           Get yours today! Grab one at our next upcoming event for only $5!
           </p>
+          <stripe-checkout
+            ref="checkoutRef"
+            :pk="publishableKey"
+            :items="items"
+            :successUrl="successUrl"
+            :cancelUrl="cancelUrl"
+          >
+            <template slot="checkout-button">
+              <button class="checkout-button-redirect" @click="checkout">Purchase it here!</button>
+            </template>
+          </stripe-checkout>
       </div>
     </div>
     <hr class="hr2">
@@ -44,7 +55,7 @@
       <hr class="hr2">
       <h1 id="anchor" style="text-align: center; font-size: 30px; font-family: IKEABold;">SPONSORS <span style="font-size: 30px; color: #be0819;">MAP</span></h1>
       <div style="width: 100%; overflow: hidden; height: 600px;">
-        <iframe style="width: 80%; margin-top: -46px;"src="https://www.google.com/maps/d/embed?mid=1MCocHjxAGO78uFDjn0fm486kqSkhqhs6" width="640" height="480"></iframe>
+        <iframe style="width: 80%; margin-top: -46px;" src="https://www.google.com/maps/d/embed?mid=1MCocHjxAGO78uFDjn0fm486kqSkhqhs6" width="640" height="480"></iframe>
       </div>
       <div class="divider"></div><br />
     </div>
@@ -53,16 +64,33 @@
 </template>
 
 <script>
+import { StripeCheckout } from 'vue-stripe-checkout';
 export default {
   name: 'sponsors',
+  components: {
+    StripeCheckout,
+  },
   methods: {
     myFunction() {
       var elmnt = document.getElementById("anchor");
-      elmnt.scrollIntoView({behavior: 'smooth'});
+      elmnt.scrollIntoView({behavior: 'smooth'}, {passive: true});
+    },
+    checkout () {
+      this.$refs.checkoutRef.redirectToCheckout();
     }
   },
   data() {
     return {
+      loading: false,
+      publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
+      items: [
+        {
+          sku: 'sku_HwCsHFwKPLhYMW', 
+          quantity: 1
+        }
+      ],
+      successUrl: 'http://localhost:8080/#/',
+      cancelUrl: 'http://localhost:8080/#/main',
       sponsorsList: [
         {
           name: 'A Beverage Store',
@@ -215,6 +243,10 @@ export default {
 </script>
 
 <style scoped>
+.checkout-button-redirect {
+  margin: auto;
+  display: block;
+}
 .scroller-btn:hover {
   opacity: 0.7;
 }
