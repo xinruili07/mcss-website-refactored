@@ -61,8 +61,8 @@ export default {
       mode: "payment",
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
       lineItems: [{price: 'price_1HQxYcAkAUwp58LUT89Ccd4u', quantity: 1}],
-      successUrl: 'http://localhost:8080/#/success',
-      cancelUrl: 'http://localhost:8080/#/main',
+      successUrl: 'https://mcss.ca/#/success',
+      cancelUrl: 'https://mcss.ca/#/main',
     };
   },
   methods: {
