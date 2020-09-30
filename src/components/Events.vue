@@ -13,19 +13,56 @@
     <hr class="hr2">
     <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">PAST <span style="font-size: 30px; color: #be0819;">EVENTS</span></h1>
     <hr class="hr1">
-    <div class="event2"><b-img-lazy :src="require('../assets/farewell.jpg')" alt="Farewell My Concubine 2020" style="border-radius: 7px;" /></div>
-    <div class="event2"><b-img-lazy :src="require('../assets/sogaeting.jpg')" alt="Sogaeting 2020" style="border-radius: 7px;" /></div>
-    <div class="event1"><b-img-lazy :src="require('../assets/ski-trip-2020.png')" alt="Ski Trip 2020" style="border-radius: 7px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/></div>
-    <div class="event2"><b-img-lazy :src="require('../assets/casino-night-2019.jpg')" alt="Casino Night: Red Carpet 2019" style="border-radius: 7px;" /></div>
+    <div class="slideshow-container">
+      <vueper-slides lazy lazy-load-on-drag :slide-ratio="236 / 420" slide-image-inside :touchable="false">
+        <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
+          <template v-slot:loader>
+            <i class="icon icon-loader spinning"></i>
+            <span>Loading...</span>
+          </template>
+        </vueper-slide>
+      </vueper-slides>
+    </div>
+    <hr class="hr2">
   </div>
 </template>
 
 <script>
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
+
 export default {
   name: 'events',
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
       farewellToggle: false,
+      slides: [
+        {
+          title: 'Farewell My Concubine',
+          content: 'First Picture',
+          // You can also provide a URL for the image.
+          image: require('../assets/farewell.jpg')
+        },
+        {
+          title: 'Sogaeting',
+          content: 'Second Picture',
+          // You can also provide a URL for the image.
+          image: require('../assets/sogaeting.jpg')
+        },
+        {
+          title: 'Ski Trip',
+          content: 'Third Picture',
+          // You can also provide a URL for the image.
+          image: require('../assets/ski-trip-2020.png')
+        },
+        {
+          title: 'Casino Night',
+          content: 'Fourth Picture',
+          // You can also provide a URL for the image.
+          image: require('../assets/casino-night-2019.jpg')
+        },
+      ]
     }
   },
   methods:{
@@ -37,8 +74,6 @@ export default {
 </script>
 
 <style scoped>
-
-
   .check-it-out {
     font-size: 3rem;
     position: absolute;
@@ -61,6 +96,10 @@ export default {
     cursor: pointer;
     background: #be0819;
     color: white;
+  }
+
+  .vueperslide__image {
+    border-radius: 7px;
   }
 
   .toggled {
@@ -103,6 +142,12 @@ export default {
   }
 
 @media screen and (min-width: 1000px) {
+  .slideshow-container {
+    width: 80%; 
+    margin-right: auto; 
+    margin-left: auto; 
+    display: block;
+  }
   .event1 img{
     padding: 20px;
     margin-top: 20px;
@@ -134,6 +179,12 @@ export default {
 }
 
 @media screen and (max-width:1000px) {
+  .slideshow-container {
+    width: 90%; 
+    margin-right: auto; 
+    margin-left: auto; 
+    display: block;
+  }
   .event2 {
     width: 90%;
     margin-left: auto;

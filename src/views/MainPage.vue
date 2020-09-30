@@ -17,7 +17,8 @@
             <stripe-checkout
               ref="checkoutRef"
               :pk="publishableKey"
-              :items="items"
+              :lineItems="lineItems"
+              :mode="mode"
               :successUrl="successUrl"
               :cancelUrl="cancelUrl"
             >
@@ -57,14 +58,10 @@ export default {
       targetPos: 0,
       transitionName: "",
       loading: false,
+      mode: "payment",
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
-      items: [
-        {
-          sku: 'sku_HwCsHFwKPLhYMW', 
-          quantity: 1
-        }
-      ],
-      successUrl: 'http://localhost:8080/#/',
+      lineItems: [{price: 'price_1HQxYcAkAUwp58LUT89Ccd4u', quantity: 1}],
+      successUrl: 'http://localhost:8080/#/success',
       cancelUrl: 'http://localhost:8080/#/main',
     };
   },

@@ -19,5 +19,10 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "main" */ './views/MainPage.vue'),
     },
+    {
+      path: '/success',
+      name: 'success',
+      component: () => import(/* webpackChunkName: "main" */ './views/Success.vue'),
+    },
   ],
 });

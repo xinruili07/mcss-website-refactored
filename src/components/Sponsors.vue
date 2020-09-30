@@ -14,25 +14,14 @@
         </div>
       </div>
       <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: justify;">
-        <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2019-2020</span> MEMBERSHIP CARD</span></h1>
+        <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2020-2021</span> MEMBERSHIP CARD</h1>
         <hr class="hr2">
         <p style="margin-right: 10%; margin-left: 10%; margin-top: 5%; font-family: Proxima; font-size: 1.8rem;">With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
           <br /><br />
-          We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold; color: #be0819; padding: 0 !important;">Click here to check out our sponsors map!</button>
+          We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold; color: #be0819; padding: 0 !important; margin-left: 2px;">Click here to check out our sponsors map!</button>
           <br /><br />
-          Get yours today! Grab one at our next upcoming event for only $5!
-          </p>
-          <stripe-checkout
-            ref="checkoutRef"
-            :pk="publishableKey"
-            :items="items"
-            :successUrl="successUrl"
-            :cancelUrl="cancelUrl"
-          >
-            <template slot="checkout-button">
-              <button class="checkout-button-redirect" @click="checkout">Purchase it here!</button>
-            </template>
-          </stripe-checkout>
+          Get yours today for only $3 by clicking on "Purchase our Card" on our navigation bar.
+        </p>
       </div>
     </div>
     <hr class="hr2">
@@ -64,33 +53,16 @@
 </template>
 
 <script>
-import { StripeCheckout } from 'vue-stripe-checkout';
 export default {
   name: 'sponsors',
-  components: {
-    StripeCheckout,
-  },
   methods: {
     myFunction() {
       var elmnt = document.getElementById("anchor");
       elmnt.scrollIntoView({behavior: 'smooth'}, {passive: true});
     },
-    checkout () {
-      this.$refs.checkoutRef.redirectToCheckout();
-    }
   },
   data() {
     return {
-      loading: false,
-      publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
-      items: [
-        {
-          sku: 'sku_HwCsHFwKPLhYMW', 
-          quantity: 1
-        }
-      ],
-      successUrl: 'http://localhost:8080/#/',
-      cancelUrl: 'http://localhost:8080/#/main',
       sponsorsList: [
         {
           name: 'A Beverage Store',
@@ -335,9 +307,6 @@ h2{
   }
 }
 @media screen and (max-width: 840px) {
-  .scroller-btn {
-    display: none;
-  }
   .intro-container-1 {
     display: flex;
     flex-direction: column;
@@ -372,6 +341,9 @@ h2{
     width: 95%;
   }
   iframe {
+    display: none;
+  }
+  .scroller-btn {
     display: none;
   }
 }

@@ -13,7 +13,7 @@
           <a class="btn instagram" href="https://www.instagram.com/mcssfam/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
           <button type="button" class="btn wechat-button" @click="showModal" ><i class="fa fa-wechat"></i></button>
           <a class="btn youtube" href="https://www.youtube.com/user/MCSSvid" target="_blank"><i class="fa fa-youtube"></i></a>
-          <a class="btn envelope" href="vpexternal@mcss.ca" target="_blank"><i class="fa fa-envelope"></i></a>
+          <a class="btn envelope" href="mailto:vpexternal@mcss.ca" target="_blank"><i class="fa fa-envelope"></i></a>
         </div>
       </div>
     </div>
@@ -193,8 +193,11 @@ h2{
   .social-btns {
     height: 90px;
     font-size: 0;
+    padding-top: 7px;
     text-align: center;
     margin-top: 3vw;
+    border-radius: 5px;
+    background-color: rgba(190, 8, 25, 0.7);
   }
   .social-btns .btn {
     display: inline-block;

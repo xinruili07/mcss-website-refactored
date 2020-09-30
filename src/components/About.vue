@@ -53,29 +53,29 @@
             <transition name="flip">
               <div class="card-container-pres" v-if="amyflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Hometown:</strong> Ottawa, ON</p>
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Major:</strong> U1, Neuroscience</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Ottawa, ON</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U1, Neuroscience</p>
                 </div>
               </div>
             <b-img-lazy :src="require('../assets/Members/amy.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
             </transition>
-            <p class="name" style="font-size: 2rem;">Amy Li</p>
-            <p class="role" style="font-size: 1.5rem;">Co-President</p>
+            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Amy Li</p>
+            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Co-President</p>
           </b-col>
           <b-col sm="12" md="6" class="avatar" v-on:click="toggleAnnie()">
             <transition name="flip">
               <div class="card-container-pres" v-if="annieflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Hometown:</strong> Vancouver, BC</p>
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Major:</strong> U2 Physiology</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Vancouver, BC</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U2 Physiology</p>
                 </div>
               </div>
             <b-img-lazy :src="require('../assets/Members/annie.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
             </transition>
-            <p class="name" style="font-size: 2rem;">Annie Sun</p>
-            <p class="role" style="font-size: 1.5rem;">Co-President</p>
+            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Annie Sun</p>
+            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Co-President</p>
           </b-col>
         </b-row>
       </div>
@@ -87,29 +87,29 @@
             <transition name="flip">
               <div class="card-container-pres" v-if="owenflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Hometown:</strong> Beijing, CN</p>
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Major:</strong> U2 CS and East Asian Studies</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Beijing, CN</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U2 CS and East Asian Studies</p>
                 </div>
               </div>
               <b-img-lazy :src="require('../assets/Members/owen.jpg')"
               :blank-src="require('../assets/About/placeholder.png')" alt="Senior Advisor"/>
             </transition>
-            <p class="name" style="font-size: 2rem;">Owen Bai</p>
-            <p class="role" style="font-size: 1.5rem;">Senior Advisor</p>
+            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Owen Bai</p>
+            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Senior Advisor</p>
           </b-col>
           <b-col sm="12" md="6" class="avatar" v-on:click="toggleEmily()">
             <transition name="flip">
               <div class="card-container-pres" v-if="emilyflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Hometown:</strong> Vancouver, BC</p>
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Major:</strong> U3 Physiotherapy</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Vancouver, BC</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U3 Physiotherapy</p>
                 </div>
               </div>
             <b-img-lazy :src="require('../assets/Members/emily_z.jpg')"
             :blank-src="require('../assets/About/placeholder.png')" alt="Senior Advisor"/>
             </transition>
-            <p class="name" style="font-size: 2rem;">Emily Zhang</p>
-            <p class="role" style="font-size: 1.5rem;">Senior Advisor</p>
+            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Emily Zhang</p>
+            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Senior Advisor</p>
           </b-col>
         </b-row>
       </div>
@@ -121,15 +121,15 @@
             <transition name="flip">
               <div class="card-container" v-if="member.flipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Hometown:</strong> {{member.hometown}}</p>
-                  <p style="font-size: 2rem;"><strong style="font-size: 2rem;">Major:</strong> {{member.major}}</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> {{member.hometown}}</p>
+                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> {{member.major}}</p>
                 </div>
               </div>
               <b-img-lazy :src="member.image" :blank-src="require('../assets/About/placeholder.png')"
               offset="700" v-else v-bind:alt="member.name"/>
             </transition>
-            <p class="name" style="font-size: 2rem;">{{member.name}}</p>
-            <p class="role" style="font-size: 1.5rem;">{{member.role}}</p>
+            <p class="name" style="font-size: 2rem; font-family: IKEABold;">{{member.name}}</p>
+            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">{{member.role}}</p>
             <br /><br />
           </b-col>
         </b-row>
