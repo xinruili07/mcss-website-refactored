@@ -20,7 +20,7 @@
           <br /><br />
           We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold; color: #be0819; padding: 0 !important; margin-left: 2px;">Click here to check out our sponsors map!</button>
           <br /><br />
-          Get yours today for only $3 by clicking on "Purchase our Card" on our navigation bar.
+          Get yours today for only <b>$2.99</b> by clicking on <b>"Purchase our Card"</b> on our navigation bar.
         </p>
       </div>
     </div>
@@ -215,6 +215,9 @@ export default {
 </script>
 
 <style scoped>
+b {
+  font-size: 1.8rem;
+}
 .checkout-button-redirect {
   margin: auto;
   display: block;

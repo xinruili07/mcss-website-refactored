@@ -62,6 +62,7 @@
             </transition>
             <p class="name" style="font-size: 2rem; font-family: IKEABold;">Amy Li</p>
             <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Co-President</p>
+            <br /><br />
           </b-col>
           <b-col sm="12" md="6" class="avatar" v-on:click="toggleAnnie()">
             <transition name="flip">
@@ -96,6 +97,7 @@
             </transition>
             <p class="name" style="font-size: 2rem; font-family: IKEABold;">Owen Bai</p>
             <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Senior Advisor</p>
+            <br /><br />
           </b-col>
           <b-col sm="12" md="6" class="avatar" v-on:click="toggleEmily()">
             <transition name="flip">

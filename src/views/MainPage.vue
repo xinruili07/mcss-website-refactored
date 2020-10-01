@@ -60,9 +60,9 @@ export default {
       loading: false,
       mode: "payment",
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
-      lineItems: [{price: 'price_1HQxYcAkAUwp58LUT89Ccd4u', quantity: 1}],
-      successUrl: 'https://mcss.ca/#/success',
-      cancelUrl: 'https://mcss.ca/#/main',
+      lineItems: [{price: process.env.VUE_APP_LINE_ITEM, quantity: 1}],
+      successUrl: process.env.SUCCESS_URL,
+      cancelUrl: process.env.CANCEL_URL,
     };
   },
   methods: {
@@ -132,6 +132,11 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 992px) {
+  .checkout-button-redirect {
+    margin-top: 5px;
+  }
+}
 .checkout-button-redirect {
   font-family: IKEABold;
   width: 25rem;
@@ -146,13 +151,9 @@ export default {
   transition: all 0.3s ease-out;
 }
 .checkout-button-redirect:hover {
-  transform: translateY(-0.4rem);
-  font-weight: 600;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
-  background: #be0819;
-  color: white;
 }
 .navbar {
   width: 100vw;

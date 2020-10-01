@@ -32,13 +32,35 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .home {
+    background-attachment: fixed !important;
+    z-index: -1;
+    height: 90vh;
+    position: fixed;
     background-position: -40rem;
+    background-image: linear-gradient(
+      to left bottom,
+      rgba(190, 8, 51, 1),
+      rgba(190, 8, 25, 0.7)
+    );
+  }
+  .home-intro-title {
+    font-size: 2.5rem;
   }
 }
 
 @media screen and (min-width: 600px) {
   .home {
     background-position: 0 0;
+    height: 100vh;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(190, 8, 51, 0.4),
+      rgba(190, 8, 25, 0.4)
+    ),
+    url(../assets/home.jpg);
+  }
+  .home-intro-title {
+      font-size: 5rem;
   }
 }
 
@@ -47,13 +69,6 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(190, 8, 51, 0.4),
-      rgba(190, 8, 25, 0.4)
-    ),
-    url(../assets/home.jpg);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -73,7 +88,6 @@ export default {
       font-family: IKEABold;
       width: 85vw;
       text-align: center;
-      font-size: 5rem;
       color: aliceblue;
       font-weight: 600;
       letter-spacing: 0.8rem;

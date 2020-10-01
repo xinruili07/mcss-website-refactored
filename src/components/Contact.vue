@@ -197,7 +197,12 @@ h2{
     text-align: center;
     margin-top: 3vw;
     border-radius: 5px;
-    background-color: rgba(190, 8, 25, 0.7);
+    border:2px solid rgba(190, 8, 25, 0.7);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(190, 8, 51, 0.1),
+      rgba(190, 8, 25, 0.1)
+    );
   }
   .social-btns .btn {
     display: inline-block;
