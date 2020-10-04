@@ -35,16 +35,6 @@ export default {
       height: 1px;
   }
 
-  .event1 img{
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 80%;
-    height: auto;
-    background-image: url(../assets/sky-background.jpg);
-  }
   @media screen and (min-width: 1000px) {
     .event2 img{
         border-radius: 7px;

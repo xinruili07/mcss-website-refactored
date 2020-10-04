@@ -3,7 +3,7 @@
     <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">UPCOMING <span style="font-size: 30px; color: #be0819;">EVENTS</span></h1>
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="farewellToggle = !farewellToggle">
-      <b-img-lazy :src="require('../assets/welcome-party.jpg')" :class="{toggled: farewellToggle}" alt="MCSS Welcome Party" style="border-radius: 7px;" />
+      <b-img-lazy :src="require('../assets/Events/welcome-party.jpg')" :class="{toggled: farewellToggle}" alt="MCSS Welcome Party" style="border-radius: 7px;" />
         <a class="event-redirect" v-if="farewellToggle" href="https://www.facebook.com/events/728987484314861" target="_blank">
           <div class="middle">
             <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
@@ -42,25 +42,25 @@ export default {
           title: 'Farewell My Concubine',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/farewell.jpg')
+          image: require('../assets/Events/farewell.jpg')
         },
         {
           title: 'Sogaeting',
           content: 'Second Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/sogaeting.jpg')
+          image: require('../assets/Events/sogaeting.jpg')
         },
         {
           title: 'Ski Trip',
           content: 'Third Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/ski-trip-2020.png')
+          image: require('../assets/Events/ski-trip-2020.png')
         },
         {
           title: 'Casino Night',
           content: 'Fourth Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/casino-night-2019.jpg')
+          image: require('../assets/Events/casino-night-2019.jpg')
         },
       ]
     }
@@ -156,7 +156,6 @@ export default {
     display: block;
     width: 80%;
     height: auto;
-    background-image: url(../assets/sky-background.jpg);
   }
   .event2 {
     width: 80%;
@@ -198,7 +197,6 @@ export default {
     display: block;
     width: 90%;
     height: auto;
-    background-image: url(../assets/sky-background.jpg);
   }
   .check-it-out {
     font-family: IKEABold;

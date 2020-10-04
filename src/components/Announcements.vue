@@ -22,12 +22,12 @@
     <hr class="hr2">
     <h1>FALL 2020 <br><span>NEW RECRUITS</span></h1>
     <hr class="hr1">
-    <div class="event2"><b-img-lazy :src="require('../assets/Welcome Post 2020 Fall.png')" alt="New Recruit Fall 2020" style="border-radius: 7px;" /></div>
+    <div class="event2"><b-img-lazy :src="require('../assets/Announcements/Welcome Post 2020 Fall.png')" alt="New Recruit Fall 2020" style="border-radius: 7px;" /></div>
     
     <hr class="hr2">
     <h1>WINTER 2020 <br><span>NEW RECRUITS</span></h1>
     <hr class="hr1">
-    <div class="event2"><b-img-lazy :src="require('../assets/About/New Recruits Winter 2020.png')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
+    <div class="event2"><b-img-lazy :src="require('../assets/Announcements/New Recruits Winter 2020.png')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
     
     <hr class="hr2">
     <div id="sogaeting"><h1>SOGAETING <br><span> FEB 14 2020</span></h1></div>
@@ -168,17 +168,6 @@ export default {
       background-color: #be0819;
       width: 28%;
       height: 1px;
-  }
-
-  .event1 img{
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 80%;
-    height: auto;
-    background-image: url(../assets/sky-background.jpg);
   }
 
   .event2 img{
