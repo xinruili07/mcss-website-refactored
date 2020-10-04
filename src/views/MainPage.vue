@@ -9,11 +9,11 @@
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto navbar-links">
-            <b-nav-item class="nav-element" @click="gotoAnnouncements">Announcements</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoEvents">Events</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoAbout">About Us</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoSponsors">Sponsors</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoContact">Contact</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoAnnouncements" v-bind:class="{ active: isActive == 'announcements'}">Announcements</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoEvents" v-bind:class="{ active: isActive == 'main-events'}">Events</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoAbout" v-bind:class="{ active: isActive == 'main-about'}">About Us</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoSponsors" v-bind:class="{ active: isActive == 'sponsors'}">Sponsors</b-nav-item>
+            <b-nav-item class="nav-element" @click="gotoContact" v-bind:class="{ active: isActive == 'main-contact'}">Contact</b-nav-item>
             <stripe-checkout
               ref="checkoutRef"
               :pk="publishableKey"
@@ -53,6 +53,7 @@ export default {
   },
   data() {
     return {
+      isActive: "announcements",
       currentComponent: "main-announcements",
       currentPos: 0,
       targetPos: 0,
@@ -77,6 +78,7 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 0;
         this.currentComponent = "main-announcements";
+        this.isActive = "announcements";
       }
     },
     gotoEvents() {
@@ -84,6 +86,7 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 0;
         this.currentComponent = "main-events";
+        this.isActive = "main-events";
       }
     },
     gotoAbout() {
@@ -91,6 +94,7 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 1;
         this.currentComponent = "main-about";
+        this.isActive = "main-about";
       }
     },
     gotoSponsors() {
@@ -98,6 +102,8 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 2;
         this.currentComponent = "main-sponsors";
+        this.isActive = "sponsors"
+
       }
     },
     gotoContact() {
@@ -105,6 +111,7 @@ export default {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 3;
         this.currentComponent = "main-contact";
+        this.isActive = "main-contact"
       }
     },
     checkCurrentPos() {
@@ -186,6 +193,10 @@ export default {
   }
   .nav-link:hover {
     opacity: 0.8;
+  }
+
+  .navbar-links .active a{
+    color: black !important;
   }
 }
 </style>
