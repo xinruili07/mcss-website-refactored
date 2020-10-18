@@ -20,6 +20,19 @@
       </div>
     </div>
     <hr class="hr2">-->
+
+    <h1>OUR <span>HALLOWEEN</span> EVENT <span>IS HERE!</span></h1>
+    <hr class="hr1">
+    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
+      <b-img-lazy :src="require('../assets/Events/halloween2020.jpg')" :class="{toggled: toggle}" alt="A Nightmare on Discord Street" style="border-radius: 7px;" />
+        <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
+          <div class="middle">
+            <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
+          </div>
+        </a>
+    </div>
+    <hr class="hr2">
+
     <h1>FALL 2020 <br><span>NEW RECRUITS</span></h1>
     <hr class="hr1">
     <div class="event2"><b-img-lazy :src="require('../assets/Announcements/Welcome Post 2020 Fall.png')" alt="New Recruit Fall 2020" style="border-radius: 7px;" /></div>
@@ -32,7 +45,7 @@
     <hr class="hr2">
     <div id="sogaeting"><h1>SOGAETING <br><span> FEB 14 2020</span></h1></div>
     <hr class="hr1">
-    <div style="width: 80%; margin-right: auto; margin-left: auto; display: block;">
+    <div class="slideshow-container">
       <vueper-slides lazy lazy-load-on-drag :slide-ratio="485 / 728" slide-image-inside :touchable="false">
         <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
           <template v-slot:loader>
@@ -55,6 +68,7 @@ export default {
   components: { VueperSlides, VueperSlide },
   data() {
     return {
+      toggle: false,
       slides: [
         {
           title: 'Sogaeting 1',
@@ -93,14 +107,59 @@ export default {
 </script>
 
 <style scoped>
-  .vueperslide__image {
-    border-radius: 7px;
-  }
   b {
   font-size: 1.8rem;
   }
 
-  @media screen and (max-width: 840px) {
+  .check-it-out {
+    font-size: 3rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    background-color: white;
+    border:0.1em solid #000000;
+    border-radius:2rem;
+    padding:0.46em 1.6em;
+    transition: all 0.5s;
+    color: #be0819;
+  }
+
+  .check-it-out:hover {
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    background: #be0819;
+    color: white;
+  }
+
+  .toggled {
+    opacity: 0.4;
+    transition: all 0.15s;
+  }
+
+  .upcoming {
+    cursor: pointer;
+  }
+
+  .event-container {
+    position: relative;
+  }
+
+  .vueperslide, .vueperslide__image {
+    border-radius: 7px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .slideshow-container {
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+
     .intro-container-2 {
       display: flex;
       flex-direction: column;
@@ -116,51 +175,83 @@ export default {
       height: auto;
     }
     .events h1 {
-      text-align: center; 
-      font-size: 20px; 
+      text-align: center;
+      font-size: 20px;
       font-family: IKEABold;
     }
+
+    .event2 {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .events span {
       font-size: 20px; 
       color: #be0819;
     }
     .card-text {
-      margin-right: 10%; 
-      margin-left: 10%; 
-      margin-top: 5%; 
+      margin-right: 10%;
+      margin-left: 10%;
+      margin-top: 5%;
       margin-bottom: 5%;
-      font-family: Proxima; 
-      font-size: 1.8rem; 
+      font-family: Proxima;
+      font-size: 1.8rem;
       text-align: justify;
     }
+
+    .check-it-out {
+      font-family: IKEABold;
+      font-size: 1.5rem;
+    }
   }
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 1000px) {
+    .slideshow-container {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+
     .intro-container-2 {
       display: flex;
       flex-wrap: nowrap;
-    }
-
-    .intro-img {
-      margin-left: 7vw;
+      width: 80%;
+      margin: auto;
     }
 
     .events h1 {
-      text-align: center; 
-      font-size: 30px; 
+      text-align: center;
+      font-size: 30px;
       font-family: IKEABold;
     }
     .events span {
-      font-size: 30px; 
+      font-size: 30px;
       color: #be0819;
     }
+
+    .event2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .card-text {
-      margin-right: 10%; 
-      margin-left: 10%; 
-      margin-top: 2%; 
+      margin-left: 10%;
+      margin-top: 2%;
       margin-bottom: 2%;
-      font-family: Proxima; 
-      font-size: 1.8rem; 
+      font-family: Proxima;
+      font-size: 1.8rem;
       text-align: justify;
+    }
+
+    .check-it-out {
+      font-family: IKEABold;
+      font-size: 3rem;
+    }
+
+    .tutorial-btn {
+      margin-left: 10%;
     }
   }
 
@@ -173,11 +264,7 @@ export default {
   .event2 img{
     border-radius: 7px;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 80%;
-    height: auto;
+    width: 100%;
   }
 
   .hr2 {
@@ -189,29 +276,30 @@ export default {
   }
 
   .tutorial-btn {
-      font-family: IKEABold;
-      width: 25rem;
-      height: 5rem;
-      padding: 10px 15px;
-      background: #be0819;
-      color: white;
-      border: none;
-      border-radius: 2rem;
-      outline: none;
-      font-size: 1.8rem;
-      letter-spacing: 0.1rem;
-      transition: all 0.3s ease-out;
-      margin-top: 20px;
+    font-family: IKEABold;
+    width: 25rem;
+    height: 5rem;
+    padding: 10px 15px;
+    background: #be0819;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease-out;
+    margin-top: 20px;
   }
+
   .tutorial-btn:hover {
-      transform: translateY(-0.4rem);
-      font-weight: 600;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      cursor: pointer;
-      background: #be0819;
-      color: white;
-      text-decoration: none;
-    }
+    transform: translateY(-0.4rem);
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    background: #be0819;
+    color: white;
+    text-decoration: none;
+  }
 
 </style>

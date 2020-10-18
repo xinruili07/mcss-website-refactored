@@ -2,9 +2,9 @@
   <div class="events">
     <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">UPCOMING <span style="font-size: 30px; color: #be0819;">EVENTS</span></h1>
     <hr class="hr1">
-    <div class="event-container event2 upcoming" v-on:click="farewellToggle = !farewellToggle">
-      <b-img-lazy :src="require('../assets/Events/welcome-party.jpg')" :class="{toggled: farewellToggle}" alt="MCSS Welcome Party" style="border-radius: 7px;" />
-        <a class="event-redirect" v-if="farewellToggle" href="https://www.facebook.com/events/728987484314861" target="_blank">
+    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
+      <b-img-lazy :src="require('../assets/Events/halloween2020.jpg')" :class="{toggled: toggle}" alt="A Nightmare on Discord Street" style="border-radius: 7px;" />
+        <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
           <div class="middle">
             <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
           </div>
@@ -36,8 +36,14 @@ export default {
   components: { VueperSlides, VueperSlide },
   data() {
     return {
-      farewellToggle: false,
+      toggle: false,
       slides: [
+        {
+          title: 'MCSS Welcome Party',
+          content: 'First Picture',
+          // You can also provide a URL for the image.
+          image: require('../assets/Events/welcome-party.png')
+        },
         {
           title: 'Farewell My Concubine',
           content: 'First Picture',
@@ -74,6 +80,10 @@ export default {
 </script>
 
 <style scoped>
+  .vueperslide, .vueperslide__image {
+    border-radius: 7px;
+  }
+
   .check-it-out {
     font-size: 3rem;
     position: absolute;
@@ -141,7 +151,7 @@ export default {
     position: relative;
   }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 840px) {
   .slideshow-container {
     width: 80%; 
     margin-right: auto; 
@@ -177,7 +187,7 @@ export default {
   }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:840px) {
   .slideshow-container {
     width: 90%; 
     margin-right: auto; 
