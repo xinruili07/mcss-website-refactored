@@ -1,5 +1,6 @@
 <template>
   <div class="events">
+    <!--
     <h1>OUR MEMBERSHIP CARD <span>IS HERE!</span></h1>
     <hr class="hr1">
     <div class="intro-container-2">
@@ -18,8 +19,7 @@
         <a href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf" class="tutorial-btn" target="_blank">Go to Tutorial</a>
       </div>
     </div>
-    
-    <hr class="hr2">
+    <hr class="hr2">-->
     <h1>FALL 2020 <br><span>NEW RECRUITS</span></h1>
     <hr class="hr1">
     <div class="event2"><b-img-lazy :src="require('../assets/Announcements/Welcome Post 2020 Fall.png')" alt="New Recruit Fall 2020" style="border-radius: 7px;" /></div>

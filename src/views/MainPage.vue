@@ -14,7 +14,7 @@
             <b-nav-item class="nav-element" @click="gotoAbout" v-bind:class="{ active: isActive == 'main-about'}">About Us</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoSponsors" v-bind:class="{ active: isActive == 'sponsors'}">Sponsors</b-nav-item>
             <b-nav-item class="nav-element" @click="gotoContact" v-bind:class="{ active: isActive == 'main-contact'}">Contact</b-nav-item>
-            <stripe-checkout
+            <!--<stripe-checkout
               ref="checkoutRef"
               :pk="publishableKey"
               :lineItems="lineItems"
@@ -25,7 +25,7 @@
               <template slot="checkout-button">
                 <button class="checkout-button-redirect" @click="checkout">Purchase our Card</button>
               </template>
-            </stripe-checkout>
+            </stripe-checkout>-->
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -59,17 +59,21 @@ export default {
       targetPos: 0,
       transitionName: "",
       loading: false,
+      /*
       mode: "payment",
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
       lineItems: [{price: process.env.VUE_APP_LINE_ITEM, quantity: 1}],
       successUrl: process.env.SUCCESS_URL,
       cancelUrl: process.env.CANCEL_URL,
+      */
     };
   },
   methods: {
+    /*
     checkout () {
       this.$refs.checkoutRef.redirectToCheckout();
     },
+    */
     gotoHome() {
       this.$router.push("/");
     },
