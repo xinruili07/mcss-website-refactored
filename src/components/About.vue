@@ -5,7 +5,7 @@
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 class="about-us" style="text-align: center; font-size: 30px; font-family: IKEABold;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem; text-align: justify;">MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
+        <p>MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
           organization in Eastern Canada. With over <strong style="font-family: Proxima; font-size: 1.5rem;">15 events per year and 40 years of history</strong>, we provide 
           a variety of events to our <strong style="font-family: Proxima; font-size: 1.5rem;">over 1,500 active members</strong> and help our members succeed in school and life. 
           Our short-term goal is to provide our students with valuable events to make their student life more 
@@ -26,7 +26,7 @@
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p style="margin-right: 10%; margin-left: 10%; margin-top: 2%; font-family: Proxima; font-size: 1.5rem; text-align: justify;">MCSS has had a long and storied history of amazing 
+        <p>MCSS has had a long and storied history of amazing 
           events, from <strong style="font-family: Proxima; font-size: 1.5rem;">our annual Ski and New York Trips, to Be There or Be Square and 
           hosting Wong Fu Productions.</strong>
           <br /><br /> 
@@ -433,6 +433,15 @@ export default {
     font-weight: bold;
   }
   @media screen and (min-width: 840px) {
+    .intro-container-1 p, .intro-container-2 p {
+      margin-right: 10%;
+      margin-left: 10%;
+      margin-top: 2%;
+      font-family: Proxima;
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+
     .intro-container-1 {
       display: flex;
       flex-wrap: nowrap;
@@ -478,6 +487,15 @@ export default {
     }
   }
   @media screen and (max-width: 840px) {
+    .intro-container-1 p, .intro-container-2 p {
+      margin-right: 5%;
+      margin-left: 5%;
+      margin-top: 2%;
+      font-family: Proxima;
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+
     .intro-container-1 {
       display: flex;
       flex-direction: column;
