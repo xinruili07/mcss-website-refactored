@@ -118,23 +118,16 @@ h2{
     font-size: 25px;
   }
 
+  .social-btns a {
+    margin: 0 10px;
+  }
+
   .social-btns .btn:hover .fa:hover {
     color: #be0819;
   }
 }
+
 @media screen and (min-width: 840px) {
-  .intro-container-1 {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-left: 7vw;
-  }
-
-  .intro-container-2 {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-right: 7vw;
-  }
-
   .social-btns .btn,
   .social-btns .btn:before,
   .social-btns .btn .fa {
@@ -230,7 +223,21 @@ h2{
     font-size: 38px;
   }
 }
-@media screen and (max-width: 840px) {
+
+@media screen and (min-width: 1100px) {
+  .intro-container-1 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 7vw;
+  }
+
+  .intro-container-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 7vw;
+  }
+}
+@media screen and (max-width: 1100px) {
   .intro-container-1 {
     display: flex;
     flex-direction: column;
@@ -254,7 +261,7 @@ h2{
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 840px) {
   h2 {
     font-size: 25px;
   }
