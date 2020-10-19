@@ -1,14 +1,21 @@
 <template>
-  <div class="events">
-    <h1 style="text-align: center; font-size: 30px; font-family: IKEABold; margin-top: 50px;">THANK YOU <br/><span style="font-size: 30px; color: #be0819;">FOR YOUR PURCHASE</span></h1>
+  <div class="events centered">
+    <h1>THANK YOU <br/><span>FOR YOUR PURCHASE</span></h1>
     <hr class="hr1">
-    <div class="event2"><b-img-lazy :src="require('../assets/card2020.png')" alt="2020 Membership Card" style="border-radius: 7px;" /></div>
-    
-    <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
-        <p class="instructions" style=" margin-top: 2%; font-family: Proxima; font-size: 2rem; text-align: justify;">With our MCSS Membership card, 
+    <div class="event2">
+      <b-img-lazy
+        :src="require('../assets/card2020.png')"
+        alt="2020 Membership Card"
+        style="border-radius: 7px;"
+      />
+    </div>
+
+    <div class="centered">
+        <p class="instructions">With our MCSS Membership card,
           you can now get numerous discounts at various restaurants and stores across the city!
-          You should receive an email with the next steps for activating your membership card within a few minutes.
-          <br /><br /> 
+          You should receive an email with the next steps for activating
+          your membership card within a few minutes.
+          <br /><br />
         </p>
     </div>
     <button class="home-intro-btn" @click="gotoMain">Back to Home</button>
@@ -21,13 +28,42 @@ export default {
   name: 'success',
   methods: {
     gotoMain() {
-      this.$router.push("/main");
-    }
-  }
+      this.$router.push('/home');
+    },
+  },
 };
 </script>
 
 <style scoped>
+  .events {
+    margin-top: 50px;
+  }
+
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+
+  p.instructions {
+    margin-top: 2%;
+    font-family: Proxima;
+    font-size: 2rem;
+    text-align: justify;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: IKEABold;
+  }
+
+  h1 span {
+    font-size: 30px;
+    font-family: IKEABold;
+    color: #be0819;
+  }
 
   .hr1{
       background-color: #be0819;
@@ -46,7 +82,7 @@ export default {
         height: auto;
     }
     .instructions {
-      margin-right: 30%; 
+      margin-right: 30%;
       margin-left: 30%;
   }
   }
@@ -62,7 +98,7 @@ export default {
         height: auto;
     }
     .instructions {
-      margin-right: 20%; 
+      margin-right: 20%;
       margin-left: 20%;
     }
   }
@@ -78,7 +114,7 @@ export default {
         height: auto;
     }
     .instructions {
-      margin-right: 10%; 
+      margin-right: 10%;
       margin-left: 10%;
   }
   }

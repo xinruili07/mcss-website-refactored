@@ -12,12 +12,12 @@
 // @ is an alias to /src
 
 export default {
-  name: "home",
+  name: 'home',
   methods: {
     gotoMain() {
-      this.$router.push("/home");
-    }
-  }
+      this.$router.push('/home');
+    },
+  },
 };
 </script>
 

@@ -3,19 +3,36 @@
     <h1>OUR MEMBERSHIP CARD <span>IS HERE!</span></h1>
     <hr class="hr1">
     <div class="intro-container-2">
-      <div class="intro-img"><b-img-lazy :src="require('../assets/card2020.png')" alt="Group Picture!" width=542 height=330 style="border-radius: 7px;" class="group-pic" /></div>
-      <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
+      <div class="intro-img">
+        <b-img-lazy
+          :src="require('../assets/card2020.png')"
+          alt="Group Picture!"
+          width=542
+          height=330
+          style="border-radius: 7px;"
+          class="group-pic"
+        />
+      </div>
+      <div class="centered">
         <p class="card-text">
-          With our MCSS Membership card, students can get numerous discounts 
+          With our MCSS Membership card, students can get numerous discounts
           at various restaurants and stores across the city.
-          Get yours today for only <b>$2.99</b> by clicking on <b>"Purchase our Card"</b> on our navigation bar.
+          Get yours today for only <b>$2.99</b> by clicking on
+          <b>"Purchase our Card"</b> on our navigation bar.
           <br /><br />
-          After your purchase, you should receive an email containing the activation code. Make sure to 
-          check your spam folder if it doesn't arrive in your inbox.
+          After your purchase, you should receive an email containing the activation code.
+          Make sure to check your spam folder if it doesn't arrive in your inbox.
           <br /><br />
-          Once you have your activation code, please follow our tutorial to activate your membership card:
+          Once you have your activation code, please follow our tutorial
+          to activate your membership card:
         </p>
-        <a href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf" class="tutorial-btn" target="_blank">Go to Tutorial</a>
+        <a
+          href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf"
+          class="tutorial-btn"
+          target="_blank"
+        >
+          Go to Tutorial
+        </a>
       </div>
     </div>
     <hr class="hr2">
@@ -23,29 +40,49 @@
     <h1>OUR <span>HALLOWEEN</span> EVENT <span>IS HERE!</span></h1>
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
-      <b-img-lazy :src="require('../assets/Events/halloween2020.jpg')" :class="{toggled: toggle}" alt="A Nightmare on Discord Street" style="border-radius: 7px;" />
-        <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
-          <div class="middle">
-            <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
-          </div>
-        </a>
+      <b-img-lazy
+        :src="require('../assets/Events/halloween2020.jpg')"
+        :class="{toggled: toggle}"
+        alt="A Nightmare on Discord Street"
+        style="border-radius: 7px;"
+      />
+      <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
+        <div class="middle">
+          <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
+        </div>
+      </a>
     </div>
     <hr class="hr2">
 
     <h1>FALL 2020 <br><span>NEW RECRUITS</span></h1>
     <hr class="hr1">
-    <div class="event2"><b-img-lazy :src="require('../assets/Announcements/Welcome Post 2020 Fall.png')" alt="New Recruit Fall 2020" style="border-radius: 7px;" /></div>
-    
+    <div class="event2">
+      <b-img-lazy
+        :src="require('../assets/Announcements/Welcome Post 2020 Fall.png')"
+        alt="New Recruit Fall 2020"
+        style="border-radius: 7px;"
+      />
+    </div>
+
     <hr class="hr2">
     <h1>WINTER 2020 <br><span>NEW RECRUITS</span></h1>
     <hr class="hr1">
-    <div class="event2"><b-img-lazy :src="require('../assets/Announcements/New Recruits Winter 2020.png')" alt="New Recruit Winter 2020" style="border-radius: 7px;" /></div>
-    
+    <div class="event2">
+      <b-img-lazy
+        :src="require('../assets/Announcements/New Recruits Winter 2020.png')"
+        alt="New Recruit Winter 2020"
+        style="border-radius: 7px;"
+      />
+    </div>
+
     <hr class="hr2">
     <div id="sogaeting"><h1>SOGAETING <br><span> FEB 14 2020</span></h1></div>
     <hr class="hr1">
     <div class="slideshow-container">
-      <vueper-slides lazy lazy-load-on-drag :slide-ratio="485 / 728" slide-image-inside :touchable="false">
+      <vueper-slides lazy lazy-load-on-drag slide-image-inside
+        :slide-ratio="485 / 728"
+        :touchable="false"
+      >
         <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
           <template v-slot:loader>
             <i class="icon icon-loader spinning"></i>
@@ -59,8 +96,8 @@
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import { VueperSlides, VueperSlide } from 'vueperslides';
+import 'vueperslides/dist/vueperslides.css';
 
 export default {
   name: 'announcements',
@@ -73,39 +110,52 @@ export default {
           title: 'Sogaeting 1',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic1.jpg')
+          image: require('../assets/Sogaeting/pic1.jpg'),
         },
         {
           title: 'Sogaeting 2',
           content: 'Second Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic2.jpg')
+          image: require('../assets/Sogaeting/pic2.jpg'),
         },
         {
           title: 'Sogaeting 3',
           content: 'Third Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic3.jpg')
+          image: require('../assets/Sogaeting/pic3.jpg'),
         },
         {
           title: 'Sogaeting 4',
           content: 'Fourth Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic4.jpg')
+          image: require('../assets/Sogaeting/pic4.jpg'),
         },
         {
           title: 'Sogaeting 5',
           content: 'Fifth Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic5.jpg')
+          image: require('../assets/Sogaeting/pic5.jpg'),
         },
-      ]
-    }
-  }
+      ],
+    };
+  },
 };
 </script>
 
 <style scoped>
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .intro-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   b {
   font-size: 1.8rem;
   }
@@ -241,7 +291,7 @@ export default {
     .card-text {
       margin-left: 10%;
       margin-top: 2%;
-      margin-bottom: 2%;
+      margin-bottom: 5%;
       font-family: Proxima;
       font-size: 1.8rem;
       text-align: justify;
