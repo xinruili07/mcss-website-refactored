@@ -15,7 +15,7 @@
       </div>
       <div class="intro-text" style="margin-left: auto; margin-right: auto; display: block; text-align: justify;">
         <h1 style="text-align: center; font-size: 30px; color: #be0819; font-family: IKEABold;">MCSS <span style="font-size: 30px; color: black;">2020-2021</span> MEMBERSHIP CARD</h1>
-        <hr class="hr2">
+        <hr class="hr1">
         <p>With our MCSS Membership card, students can get numerous discounts at various restaurants and stores across the city.
           We take pride in bringing our members the best deals and benefits with our annually updated list of participating sponsors.<button class="scroller-btn" v-on:click="myFunction()" style="border: none; background-color: transparent; font-weight: bold; color: #be0819; padding: 0 !important; margin-left: 2px;">Click here to check out our sponsors map!</button>
           <br /><br />

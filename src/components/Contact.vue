@@ -4,7 +4,7 @@
       <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.png')" alt="recruitment" width=300 height=300 style="border-radius: 7px;" /></div>
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center; margin-top: 3vw;">
         <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">WANT TO KNOW MORE<span style="font-size: 30px; color: #be0819; font-weight: bold;"> ABOUT MCSS?</span></h1>
-        <hr class="hr2">
+        <hr class="hr1">
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: black; font-family: Proxima;">Looking for more awesome events?</span></h1>
         <h1 style="text-align: center; font-size: 30px;"><span style="font-size: 20px; color: black; font-family: Proxima;">Make sure to follow us on our social medias!</span></h1>
         <modal v-show="isModalVisible" @close="closeModal" />
@@ -66,8 +66,9 @@
 }
 .hr1{
     background-color: #be0819;
-    width: 30%;
+    width: 50%;
     height: 1px;
+    margin-bottom: 4%;
 }
 h2{
   background-color: #0c5fa8;
@@ -184,13 +185,15 @@ h2{
             transform: scale(1);
   }
   .social-btns {
+    margin-right: auto;
+    margin-left: auto;
     height: 90px;
     font-size: 0;
     padding-top: 7px;
     text-align: center;
     margin-top: 3vw;
-    border-radius: 5px;
-    border:2px solid rgba(190, 8, 25, 0.7);
+    border-radius: 30px;
+    width: 90%;
     background-image: linear-gradient(
       to right bottom,
       rgba(190, 8, 51, 0.1),

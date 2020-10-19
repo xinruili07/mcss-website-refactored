@@ -175,8 +175,10 @@ export default {
     }
     .events h1 {
       text-align: center;
-      font-size: 20px;
+      font-size: 25px;
       font-family: IKEABold;
+      margin-left: 5%;
+      margin-right: 5%;
     }
 
     .event2 {
@@ -186,7 +188,7 @@ export default {
     }
 
     .events span {
-      font-size: 20px; 
+      font-size: 25px;
       color: #be0819;
     }
     .card-text {
@@ -217,6 +219,7 @@ export default {
       flex-wrap: nowrap;
       width: 80%;
       margin: auto;
+      margin-top: 2%;
     }
 
     .events h1 {
