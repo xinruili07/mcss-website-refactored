@@ -5,7 +5,7 @@
     <div class="intro-container-2">
       <div class="intro-img">
         <b-img-lazy
-          :src="require('../assets/card2020.png')"
+          src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139752/MCSS/card2020_ap1nc4.png"
           alt="Group Picture!"
           width=542
           height=330
@@ -41,7 +41,7 @@
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
       <b-img-lazy
-        :src="require('../assets/Events/halloween2020.jpg')"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/halloween2020_t5u5cm.jpg"
         :class="{toggled: toggle}"
         alt="A Nightmare on Discord Street"
         style="border-radius: 7px;"
@@ -58,7 +58,7 @@
     <hr class="hr1">
     <div class="event2">
       <b-img-lazy
-        :src="require('../assets/Announcements/Welcome Post 2020 Fall.png')"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139984/MCSS/Announcements/Welcome_Post_2020_Fall_s9g8ct.png"
         alt="New Recruit Fall 2020"
         style="border-radius: 7px;"
       />
@@ -69,7 +69,7 @@
     <hr class="hr1">
     <div class="event2">
       <b-img-lazy
-        :src="require('../assets/Announcements/New Recruits Winter 2020.png')"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139984/MCSS/Announcements/New_Recruits_Winter_2020_kmacju.png"
         alt="New Recruit Winter 2020"
         style="border-radius: 7px;"
       />
@@ -110,31 +110,31 @@ export default {
           title: 'Sogaeting 1',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic1.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140042/MCSS/Events/Sogaeting/pic1_f2atg4.jpg',
         },
         {
           title: 'Sogaeting 2',
           content: 'Second Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic2.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/v1603140041/MCSS/Events/Sogaeting/pic3_srnpsm.jpg',
         },
         {
           title: 'Sogaeting 3',
           content: 'Third Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic3.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/v1603140040/MCSS/Events/Sogaeting/pic2_kinssy.jpg',
         },
         {
           title: 'Sogaeting 4',
           content: 'Fourth Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic4.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/v1603140041/MCSS/Events/Sogaeting/pic4_oyqkts.jpg',
         },
         {
           title: 'Sogaeting 5',
           content: 'Fifth Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Sogaeting/pic5.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/v1603140040/MCSS/Events/Sogaeting/pic5_ujt3a2.jpg',
         },
       ],
     };

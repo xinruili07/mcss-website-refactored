@@ -4,7 +4,7 @@
     <hr class="hr1">
     <div class="event2">
       <b-img-lazy
-        :src="require('../assets/card2020.png')"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139752/MCSS/card2020_ap1nc4.png"
         alt="2020 Membership Card"
         style="border-radius: 7px;"
       />

@@ -3,7 +3,7 @@
     <div class="intro-container-1">
       <div class="intro-img">
         <b-img-lazy
-          :src="require('../assets/About/recruiting.png')"
+          src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139816/MCSS/About/recruiting_zt7mob.png"
           alt="recruitment"
           width=300
           height=300
@@ -56,7 +56,7 @@
       </div>
       <div class="intro-img">
         <b-img-lazy
-          :src="require('../assets/About/group-pic.jpg')"
+          src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139816/MCSS/About/group-pic_jfk8ol.jpg"
           alt="Group Picture!"
           width=466
           height=300
@@ -83,8 +83,8 @@
                 </div>
               </div>
               <b-img-lazy
-                :src="require('../assets/Members/amy.jpg')"
-                :blank-src="require('../assets/About/placeholder.png')"
+                src="https://res.cloudinary.com/die52atcc/image/upload/v1603139840/MCSS/Members/amy_v1ody6.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/v1603139815/MCSS/About/placeholder_wox9nt.png"
                 alt="Co-President"
               />
             </transition>
@@ -101,8 +101,8 @@
                 </div>
               </div>
               <b-img-lazy
-                :src="require('../assets/Members/annie.jpg')"
-                :blank-src="require('../assets/About/placeholder.png')"
+                src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139841/MCSS/Members/annie_tcpezu.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
                 alt="Co-President"
               />
             </transition>
@@ -124,8 +124,8 @@
                 </div>
               </div>
               <b-img-lazy
-                :src="require('../assets/Members/owen.jpg')"
-                :blank-src="require('../assets/About/placeholder.png')"
+                src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139844/MCSS/Members/owen_kyhydw.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
                 alt="Senior Advisor"
               />
             </transition>
@@ -142,8 +142,8 @@
                 </div>
               </div>
               <b-img-lazy
-                :src="require('../assets/Members/emily_z.jpg')"
-                :blank-src="require('../assets/About/placeholder.png')"
+                src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139841/MCSS/Members/emily_z_irrh4y.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
                 alt="Senior Advisor"
               />
             </transition>
@@ -170,7 +170,7 @@
               </div>
               <b-img-lazy
                 :src="member.image"
-                :blank-src="require('../assets/About/placeholder.png')"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
                 offset="700"
                 v-else
                 v-bind:alt="member.name"
@@ -219,7 +219,7 @@ export default {
           name: 'Danielle Zhu',
           id: 'danielle',
           role: 'VP Internal',
-          image: require('../assets/Members/danielle.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139840/MCSS/Members/danielle_fe5cxn.jpg',
           hometown: 'Montreal QC',
           major: 'U2 Marketing & Digital Innovation',
           flipped: false,
@@ -228,7 +228,7 @@ export default {
           name: 'Jian Qiao He',
           id: 'mike',
           role: 'VP External',
-          image: require('../assets/Members/mike.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139844/MCSS/Members/mike_eptzv7.jpg',
           hometown: 'Montreal QC',
           major: 'U2 Marketing',
           flipped: false,
@@ -237,7 +237,7 @@ export default {
           name: 'Gloria Ma',
           id: 'gloria',
           role: 'VP Internal',
-          image: require('../assets/Members/gloria.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/gloria_frhx9z.jpg',
           hometown: 'Hillsborough, NJ',
           major: 'U2 Biochem',
           flipped: false,
@@ -246,7 +246,7 @@ export default {
           name: 'Xi Ran Chen',
           id: 'xiran',
           role: 'VP Finance',
-          image: require('../assets/Members/xiran.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/xiran_kbjh5c.jpg',
           hometown: 'Montreal, QC',
           major: 'U1 Economics & Accounting',
           flipped: false,
@@ -255,7 +255,7 @@ export default {
           name: 'Melody Zhou',
           id: 'melody',
           role: 'Junior VP Finance',
-          image: require('../assets/Members/melody.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/melody_ghlll9.jpg',
           hometown: 'Boston, MA',
           major: 'U2 Cognitive Science',
           flipped: false,
@@ -264,7 +264,7 @@ export default {
           name: 'Julian Qu',
           id: 'julian',
           role: 'Sponsorship Director',
-          image: require('../assets/Members/julian.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/julian_bmz2km.jpg',
           hometown: 'Vancouver, BC',
           major: 'U1 Civil Engineering',
           flipped: false,
@@ -273,7 +273,7 @@ export default {
           name: 'Karist Ng',
           id: 'karist',
           role: 'Project Manager',
-          image: require('../assets/Members/karist.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/karist_qzggqy.jpg',
           hometown: 'Thailand',
           major: 'U2 Materials Engineering',
           flipped: false,
@@ -282,7 +282,7 @@ export default {
           name: 'Jeremy Leung',
           id: 'jeremy',
           role: 'Project Manager',
-          image: require('../assets/Members/jeremy.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/jeremy_ymbcml.jpg',
           hometown: 'Toronto, ON',
           major: 'U2 Microbiology & Immunology',
           flipped: false,
@@ -291,7 +291,7 @@ export default {
           name: 'Sherry Chen',
           id: 'sherry',
           role: 'Project Manager',
-          image: require('../assets/Members/sherry.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/sherry_lbmxrv.jpg',
           hometown: 'Chengdu, China',
           major: 'U1 Joint Political Science & Psychology',
           flipped: false,
@@ -300,7 +300,7 @@ export default {
           name: 'Chris Gao',
           id: 'chris',
           role: 'VP Communications and Academics',
-          image: require('../assets/Members/chris.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139840/MCSS/Members/chris_q6kb0z.jpg',
           hometown: 'Markham, ON',
           major: 'U1 Psychology',
           flipped: false,
@@ -309,7 +309,7 @@ export default {
           name: 'Dimitri Yang',
           id: 'dimitri',
           role: 'VP Marketing and Communications',
-          image: require('../assets/Members/dimitri.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139842/MCSS/Members/dimitri_sxtgdo.jpg',
           hometown: 'Vancouver, BC',
           major: 'U1 Neuroscience',
           flipped: false,
@@ -318,7 +318,7 @@ export default {
           name: 'YoungRock Han',
           id: 'youngrock',
           role: 'Social Director',
-          image: require('../assets/Members/youngrock.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/youngrock_kc4n6f.jpg',
           hometown: 'Winnipeg, MB',
           major: 'U1 Nursing',
           flipped: false,
@@ -327,7 +327,7 @@ export default {
           name: 'Ivy Chen',
           id: 'ivy',
           role: 'VP Media',
-          image: require('../assets/Members/ivy.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139844/MCSS/Members/ivy_r0jpar.jpg',
           hometown: 'Toronto, ON',
           major: 'U0 Nursing',
           flipped: false,
@@ -336,7 +336,7 @@ export default {
           name: 'Dian Dian Dai',
           id: 'dian',
           role: 'Photographer',
-          image: require('../assets/Members/dian.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139840/MCSS/Members/dian_q3x9cr.jpg',
           hometown: 'Toronto, ON',
           major: 'U1 Computer Science',
           flipped: false,
@@ -345,7 +345,7 @@ export default {
           name: 'Hattie Chen',
           id: 'hattie',
           role: 'Photographer',
-          image: require('../assets/Members/hattie.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/hattie_qblkwf.jpg',
           hometown: 'Montreal, QC',
           major: 'U2 Physical Therapy',
           flipped: false,
@@ -354,7 +354,7 @@ export default {
           name: 'Xinrui Li',
           id: 'xinrui',
           role: 'Webmaster',
-          image: require('../assets/Members/xinrui.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/xinrui_qdiho1.jpg',
           hometown: 'Montreal, QC',
           major: 'U2 Computer Science',
           flipped: false,

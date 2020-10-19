@@ -3,7 +3,7 @@
     <div class="intro-container-1">
       <div class="intro-img">
         <b-img-lazy
-          :src="require('../assets/About/recruiting.png')"
+          src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139816/MCSS/About/recruiting_zt7mob.png"
           alt="recruitment"
           width=300
           height=300

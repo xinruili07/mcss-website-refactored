@@ -3,7 +3,11 @@
     <div class="navbar">
       <b-navbar toggleable="lg" variant="faded">
         <b-navbar-brand @click="gotoHome">
-          <img src="../assets/redlogo.png" alt="redlogo" class="navbar-logo" />
+          <img
+            src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139753/MCSS/redlogo_jpk8nl.png"
+            alt="redlogo"
+            class="navbar-logo"
+          />
         </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>

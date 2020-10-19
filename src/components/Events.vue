@@ -4,7 +4,7 @@
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
       <b-img-lazy
-        :src="require('../assets/Events/halloween2020.jpg')"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/halloween2020_t5u5cm.jpg"
         :class="{toggled: toggle}"
         alt="A Nightmare on Discord Street"
         style="border-radius: 7px;"
@@ -52,31 +52,31 @@ export default {
           title: 'MCSS Welcome Party',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Events/welcome-party.png'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140020/MCSS/Events/welcome-party_r00waq.png',
         },
         {
           title: 'Farewell My Concubine',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Events/farewell.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140021/MCSS/Events/farewell_mvo7k9.jpg',
         },
         {
           title: 'Sogaeting',
           content: 'Second Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Events/sogaeting.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/sogaeting_kqloui.jpg',
         },
         {
           title: 'Ski Trip',
           content: 'Third Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Events/ski-trip-2020.png'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140019/MCSS/Events/ski-trip-2020_qumfgc.png',
         },
         {
           title: 'Casino Night',
           content: 'Fourth Picture',
           // You can also provide a URL for the image.
-          image: require('../assets/Events/casino-night-2019.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140020/MCSS/Events/casino-night-2019_eqk6tm.jpg',
         },
       ],
     };
