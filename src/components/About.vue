@@ -5,17 +5,17 @@
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 class="about-us" style="text-align: center; font-size: 30px; font-family: IKEABold;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p>MCSS, McGill Chinese Students' Society is the largest and most influential cultural student 
-          organization in Eastern Canada. With over <strong style="font-family: Proxima; font-size: 1.5rem;">15 events per year and 40 years of history</strong>, we provide 
-          a variety of events to our <strong style="font-family: Proxima; font-size: 1.5rem;">over 1,500 active members</strong> and help our members succeed in school and life. 
-          Our short-term goal is to provide our students with valuable events to make their student life more 
-          meaningful, while our long-term goal is to motivate and encourage our students to give back to their 
-          community and excel academically by providing them with helpful services including seminars, lessons, 
+        <p>MCSS, McGill Chinese Students' Society is the largest and most influential cultural student
+          organization in Eastern Canada. With over <strong>15 events per year and 40 years of history</strong>, we provide
+          a variety of events to our <strong>over 1,500 active members</strong> and help our members succeed in school and life.
+          Our short-term goal is to provide our students with valuable events to make their student life more
+          meaningful, while our long-term goal is to motivate and encourage our students to give back to their
+          community and excel academically by providing them with helpful services including seminars, lessons,
           and talks.
           <br /><br />
-          MCSS is a non-profit organization registered under the Students' Society of McGill University. 
-          All our proceeds either go to charity or are used to provide our students with more valuable 
-          services. <strong style="font-family: Proxima; font-size: 1.5rem;">Our events range from largescale shows to career planning and information seminars. 
+          MCSS is a non-profit organization registered under the Students' Society of McGill University.
+          All our proceeds either go to charity or are used to provide our students with more valuable
+          services. <strong>Our events range from largescale shows to career planning and information seminars.
           In addition, we organize dinner outings, networking opportunities and parties for our members.</strong>
           </p>
       </div>
@@ -26,15 +26,15 @@
       <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
         <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
         <hr class="hr1">
-        <p>MCSS has had a long and storied history of amazing 
-          events, from <strong style="font-family: Proxima; font-size: 1.5rem;">our annual Ski and New York Trips, to Be There or Be Square and 
+        <p>MCSS has had a long and storied history of amazing
+          events, from <strong>our annual Ski and New York Trips, to Be There or Be Square and
           hosting Wong Fu Productions.</strong>
-          <br /><br /> 
-          With MCSS, you’ll create unforgettable memories, have a blast, and learn a thing or 
+          <br /><br />
+          With MCSS, you’ll create unforgettable memories, have a blast, and learn a thing or
           two about event planning in the process. MCSS is a fun, loving, and close-knit family away from home!
-          <br /><br /> 
-          We accept executives from all around the world; <strong style="font-family: Proxima; font-size: 1.5rem;">you don’t have to be Chinese or even Asian!</strong>
-          <br /><br /> 
+          <br /><br />
+          We accept executives from all around the world; <strong>you don’t have to be Chinese or even Asian!</strong>
+          <br /><br />
           </p>
       </div>
       <div class="intro-img"><b-img-lazy :src="require('../assets/About/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" class="group-pic" /></div>
@@ -321,6 +321,11 @@ export default {
 </script>
 
 <style scoped>
+  .intro-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .card-container {
     display: block;
     margin-right: auto;
@@ -357,7 +362,8 @@ export default {
   }
 
   .flip-enter-active {
-    transition: all 0.1s ease;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
   }
   
   .flip-leave-active {
@@ -365,9 +371,8 @@ export default {
   }
   
   .flip-enter, .flip-leave {
-    transform: rotateY(180deg);
+    transform: rotateY(90deg);
     opacity: 0;
-  
   }
 
   .members{
@@ -438,8 +443,13 @@ export default {
       margin-left: 10%;
       margin-top: 2%;
       font-family: Proxima;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       text-align: justify;
+    }
+
+    .intro-container-1 p strong, .intro-container-2 p strong {
+      font-family: Proxima;
+      font-size: 1.8rem;
     }
 
     .intro-container-1 {
@@ -492,8 +502,13 @@ export default {
       margin-left: 5%;
       margin-top: 2%;
       font-family: Proxima;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       text-align: justify;
+    }
+
+    .intro-container-1 p strong, .intro-container-2 p strong {
+      font-family: Proxima;
+      font-size: 1.8rem;
     }
 
     .intro-container-1 {
