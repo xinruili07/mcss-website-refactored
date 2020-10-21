@@ -10,7 +10,7 @@
 html, body {
   width: auto!important;
   overflow-x: hidden!important
-} 
+}
 #app {
   font-family: Lato, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,7 +1,11 @@
 <template>
   <div class="home">
     <section class="home-intro">
-      <img src="../assets/logo.png" alt="mcss-logo" class="home-intro-logo" />
+      <img
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139753/MCSS/logo_nrklxm.png"
+        alt="mcss-logo"
+        class="home-intro-logo"
+      />
       <div class="home-intro-title">MCGILL CHINESE STUDENTS' SOCIETY</div>
       <button class="home-intro-btn" @click="gotoMain">GET STARTED</button>
     </section>
@@ -12,12 +16,12 @@
 // @ is an alias to /src
 
 export default {
-  name: "home",
+  name: 'home',
   methods: {
     gotoMain() {
-      this.$router.push("/home");
-    }
-  }
+      this.$router.push('/home');
+    },
+  },
 };
 </script>
 
@@ -57,7 +61,7 @@ export default {
       rgba(190, 8, 51, 0.4),
       rgba(190, 8, 25, 0.4)
     ),
-    url(../assets/home.jpg);
+    url('https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139754/MCSS/home_eajd7x.jpg');
   }
   .home-intro-title {
       font-size: 5rem;

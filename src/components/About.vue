@@ -1,47 +1,72 @@
 <template>
   <div class="members">
     <div class="intro-container-1">
-      <div class="intro-img"><b-img-lazy :src="require('../assets/About/recruiting.png')" alt="recruitment" width=300 height=300 style="border-radius: 7px; margin-top: 5%;" /></div>
-      <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
-        <h1 class="about-us" style="text-align: center; font-size: 30px; font-family: IKEABold;">ABOUT <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
+      <div class="intro-img">
+        <b-img-lazy
+          src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139816/MCSS/About/recruiting_zt7mob.png"
+          alt="recruitment"
+          width=300
+          height=300
+          style="border-radius: 7px; margin-top: 5%;"
+        />
+      </div>
+      <div class="centered">
+        <h1 class="about-us">
+          ABOUT <span>MCSS</span>
+        </h1>
         <hr class="hr1">
-        <p>MCSS, McGill Chinese Students' Society is the largest and most influential cultural student
-          organization in Eastern Canada. With over <strong>15 events per year and 40 years of history</strong>, we provide
-          a variety of events to our <strong>over 1,500 active members</strong> and help our members succeed in school and life.
-          Our short-term goal is to provide our students with valuable events to make their student life more
-          meaningful, while our long-term goal is to motivate and encourage our students to give back to their
-          community and excel academically by providing them with helpful services including seminars, lessons,
-          and talks.
+        <p>MCSS, McGill Chinese Students' Society is the largest and most influential cultural
+          student organization in Eastern Canada.
+          With over <strong>15 events per year and 40 years of history</strong>, we provide
+          a variety of events to our <strong>over 1,500 active members</strong> and help
+          our members succeed in school and life.
+          Our short-term goal is to provide our students with valuable events to make their
+          student life more meaningful, while our long-term goal is to motivate and encourage
+          our students to give back to their community and excel academically by providing
+          them with helpful services including seminars, lessons, and talks.
           <br /><br />
-          MCSS is a non-profit organization registered under the Students' Society of McGill University.
-          All our proceeds either go to charity or are used to provide our students with more valuable
-          services. <strong>Our events range from largescale shows to career planning and information seminars.
-          In addition, we organize dinner outings, networking opportunities and parties for our members.</strong>
+          MCSS is a non-profit organization registered under the Students' Society of
+          McGill University.
+          All our proceeds either go to charity or are used to provide our students with
+          more valuable services.
+          <strong>Our events range from largescale shows to career planning
+          and information seminars. In addition, we organize dinner outings,
+          networking opportunities and parties for our members.</strong>
           </p>
       </div>
     </div>
     <hr class="hr2">
 
     <div class="intro-container-2">
-      <div style=" margin-left: auto; margin-right: auto; display: block; text-align: center;">
-        <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">WHY <span style="font-size: 30px; color: #be0819;">MCSS</span></h1>
+      <div class="centered">
+        <h1>WHY <span>MCSS</span></h1>
         <hr class="hr1">
         <p>MCSS has had a long and storied history of amazing
           events, from <strong>our annual Ski and New York Trips, to Be There or Be Square and
           hosting Wong Fu Productions.</strong>
           <br /><br />
           With MCSS, you’ll create unforgettable memories, have a blast, and learn a thing or
-          two about event planning in the process. MCSS is a fun, loving, and close-knit family away from home!
+          two about event planning in the process. MCSS is a fun, loving, and close-knit
+          family away from home!
           <br /><br />
-          We accept executives from all around the world; <strong>you don’t have to be Chinese or even Asian!</strong>
+          We accept executives from all around the world;
+          <strong>you don’t have to be Chinese or even Asian!</strong>
           <br /><br />
           </p>
       </div>
-      <div class="intro-img"><b-img-lazy :src="require('../assets/About/group-pic.jpg')" alt="Group Picture!" width=466 height=300 style="border-radius: 7px;" class="group-pic" /></div>
+      <div class="intro-img">
+        <b-img-lazy
+          src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139816/MCSS/About/group-pic_jfk8ol.jpg"
+          alt="Group Picture!"
+          width=466
+          height=300
+          style="border-radius: 7px;" class="group-pic"
+        />
+      </div>
     </div>
     <hr class="hr2">
 
-    <h1 style="text-align: center; font-size: 30px; font-family: IKEABold;">OUR <span style="font-size: 30px; color: #be0819;">TEAM</span></h1>
+    <h1>OUR <span>TEAM</span></h1>
     <hr class="hr3">
     <br />
 
@@ -53,30 +78,36 @@
             <transition name="flip">
               <div class="card-container-pres" v-if="amyflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Ottawa, ON</p>
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U1, Neuroscience</p>
+                  <p><strong>Hometown:</strong> Ottawa, ON</p>
+                  <p><strong>Major:</strong> U1, Neuroscience</p>
                 </div>
               </div>
-            <b-img-lazy :src="require('../assets/Members/amy.jpg')"
-            :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
+              <b-img-lazy
+                src="https://res.cloudinary.com/die52atcc/image/upload/v1603139840/MCSS/Members/amy_v1ody6.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/v1603139815/MCSS/About/placeholder_wox9nt.png"
+                alt="Co-President"
+              />
             </transition>
-            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Amy Li</p>
-            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Co-President</p>
+            <p class="name">Amy Li</p>
+            <p class="role">Co-President</p>
             <br /><br />
           </b-col>
           <b-col sm="12" md="6" class="avatar" v-on:click="toggleAnnie()">
             <transition name="flip">
               <div class="card-container-pres" v-if="annieflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Vancouver, BC</p>
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U2 Physiology</p>
+                  <p><strong>Hometown:</strong> Vancouver, BC</p>
+                  <p><strong>Major:</strong> U2 Physiology</p>
                 </div>
               </div>
-            <b-img-lazy :src="require('../assets/Members/annie.jpg')"
-            :blank-src="require('../assets/About/placeholder.png')" alt="Co-President"/>
+              <b-img-lazy
+                src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139841/MCSS/Members/annie_tcpezu.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
+                alt="Co-President"
+              />
             </transition>
-            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Annie Sun</p>
-            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Co-President</p>
+            <p class="name">Annie Sun</p>
+            <p class="role">Co-President</p>
           </b-col>
         </b-row>
       </div>
@@ -88,30 +119,36 @@
             <transition name="flip">
               <div class="card-container-pres" v-if="owenflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Beijing, CN</p>
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U2 CS and East Asian Studies</p>
+                  <p><strong>Hometown:</strong> Beijing, CN</p>
+                  <p><strong>Major:</strong> U2 CS and East Asian Studies</p>
                 </div>
               </div>
-              <b-img-lazy :src="require('../assets/Members/owen.jpg')"
-              :blank-src="require('../assets/About/placeholder.png')" alt="Senior Advisor"/>
+              <b-img-lazy
+                src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139844/MCSS/Members/owen_kyhydw.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
+                alt="Senior Advisor"
+              />
             </transition>
-            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Owen Bai</p>
-            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Senior Advisor</p>
+            <p class="name">Owen Bai</p>
+            <p class="role">Senior Advisor</p>
             <br /><br />
           </b-col>
           <b-col sm="12" md="6" class="avatar" v-on:click="toggleEmily()">
             <transition name="flip">
               <div class="card-container-pres" v-if="emilyflipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> Vancouver, BC</p>
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> U3 Physiotherapy</p>
+                  <p><strong>Hometown:</strong> Vancouver, BC</p>
+                  <p><strong>Major:</strong> U3 Physiotherapy</p>
                 </div>
               </div>
-            <b-img-lazy :src="require('../assets/Members/emily_z.jpg')"
-            :blank-src="require('../assets/About/placeholder.png')" alt="Senior Advisor"/>
+              <b-img-lazy
+                src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139841/MCSS/Members/emily_z_irrh4y.jpg"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
+                alt="Senior Advisor"
+              />
             </transition>
-            <p class="name" style="font-size: 2rem; font-family: IKEABold;">Emily Zhang</p>
-            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">Senior Advisor</p>
+            <p class="name">Emily Zhang</p>
+            <p class="role">Senior Advisor</p>
           </b-col>
         </b-row>
       </div>
@@ -119,25 +156,32 @@
 
       <div class="restOfBoard">
         <b-row>
-          <b-col sm="12" md="4" class="avatar" v-on:click="toggleCard(member)" v-for="member in boardMembers" :key="member.name">
+          <b-col sm="12" md="4" class="avatar"
+            v-on:click="toggleCard(member)"
+            v-for="member in boardMembers"
+            :key="member.name"
+          >
             <transition name="flip">
               <div class="card-container" v-if="member.flipped">
                 <div class="member-desc">
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Hometown:</strong> {{member.hometown}}</p>
-                  <p style="font-size: 2rem; font-family: IKEABold;"><strong style="font-size: 2rem;">Major:</strong> {{member.major}}</p>
+                  <p><strong>Hometown:</strong> {{ member.hometown }}</p>
+                  <p><strong>Major:</strong> {{ member.major }}</p>
                 </div>
               </div>
-              <b-img-lazy :src="member.image" :blank-src="require('../assets/About/placeholder.png')"
-              offset="700" v-else v-bind:alt="member.name"/>
+              <b-img-lazy
+                :src="member.image"
+                blank-src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139815/MCSS/About/placeholder_wox9nt.png"
+                offset="700"
+                v-else
+                v-bind:alt="member.name"
+              />
             </transition>
-            <p class="name" style="font-size: 2rem; font-family: IKEABold;">{{member.name}}</p>
-            <p class="role" style="font-size: 1.5rem; font-family: IKEABold;">{{member.role}}</p>
+            <p class="name">{{member.name}}</p>
+            <p class="role">{{member.role}}</p>
             <br /><br />
           </b-col>
         </b-row>
       </div>
-
-      <div class="divider"></div><br />
     </div>
 
   </div>
@@ -147,19 +191,20 @@
 export default {
   name: 'about',
   methods: {
-    toggleCard: function(member) {
+    toggleCard(member) {
+      // eslint-disable-next-line no-param-reassign
       member.flipped = !member.flipped;
     },
-    toggleOwen: function() {
+    toggleOwen() {
       this.owenflipped = !this.owenflipped;
     },
-    toggleAmy: function() {
+    toggleAmy() {
       this.amyflipped = !this.amyflipped;
     },
-    toggleEmily: function() {
+    toggleEmily() {
       this.emilyflipped = !this.emilyflipped;
     },
-    toggleAnnie: function() {
+    toggleAnnie() {
       this.annieflipped = !this.annieflipped;
     },
   },
@@ -174,7 +219,7 @@ export default {
           name: 'Danielle Zhu',
           id: 'danielle',
           role: 'VP Internal',
-          image: require('../assets/Members/danielle.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139840/MCSS/Members/danielle_fe5cxn.jpg',
           hometown: 'Montreal QC',
           major: 'U2 Marketing & Digital Innovation',
           flipped: false,
@@ -183,7 +228,7 @@ export default {
           name: 'Jian Qiao He',
           id: 'mike',
           role: 'VP External',
-          image: require('../assets/Members/mike.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139844/MCSS/Members/mike_eptzv7.jpg',
           hometown: 'Montreal QC',
           major: 'U2 Marketing',
           flipped: false,
@@ -192,7 +237,7 @@ export default {
           name: 'Gloria Ma',
           id: 'gloria',
           role: 'VP Internal',
-          image: require('../assets/Members/gloria.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/gloria_frhx9z.jpg',
           hometown: 'Hillsborough, NJ',
           major: 'U2 Biochem',
           flipped: false,
@@ -201,7 +246,7 @@ export default {
           name: 'Xi Ran Chen',
           id: 'xiran',
           role: 'VP Finance',
-          image: require('../assets/Members/xiran.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/xiran_kbjh5c.jpg',
           hometown: 'Montreal, QC',
           major: 'U1 Economics & Accounting',
           flipped: false,
@@ -210,7 +255,7 @@ export default {
           name: 'Melody Zhou',
           id: 'melody',
           role: 'Junior VP Finance',
-          image: require('../assets/Members/melody.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/melody_ghlll9.jpg',
           hometown: 'Boston, MA',
           major: 'U2 Cognitive Science',
           flipped: false,
@@ -219,7 +264,7 @@ export default {
           name: 'Julian Qu',
           id: 'julian',
           role: 'Sponsorship Director',
-          image: require('../assets/Members/julian.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/julian_bmz2km.jpg',
           hometown: 'Vancouver, BC',
           major: 'U1 Civil Engineering',
           flipped: false,
@@ -228,7 +273,7 @@ export default {
           name: 'Karist Ng',
           id: 'karist',
           role: 'Project Manager',
-          image: require('../assets/Members/karist.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/karist_qzggqy.jpg',
           hometown: 'Thailand',
           major: 'U2 Materials Engineering',
           flipped: false,
@@ -237,7 +282,7 @@ export default {
           name: 'Jeremy Leung',
           id: 'jeremy',
           role: 'Project Manager',
-          image: require('../assets/Members/jeremy.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/jeremy_ymbcml.jpg',
           hometown: 'Toronto, ON',
           major: 'U2 Microbiology & Immunology',
           flipped: false,
@@ -246,7 +291,7 @@ export default {
           name: 'Sherry Chen',
           id: 'sherry',
           role: 'Project Manager',
-          image: require('../assets/Members/sherry.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/sherry_lbmxrv.jpg',
           hometown: 'Chengdu, China',
           major: 'U1 Joint Political Science & Psychology',
           flipped: false,
@@ -255,7 +300,7 @@ export default {
           name: 'Chris Gao',
           id: 'chris',
           role: 'VP Communications and Academics',
-          image: require('../assets/Members/chris.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139840/MCSS/Members/chris_q6kb0z.jpg',
           hometown: 'Markham, ON',
           major: 'U1 Psychology',
           flipped: false,
@@ -264,7 +309,7 @@ export default {
           name: 'Dimitri Yang',
           id: 'dimitri',
           role: 'VP Marketing and Communications',
-          image: require('../assets/Members/dimitri.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139842/MCSS/Members/dimitri_sxtgdo.jpg',
           hometown: 'Vancouver, BC',
           major: 'U1 Neuroscience',
           flipped: false,
@@ -273,7 +318,7 @@ export default {
           name: 'YoungRock Han',
           id: 'youngrock',
           role: 'Social Director',
-          image: require('../assets/Members/youngrock.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/youngrock_kc4n6f.jpg',
           hometown: 'Winnipeg, MB',
           major: 'U1 Nursing',
           flipped: false,
@@ -282,7 +327,7 @@ export default {
           name: 'Ivy Chen',
           id: 'ivy',
           role: 'VP Media',
-          image: require('../assets/Members/ivy.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139844/MCSS/Members/ivy_r0jpar.jpg',
           hometown: 'Toronto, ON',
           major: 'U0 Nursing',
           flipped: false,
@@ -291,7 +336,7 @@ export default {
           name: 'Dian Dian Dai',
           id: 'dian',
           role: 'Photographer',
-          image: require('../assets/Members/dian.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139840/MCSS/Members/dian_q3x9cr.jpg',
           hometown: 'Toronto, ON',
           major: 'U1 Computer Science',
           flipped: false,
@@ -300,7 +345,7 @@ export default {
           name: 'Hattie Chen',
           id: 'hattie',
           role: 'Photographer',
-          image: require('../assets/Members/hattie.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139843/MCSS/Members/hattie_qblkwf.jpg',
           hometown: 'Montreal, QC',
           major: 'U2 Physical Therapy',
           flipped: false,
@@ -309,7 +354,7 @@ export default {
           name: 'Xinrui Li',
           id: 'xinrui',
           role: 'Webmaster',
-          image: require('../assets/Members/xinrui.jpg'),
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139845/MCSS/Members/xinrui_qdiho1.jpg',
           hometown: 'Montreal, QC',
           major: 'U2 Computer Science',
           flipped: false,
@@ -321,11 +366,31 @@ export default {
 </script>
 
 <style scoped>
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: IKEABold;
+  }
+
+  h1 span {
+    font-size: 30px;
+    font-family: IKEABold;
+    color: #be0819;
+  }
+
   .intro-img {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .card-container {
     display: block;
     margin-right: auto;
@@ -365,14 +430,36 @@ export default {
     transition: all 1s ease;
     transform-style: preserve-3d;
   }
-  
+
   .flip-leave-active {
     display: none;
   }
-  
+
   .flip-enter, .flip-leave {
     transform: rotateY(90deg);
     opacity: 0;
+  }
+
+  .member-desc {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .member-desc p, .member-desc p strong, p.name {
+    font-size: 2rem;
+    font-family: IKEABold;
+  }
+
+  p.role {
+    font-size: 1.5rem;
+    font-family: Proxima;
   }
 
   .members{
@@ -380,21 +467,21 @@ export default {
     margin: auto;
   }
   .hr3{
-      background-color: #be0819;
-      width: 15%;
-      height: 1px;
+    background-color: #be0819;
+    width: 15%;
+    height: 1px;
   }
   .hr2 {
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-      width: 80%;
-      border: 0;
-      border-top: 1px solid rgba(0,0,0,.1);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
   }
   .hr1{
-      background-color: #be0819;
-      width: 30%;
-      height: 1px;
+    background-color: #be0819;
+    width: 30%;
+    height: 1px;
   }
   h2{
     background-color: #0c5fa8;
@@ -425,13 +512,7 @@ export default {
     font-weight: bold;
     margin-bottom: 0;
   }
-  .divider{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 100%;
-    height: 100px;
-  }
+
   .members li{
     display: inline-grid;
     padding: 10px 20px 10px 20px;
@@ -466,18 +547,7 @@ export default {
     .president img{
       width: 60% !important;
     }
-    /* If you want text inside of the container */
-    .member-desc {
-      color: #fff;
-      position: absolute;
-      top: 40%;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      margin-left: 5px;
-      margin-right: 5px;
-    }
+
     .card-container-pres {
       display: block;
       margin-right: auto;
@@ -538,17 +608,6 @@ export default {
     }
     .about-us {
       margin-top: 5%;
-    }
-    .member-desc {
-      color: #fff;
-      position: absolute;
-      top: 40%;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      margin-left: 5px;
-      margin-right: 5px;
     }
   }
 

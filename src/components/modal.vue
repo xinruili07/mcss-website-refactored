@@ -1,14 +1,3 @@
-<script>
-  export default {
-    name: 'modal',
-    methods: {
-      close() {
-        this.$emit('close');
-      },
-    },
-  };
-</script>
-
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
@@ -41,7 +30,12 @@
             <div class="title">
               <h1 style="font-family: IKEABold;">FOLLOW US ON WECHAT!</h1>
             </div>
-            <b-img-lazy :src="require('../assets/wechat-qr.jpeg')" alt="wechat" style="border-radius: 7px;" class="wechat"/>
+            <b-img-lazy
+              src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139753/MCSS/wechat-qr_waamy4.jpg"
+              alt="wechat"
+              style="border-radius: 7px;"
+              class="wechat"
+            />
           </slot>
         </section>
         <footer class="modal-footer">
@@ -61,6 +55,18 @@
     </div>
   </transition>
 </template>
+
+<script>
+export default {
+  name: 'modal',
+  methods: {
+    close() {
+      this.$emit('close');
+    },
+  },
+};
+</script>
+
 <style>
   @media screen and (max-width: 1000px) {
     .modal {

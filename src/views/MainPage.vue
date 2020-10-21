@@ -3,17 +3,53 @@
     <div class="navbar">
       <b-navbar toggleable="lg" variant="faded">
         <b-navbar-brand @click="gotoHome">
-          <img src="../assets/redlogo.png" alt="redlogo" class="navbar-logo" />
+          <img
+            src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139753/MCSS/redlogo_jpk8nl.png"
+            alt="redlogo"
+            class="navbar-logo"
+          />
         </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto navbar-links">
-            <b-nav-item class="nav-element" @click="gotoAnnouncements" v-bind:class="{ active: isActive == 'announcements'}">Announcements</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoEvents" v-bind:class="{ active: isActive == 'main-events'}">Events</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoAbout" v-bind:class="{ active: isActive == 'main-about'}">About Us</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoSponsors" v-bind:class="{ active: isActive == 'sponsors'}">Sponsors</b-nav-item>
-            <b-nav-item class="nav-element" @click="gotoContact" v-bind:class="{ active: isActive == 'main-contact'}">Contact</b-nav-item>
+            <b-nav-item
+              class="nav-element"
+              @click="gotoAnnouncements"
+              v-bind:class="{ active: isActive == 'announcements'}"
+            >
+              Announcements
+            </b-nav-item>
+
+            <b-nav-item class="nav-element"
+              @click="gotoEvents"
+              v-bind:class="{ active: isActive == 'main-events'}"
+            >
+              Events
+            </b-nav-item>
+
+            <b-nav-item class="nav-element"
+              @click="gotoAbout"
+              v-bind:class="{ active: isActive == 'main-about'}"
+            >
+              About Us
+            </b-nav-item>
+
+            <b-nav-item
+              class="nav-element"
+              @click="gotoSponsors"
+              v-bind:class="{ active: isActive == 'sponsors'}"
+            >
+              Sponsors
+            </b-nav-item>
+
+            <b-nav-item
+              class="nav-element"
+              @click="gotoContact"
+              v-bind:class="{ active: isActive == 'main-contact'}"
+            >
+              Contact
+            </b-nav-item>
             <!--<stripe-checkout
               ref="checkoutRef"
               :pk="publishableKey"
@@ -23,7 +59,12 @@
               :cancelUrl="cancelUrl"
             >
               <template slot="checkout-button">
-                <button class="checkout-button-redirect" @click="checkout">Purchase our Card</button>
+                <button
+                  class="checkout-button-redirect"
+                  @click="checkout"
+                >
+                  Purchase our Card
+                </button>
               </template>
             </stripe-checkout>-->
           </b-navbar-nav>
@@ -42,27 +83,27 @@
 import { StripeCheckout } from 'vue-stripe-checkout';
 
 export default {
-  name: "mainPage",
+  name: 'mainPage',
   components: {
     StripeCheckout,
-    "main-announcements": () => import("../components/Announcements"),
-    "main-events": () => import("../components/Events"),
-    "main-about": () => import("../components/About"),
-    "main-sponsors": () => import("../components/Sponsors"),
-    "main-contact": () => import("../components/Contact")
+    'main-announcements': () => import('../components/Announcements'),
+    'main-events': () => import('../components/Events'),
+    'main-about': () => import('../components/About'),
+    'main-sponsors': () => import('../components/Sponsors'),
+    'main-contact': () => import('../components/Contact'),
   },
   data() {
     return {
-      isActive: "announcements",
-      currentComponent: "main-announcements",
+      isActive: 'announcements',
+      currentComponent: 'main-announcements',
       currentPos: 0,
       targetPos: 0,
-      transitionName: "",
+      transitionName: '',
       loading: false,
       /*
       mode: "payment",
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
-      lineItems: [{price: process.env.VUE_APP_LINE_ITEM, quantity: 1}],
+      lineItems: [{ price: process.env.VUE_APP_LINE_ITEM, quantity: 1 }],
       successUrl: process.env.SUCCESS_URL,
       cancelUrl: process.env.CANCEL_URL,
       */
@@ -75,70 +116,68 @@ export default {
     },
     */
     gotoHome() {
-      this.$router.push("/");
+      this.$router.push('/');
     },
     gotoAnnouncements() {
-      if (this.currentComponent !== "main-announcements") {
+      if (this.currentComponent !== 'main-announcements') {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 0;
-        this.currentComponent = "main-announcements";
-        this.isActive = "announcements";
+        this.currentComponent = 'main-announcements';
+        this.isActive = 'announcements';
       }
     },
     gotoEvents() {
-      if (this.currentComponent !== "main-events") {
+      if (this.currentComponent !== 'main-events') {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 0;
-        this.currentComponent = "main-events";
-        this.isActive = "main-events";
+        this.currentComponent = 'main-events';
+        this.isActive = 'main-events';
       }
     },
     gotoAbout() {
-      if (this.currentComponent !== "main-about") {
+      if (this.currentComponent !== 'main-about') {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 1;
-        this.currentComponent = "main-about";
-        this.isActive = "main-about";
+        this.currentComponent = 'main-about';
+        this.isActive = 'main-about';
       }
     },
     gotoSponsors() {
-      if (this.currentComponent !== "main-sponsors") {
+      if (this.currentComponent !== 'main-sponsors') {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 2;
-        this.currentComponent = "main-sponsors";
-        this.isActive = "sponsors"
-
+        this.currentComponent = 'main-sponsors';
+        this.isActive = 'sponsors';
       }
     },
     gotoContact() {
-      if (this.currentComponent !== "main-contact") {
+      if (this.currentComponent !== 'main-contact') {
         this.currentPos = this.checkCurrentPos();
         this.targetPos = 3;
-        this.currentComponent = "main-contact";
-        this.isActive = "main-contact"
+        this.currentComponent = 'main-contact';
+        this.isActive = 'main-contact';
       }
     },
     checkCurrentPos() {
-      if (this.currentComponent === "main-events") {
+      if (this.currentComponent === 'main-events') {
         return 0;
-      } else if (this.currentComponent === "main-about") {
+      } if (this.currentComponent === 'main-about') {
         return 1;
-      } else if (this.currentComponent === "main-sponsors") {
+      } if (this.currentComponent === 'main-sponsors') {
         return 2;
-      } else if (this.currentComponent === "main-contact") {
+      } if (this.currentComponent === 'main-contact') {
         return 3;
-      } else {
-        return -1;
       }
-    }
+      return -1;
+    },
   },
   computed: {
     getTransition() {
-      this.transitionName =
-        this.currentPos < this.targetPos ? "slide-right" : "slide-left";
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.transitionName = this.currentPos < this.targetPos ? 'slide-right' : 'slide-left';
       return this.transitionName;
-    }
-  }
+    },
+  },
 };
 </script>
 
