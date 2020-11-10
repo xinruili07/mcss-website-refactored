@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import modal from './modal.vue';
+import modal from '../components/modal.vue';
 
 export default {
   name: 'contact',

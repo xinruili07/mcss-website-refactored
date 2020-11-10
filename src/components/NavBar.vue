@@ -16,21 +16,21 @@
             <b-nav-item
               class="nav-element"
               @click="gotoAnnouncements"
-              v-bind:class="{ active: isActive == 'announcements'}"
+              v-bind:class="{ active: routeName == '/announcements'}"
             >
               Announcements
             </b-nav-item>
 
             <b-nav-item class="nav-element"
               @click="gotoEvents"
-              v-bind:class="{ active: isActive == 'main-events'}"
+              v-bind:class="{ active: routeName == '/events'}"
             >
               Events
             </b-nav-item>
 
             <b-nav-item class="nav-element"
               @click="gotoAbout"
-              v-bind:class="{ active: isActive == 'main-about'}"
+              v-bind:class="{ active: routeName == '/about'}"
             >
               About Us
             </b-nav-item>
@@ -38,7 +38,7 @@
             <b-nav-item
               class="nav-element"
               @click="gotoSponsors"
-              v-bind:class="{ active: isActive == 'sponsors'}"
+              v-bind:class="{ active: routeName == '/sponsors'}"
             >
               Sponsors
             </b-nav-item>
@@ -46,7 +46,7 @@
             <b-nav-item
               class="nav-element"
               @click="gotoContact"
-              v-bind:class="{ active: isActive == 'main-contact'}"
+              v-bind:class="{ active: routeName == '/contact'}"
             >
               Contact
             </b-nav-item>
@@ -72,11 +72,6 @@
         </b-collapse>
       </b-navbar>
     </div>
-    <keep-alive>
-      <transition :name="getTransition">
-        <component :is="currentComponent"></component>
-      </transition>
-    </keep-alive>
   </div>
 </template>
 
@@ -87,16 +82,10 @@ export default {
   name: 'mainPage',
   components: {
     StripeCheckout,
-    'main-announcements': () => import('../components/Announcements'),
-    'main-events': () => import('../components/Events'),
-    'main-about': () => import('../components/About'),
-    'main-sponsors': () => import('../components/Sponsors'),
-    'main-contact': () => import('../components/Contact'),
   },
   data() {
     return {
-      isActive: 'announcements',
-      currentComponent: 'main-announcements',
+      isActive: '',
       currentPos: 0,
       targetPos: 0,
       transitionName: '',
@@ -104,8 +93,8 @@ export default {
       mode: 'payment',
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
       lineItems: [{ price: process.env.VUE_APP_LINE_ITEM, quantity: 1 }],
-      successUrl: process.env.SUCCESS_URL,
-      cancelUrl: process.env.CANCEL_URL,
+      successUrl: process.env.VUE_APP_SUCCESS_URL,
+      cancelUrl: process.env.VUE_APP_CANCEL_URL,
     };
   },
   methods: {
@@ -117,58 +106,44 @@ export default {
     },
     gotoAnnouncements() {
       if (this.currentComponent !== 'main-announcements') {
-        this.currentPos = this.checkCurrentPos();
-        this.targetPos = 0;
+        this.$router.push('/announcements');
         this.currentComponent = 'main-announcements';
         this.isActive = 'announcements';
       }
     },
     gotoEvents() {
       if (this.currentComponent !== 'main-events') {
-        this.currentPos = this.checkCurrentPos();
-        this.targetPos = 0;
+        this.$router.push('/events');
         this.currentComponent = 'main-events';
         this.isActive = 'main-events';
       }
     },
     gotoAbout() {
       if (this.currentComponent !== 'main-about') {
-        this.currentPos = this.checkCurrentPos();
-        this.targetPos = 1;
+        this.$router.push('/about');
         this.currentComponent = 'main-about';
         this.isActive = 'main-about';
       }
     },
     gotoSponsors() {
       if (this.currentComponent !== 'main-sponsors') {
-        this.currentPos = this.checkCurrentPos();
-        this.targetPos = 2;
+        this.$router.push('/sponsors');
         this.currentComponent = 'main-sponsors';
         this.isActive = 'sponsors';
       }
     },
     gotoContact() {
       if (this.currentComponent !== 'main-contact') {
-        this.currentPos = this.checkCurrentPos();
-        this.targetPos = 3;
+        this.$router.push('/contact');
         this.currentComponent = 'main-contact';
         this.isActive = 'main-contact';
       }
     },
-    checkCurrentPos() {
-      if (this.currentComponent === 'main-events') {
-        return 0;
-      } if (this.currentComponent === 'main-about') {
-        return 1;
-      } if (this.currentComponent === 'main-sponsors') {
-        return 2;
-      } if (this.currentComponent === 'main-contact') {
-        return 3;
-      }
-      return -1;
-    },
   },
   computed: {
+    routeName() {
+      return this.$route.path;
+    },
     getTransition() {
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
       this.transitionName = this.currentPos < this.targetPos ? 'slide-right' : 'slide-left';

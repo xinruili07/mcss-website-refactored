@@ -28,7 +28,7 @@ export default {
   name: 'success',
   methods: {
     gotoMain() {
-      this.$router.push('/home');
+      this.$router.push('/announcements');
     },
   },
 };

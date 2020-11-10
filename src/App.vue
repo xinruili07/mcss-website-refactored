@@ -1,10 +1,23 @@
 <template>
   <div id="app">
-    <transition name="slide-fade">
-      <router-view />
-    </transition>
+      <component :is="layout">
+        <transition name="slide-fade">
+        <router-view />
+        </transition>
+      </component>
   </div>
 </template>
+
+<script>
+const defaultLayout = 'default';
+export default {
+  computed: {
+    layout() {
+      return `${this.$route.meta.layout || defaultLayout}-layout`;
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 html, body {
