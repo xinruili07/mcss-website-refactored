@@ -20,7 +20,6 @@
             >
               Announcements
             </b-nav-item>
-
             <b-nav-item class="nav-element"
               @click="gotoEvents"
               v-bind:class="{ active: routeName == '/events'}"
@@ -34,7 +33,6 @@
             >
               About Us
             </b-nav-item>
-
             <b-nav-item
               class="nav-element"
               @click="gotoSponsors"

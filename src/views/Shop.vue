@@ -2,7 +2,7 @@
   <div>
     <div class="banner-img">
       <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative/v1605406313/MCSS/Merch/_YWD8123_t7pqpq.jpg"
+        src="https://res.cloudinary.com/die52atcc/image/upload/v1605482956/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS_kaguox.jpg"
       />
     </div>
     <h1>MCSS <span>FIRST COLLECTION</span></h1>
