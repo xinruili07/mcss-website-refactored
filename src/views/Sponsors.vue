@@ -39,11 +39,10 @@
             class="scroller-btn"
             v-on:click="scrollDown()"
           >
-            Click here to check out our sponsors map!
+            Click here to check out our sponsors map.
           </button>
           <br /><br />
-          Get yours today for only <b>$2.99</b> by clicking on
-          <b>"Purchase our Card"</b> on our navigation bar.
+          Get yours today for only <b>$2.99</b> in our shop page!
         </p>
       </div>
     </div>

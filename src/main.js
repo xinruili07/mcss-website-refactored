@@ -6,7 +6,7 @@ import App from './App.vue';
 import router from './router';
 import Default from './layouts/Default.vue';
 import NoNavBar from './layouts/NoNavBar.vue';
-
+import store from './store.js';
 
 Vue.config.productionTip = false;
 Vue.component('default-layout', Default);
@@ -15,6 +15,7 @@ Vue.use(BootstrapVue);
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app');
 

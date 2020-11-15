@@ -50,24 +50,20 @@
             >
               Contact
             </b-nav-item>
-
-            <stripe-checkout
-              ref="checkoutRef"
-              :pk="publishableKey"
-              :lineItems="lineItems"
-              :mode="mode"
-              :successUrl="successUrl"
-              :cancelUrl="cancelUrl"
+            <b-nav-item
+              class="nav-element"
+              @click="gotoShop"
+              v-bind:class="{ active: routeName == '/shop'}"
             >
-              <template slot="checkout-button">
-                <button
-                  class="checkout-button-redirect"
-                  @click="checkout"
-                >
-                  Purchase our Card
-                </button>
-              </template>
-            </stripe-checkout>
+              Shop
+            </b-nav-item>
+            <b-nav-item
+              class="nav-element"
+              @click="gotoCart"
+              v-bind:class="{ active: routeName == '/shopping-bag'}"
+            >
+              <i class="fa fa-shopping-cart"></i> ({{ cartCount }})
+            </b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -76,25 +72,15 @@
 </template>
 
 <script>
-import { StripeCheckout } from 'vue-stripe-checkout';
 
 export default {
   name: 'mainPage',
-  components: {
-    StripeCheckout,
-  },
   data() {
     return {
-      isActive: '',
       currentPos: 0,
       targetPos: 0,
       transitionName: '',
       loading: false,
-      mode: 'payment',
-      publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
-      lineItems: [{ price: process.env.VUE_APP_LINE_ITEM, quantity: 1 }],
-      successUrl: process.env.VUE_APP_SUCCESS_URL,
-      cancelUrl: process.env.VUE_APP_CANCEL_URL,
     };
   },
   methods: {
@@ -105,38 +91,38 @@ export default {
       this.$router.push('/');
     },
     gotoAnnouncements() {
-      if (this.currentComponent !== 'main-announcements') {
+      if (this.$route.path !== '/announcements') {
         this.$router.push('/announcements');
-        this.currentComponent = 'main-announcements';
-        this.isActive = 'announcements';
       }
     },
     gotoEvents() {
-      if (this.currentComponent !== 'main-events') {
+      if (this.$route.path !== '/events') {
         this.$router.push('/events');
-        this.currentComponent = 'main-events';
-        this.isActive = 'main-events';
       }
     },
     gotoAbout() {
-      if (this.currentComponent !== 'main-about') {
+      if (this.$route.path !== '/about') {
         this.$router.push('/about');
-        this.currentComponent = 'main-about';
-        this.isActive = 'main-about';
       }
     },
     gotoSponsors() {
-      if (this.currentComponent !== 'main-sponsors') {
+      if (this.$route.path !== '/sponsors') {
         this.$router.push('/sponsors');
-        this.currentComponent = 'main-sponsors';
-        this.isActive = 'sponsors';
       }
     },
     gotoContact() {
-      if (this.currentComponent !== 'main-contact') {
+      if (this.$route.path !== '/contact') {
         this.$router.push('/contact');
-        this.currentComponent = 'main-contact';
-        this.isActive = 'main-contact';
+      }
+    },
+    gotoShop() {
+      if (this.$route.path !== '/shop') {
+        this.$router.push('/shop');
+      }
+    },
+    gotoCart() {
+      if (this.$route.path !== '/shopping-bag') {
+        this.$router.push('/shopping-bag');
       }
     },
   },
@@ -148,6 +134,14 @@ export default {
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
       this.transitionName = this.currentPos < this.targetPos ? 'slide-right' : 'slide-left';
       return this.transitionName;
+    },
+    StoreCart() {
+      return this.$store.getters.StoreCart;
+    },
+    cartCount() {
+      return this.$store.getters.StoreCart.reduce((total, product) => {
+        return total + product.quantity;
+      }, 0);
     },
   },
 };

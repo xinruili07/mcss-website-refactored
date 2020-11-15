@@ -43,5 +43,20 @@ export default new Router({
       name: 'sponsors',
       component: () => import(/* webpackChunkName: "main" */ './views/Sponsors.vue'),
     },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import(/* webpackChunkName: "main" */ './views/Shop.vue'),
+    },
+    {
+      path: '/shop/:itemPath',
+      name: 'shop-item',
+      component: () => import(/* webpackChunkName: "main" */ './views/Item.vue'),
+    },
+    {
+      path: '/shopping-bag',
+      name: 'shopping-bag',
+      component: () => import(/* webpackChunkName: "main" */ './views/ShoppingCart.vue'),
+    },
   ],
 });

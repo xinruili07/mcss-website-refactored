@@ -17,8 +17,7 @@
         <p class="card-text">
           With our MCSS Membership card, students can get numerous discounts
           at various restaurants and stores across the city.
-          Get yours today for only <b>$2.99</b> by clicking on
-          <b>"Purchase our Card"</b> on our navigation bar.
+          Get yours today for only <b>$2.99</b> in our shop.
           <br /><br />
           After your purchase, you should receive an email containing the activation code.
           Make sure to check your spam folder if it doesn't arrive in your inbox.
@@ -26,31 +25,22 @@
           Once you have your activation code, please follow our tutorial
           to activate your membership card:
         </p>
-        <a
-          href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf"
-          class="tutorial-btn"
-          target="_blank"
-        >
-          Go to Tutorial
-        </a>
-      </div>
-    </div>
-    <hr class="hr2">
-
-    <h1>OUR <span>HALLOWEEN</span> EVENT <span>IS HERE!</span></h1>
-    <hr class="hr1">
-    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
-      <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/halloween2020_t5u5cm.jpg"
-        :class="{toggled: toggle}"
-        alt="A Nightmare on Discord Street"
-        style="border-radius: 7px;"
-      />
-      <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
-        <div class="middle">
-          <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
+        <div class="buttons">
+          <button
+            class="card-btn"
+            @click="redirectToCard()"
+          >
+            PURCHASE
+          </button>
+          <a
+            href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf"
+            class="tutorial-btn"
+            target="_blank"
+          >
+            GO TO TUTORIAL
+          </a>
         </div>
-      </a>
+      </div>
     </div>
     <hr class="hr2">
 
@@ -139,6 +129,11 @@ export default {
       ],
     };
   },
+  methods: {
+    redirectToCard() {
+      this.$router.push('/shop/membership-card');
+    },
+  },
 };
 </script>
 
@@ -160,28 +155,28 @@ export default {
   font-size: 1.8rem;
   }
 
-  .check-it-out {
-    font-size: 3rem;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    background-color: white;
-    border:0.1em solid #000000;
-    border-radius:2rem;
-    padding:0.46em 1.6em;
-    transition: all 0.5s;
-    color: #be0819;
+  .buttons {
+    display: flex;
   }
-
-  .check-it-out:hover {
-    font-weight: 600;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor: pointer;
+  .card-btn {
+    font-family: IKEABold;
+    width: 25rem;
+    height: 4.5rem;
     background: #be0819;
     color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease-out;
+    margin-right: auto;
+    margin-left: 10%;
+    display: block;
+  }
+
+  .card-btn:hover {
+    opacity: 0.8;
   }
 
   .toggled {
@@ -330,26 +325,22 @@ export default {
   .tutorial-btn {
     font-family: IKEABold;
     width: 25rem;
-    height: 5rem;
+    height: 4.5rem;
     padding: 10px 15px;
-    background: #be0819;
-    color: white;
-    border: none;
-    border-radius: 2rem;
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
     outline: none;
-    font-size: 1.8rem;
-    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease-out;
-    margin-top: 20px;
+    align-items: center;
   }
 
   .tutorial-btn:hover {
-    transform: translateY(-0.4rem);
     font-weight: 600;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
-    background: #be0819;
+    background: black;
     color: white;
     text-decoration: none;
   }
