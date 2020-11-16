@@ -47,7 +47,6 @@ export default {
   },
   computed: {
     StoreCart() {
-      console.log(this.$store.getters.StoreCart);
       return this.$store.getters.StoreCart;
     },
     cartCount() {

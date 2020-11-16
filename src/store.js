@@ -26,6 +26,7 @@ export default new Vuex.Store({
           XL: 'sku_INXxSTdzNb3IxE',
         },
         path: 'hotpot-tee',
+        dbName: 'white-tee',
       },
       {
         id: 2,
@@ -46,6 +47,7 @@ export default new Vuex.Store({
           XL: 'sku_IOg0nP9c63XRzh',
         },
         path: 'chopstick-tee',
+        dbName: 'white-tee',
       },
       {
         id: 3,
@@ -67,6 +69,7 @@ export default new Vuex.Store({
           XL: 'sku_IOg2UlZG0ln08X',
         },
         path: 'crane-tee',
+        dbName: 'white-tee',
       },
       {
         id: 4,
@@ -88,6 +91,7 @@ export default new Vuex.Store({
           XL: 'sku_IOg4ZBlXO5fsYd',
         },
         path: 'fruits-tee',
+        dbName: 'white-tee',
       },
       {
         id: 5,
@@ -109,6 +113,7 @@ export default new Vuex.Store({
           XL: 'sku_IOg66Xpf2JtxoZ',
         },
         path: 'white-panda-crewneck',
+        dbName: 'white-crewneck',
       },
       {
         id: 6,
@@ -130,6 +135,7 @@ export default new Vuex.Store({
           XL: 'sku_IOg8Wrq1Yfn377',
         },
         path: 'black-panda-crewneck',
+        dbName: 'black-crewneck',
       },
       {
         id: 7,
@@ -147,7 +153,8 @@ export default new Vuex.Store({
         sizeSku: {
           'ONE SIZE': 'sku_IOgDMXf26andoj',
         },
-        path: 'crane-tote-bag',
+        path: 'crane-tote',
+        dbName: 'tote',
       },
       {
         id: 8,
@@ -164,7 +171,8 @@ export default new Vuex.Store({
         sizeSku: {
           'ONE SIZE': 'sku_IOgDb2IWwDa25V',
         },
-        path: 'fruits-tote-bag',
+        path: 'fruits-tote',
+        dbName: 'tote',
       },
       {
         id: 9,
@@ -182,7 +190,8 @@ export default new Vuex.Store({
         sizeSku: {
           'ONE SIZE': 'sku_IOgEEJRLrHGzmc',
         },
-        path: 'hotpot-tote-bag',
+        path: 'hotpot-tote',
+        dbName: 'tote',
       },
       {
         id: 10,
@@ -201,6 +210,7 @@ export default new Vuex.Store({
           'E-CARD': 'price_1HXDz9KCEqBnqoVgoqEewCco',
         },
         path: 'membership-card',
+        dbName: 'membership-card',
       },
     ],
 
@@ -212,7 +222,6 @@ export default new Vuex.Store({
   },
   mutations: {
     ADD_Item(state, item) {
-      console.log(item);
       // eslint-disable-next-line max-len
       const record = state.StoreCart.find(product => product.itemName === item.itemName && product.itemSize === item.itemSize);
       if (!record) {
@@ -222,6 +231,7 @@ export default new Vuex.Store({
           itemSize: item.itemSize,
           itemPrice: item.itemPrice,
           itemSku: item.itemSku,
+          itemDbName: item.itemDbName,
           quantity: 1,
         });
       } else {
@@ -232,6 +242,9 @@ export default new Vuex.Store({
     REMOVE_Item(state, index) {
       state.StoreCart.splice(index, 1);
     },
+    RESET_Cart(state) {
+      state.StoreCart = [];
+    },
   },
   actions: {
     addItem(context, item) {
@@ -241,6 +254,9 @@ export default new Vuex.Store({
 
     removeItem(context, index) {
       context.commit('REMOVE_Item', index);
+    },
+    resetCart(context) {
+      context.commit('RESET_Cart');
     },
   },
   modules: {},

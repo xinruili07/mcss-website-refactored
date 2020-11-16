@@ -41,14 +41,20 @@
       <h1 class="product-price">${{ product.price }} CAD</h1>
       <div class="flex-sizes">
         <span v-for="size in product.size" :key="size">
-          <input :id="size"  v-model="selectedSize" name="Radios" type="radio" :value="size">
+          <input
+            :id="size"
+            v-model="selectedSize"
+            name="Radios" type="radio"
+            :value="size"
+            :disabled="inventory[size] === 0"
+          >
           <label :for="size">{{ size }}</label>
         </span>
       </div>
       <div>
         <button
           class="add_cart_btn"
-          @click="addToCart(product.name, product.image, product.price, product.sizeSku)"
+          @click="addToCart(product.name, product.image, product.price, product.sizeSku, product.dbName)"
           :disabled="!selectedSize"
         >
           ADD TO BAG
@@ -69,6 +75,7 @@
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides';
 import 'vueperslides/dist/vueperslides.css';
+import axios from 'axios';
 
 export default {
   props: ['itemPath'],
@@ -81,16 +88,18 @@ export default {
       product: {},
       selectedSize: '',
       itemAdded: false,
+      inventory: {},
     };
   },
   methods: {
-    addToCart(name, image, price, sizeSku) {
+    addToCart(name, image, price, sizeSku, dbName) {
       const item = {
         itemName: name,
         itemImage: image,
         itemPrice: price,
         itemSize: this.selectedSize,
         itemSku: sizeSku[this.selectedSize],
+        itemDbName: dbName,
       };
       this.$store.dispatch('addItem', item);
       this.itemAdded = true;
@@ -110,7 +119,13 @@ export default {
     } else {
       this.$router.push('/404');
     }
-    console.log(foundProduct);
+    console.log(this.product.dbName);
+    axios
+      .get(`https://mcss-website-backend.herokuapp.com/inventory/${this.product.dbName}`)
+      .then((response) => {
+        this.inventory = response.data;
+      })
+      .catch(error => console.log(error));
   },
 };
 </script>
@@ -164,6 +179,14 @@ input[type="radio"] + label:hover,
 input[type="checkbox"] + label:hover {
     /* hide the inputs */
     border: 1px solid black;
+}
+
+input[type="radio"]:disabled + label,
+input[type="checkbox"]:disabled + label {
+  border: none;
+  background: #E9E9E9;
+  color: #C7C7C7;
+  cursor: not-allowed;
 }
 
 /* style your lables/button */

@@ -31,6 +31,9 @@ export default {
       this.$router.push('/announcements');
     },
   },
+  created() {
+    this.$store.dispatch('resetCart');
+  },
 };
 </script>
 

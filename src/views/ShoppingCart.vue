@@ -38,6 +38,7 @@
         :mode="mode"
         :successUrl="successUrl"
         :cancelUrl="cancelUrl"
+        :clientReferenceId="checkoutMetadata()"
       >
         <template slot="checkout-button">
           <button
@@ -58,6 +59,7 @@
         :successUrl="successUrl"
         :cancelUrl="cancelUrl"
         :shippingAddressCollection="{allowedCountries: ['CA']}"
+        :clientReferenceId="checkoutMetadata()"
       >
         <template slot="checkout-button">
           <button
@@ -109,7 +111,6 @@ export default {
   },
   computed: {
     StoreCart() {
-      console.log(this.$store.getters.StoreCart);
       return this.$store.getters.StoreCart;
     },
     cartCount() {
@@ -123,7 +124,6 @@ export default {
 
     shippingPrice() {
       // eslint-disable-next-line arrow-body-style
-      console.log(this.$store.getters.StoreCart);
       if (this.cartTotalPrice() > 30 || this.isOnlyMembershipCard()) {
         return 0;
       }
@@ -151,6 +151,15 @@ export default {
         items.push({ price: 'price_1HnYhFKCEqBnqoVgm1dSUH8z', quantity: 1 });
       }
       return items;
+    },
+    checkoutMetadata() {
+      const items = [];
+      this.$store.getters.StoreCart.forEach((product) => {
+        items.push(`${product.itemDbName}_${product.itemSize}:${product.quantity}`);
+      });
+      const result = items.join();
+      console.log(result);
+      return result;
     },
     checkout() {
       this.$refs.checkoutRef.redirectToCheckout();
