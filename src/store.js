@@ -141,7 +141,7 @@ export default new Vuex.Store({
         id: 7,
         name: 'Crane Tote Bag',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/v1605457849/MCSS/Merch/first-drop/craneTOTE_r0vxef.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/v1605568583/MCSS/Merch/first-drop/craneTOTE_nhgig1.png',
         displayImages: [
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605466699/MCSS/Merch/first-drop/item-page/craneTOTE_1.5_ratio_nuda7d.png' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461944/MCSS/Merch/first-drop/photoshoot/_YWD8279_ll7gnx.jpg' },

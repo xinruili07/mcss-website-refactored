@@ -2,6 +2,14 @@
   <div class="events centered">
     <h1>THANK YOU <br/><span>FOR YOUR PURCHASE</span></h1>
     <hr class="hr1">
+
+    <div class="centered">
+        <p class="instructions">
+          A confirmation and the receipt for your order has been sent to your email.
+          Please send us an email at <span>vp-external@mcss.ca</span> for any questions related
+          to your order.
+        </p>
+    </div>
     <div class="event2">
       <b-img-lazy
         src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139752/MCSS/card2020_ap1nc4.png"
@@ -9,13 +17,17 @@
         style="border-radius: 7px;"
       />
     </div>
-
     <div class="centered">
-        <p class="instructions">With our MCSS Membership card,
-          you can now get numerous discounts at various restaurants and stores across the city!
-          You should receive an email with the next steps for activating
-          your membership card within a few minutes.
-          <br /><br />
+        <p class="instructions">On any merchandise purchase, you will receive a free MCSS membership
+          card on any purchases. With our membership card, you can now get numerous discounts
+          at various restaurants and stores across the city!
+        </p>
+    </div>
+    <div class="centered">
+        <p class="instructions">
+          You should also receive an email containing the membership code with the
+          next steps for activating your membership card within a few minutes. Make sure to check
+          your spam folder as well.
         </p>
     </div>
     <button class="home-intro-btn" @click="gotoMain">Back to Home</button>
@@ -40,6 +52,12 @@ export default {
 <style scoped>
   .events {
     margin-top: 50px;
+  }
+
+  p span {
+    color: #be0819;
+    font-size: 2rem;
+    font-family: Proxima;
   }
 
   .centered {
@@ -129,10 +147,9 @@ export default {
       background: #be0819;
       color: white;
       border: none;
-      border-radius: 2rem;
+      border-radius: 5px;
       outline: none;
       font-size: 2rem;
-      letter-spacing: 0.1rem;
       transition: all 0.3s ease-out;
       margin: auto;
       display: block;

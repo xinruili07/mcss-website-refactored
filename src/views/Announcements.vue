@@ -157,10 +157,10 @@ export default {
 
   .buttons {
     display: flex;
+    flex-wrap: wrap;
   }
   .card-btn {
     font-family: IKEABold;
-    width: 25rem;
     height: 4.5rem;
     background: #be0819;
     color: white;
@@ -171,8 +171,8 @@ export default {
     letter-spacing: 0.1rem;
     transition: all 0.3s ease-out;
     margin-right: auto;
-    margin-left: 10%;
     display: block;
+    min-width: 167px;
   }
 
   .card-btn:hover {
@@ -250,6 +250,18 @@ export default {
       font-family: IKEABold;
       font-size: 1.5rem;
     }
+    .tutorial-btn {
+      width: 25rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-btn {
+      width: 25rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
   }
   @media screen and (min-width: 1000px) {
     .slideshow-container {
@@ -299,6 +311,15 @@ export default {
 
     .tutorial-btn {
       margin-left: 10%;
+      margin-right: auto;
+      width: 40%;
+    }
+
+    .card-btn {
+      margin-left: 10%;
+      margin-right: auto;
+      width: 40%;
+      margin-bottom: 10px;
     }
   }
 
@@ -324,7 +345,6 @@ export default {
 
   .tutorial-btn {
     font-family: IKEABold;
-    width: 25rem;
     height: 4.5rem;
     padding: 10px 15px;
     background: white;
@@ -335,6 +355,7 @@ export default {
     font-size: 1.5rem;
     transition: all 0.3s ease-out;
     align-items: center;
+    min-width: 167px;
   }
 
   .tutorial-btn:hover {

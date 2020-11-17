@@ -9,32 +9,39 @@
             class="navbar-logo"
           />
         </b-navbar-brand>
+        <b-navbar-brand
+          class="shopping-cart-icon"
+          @click="gotoCart"
+          v-bind:class="{ active: routeName == '/shopping-bag'}"
+        >
+          <i class="fa fa-shopping-cart"></i> ({{ cartCount }})
+        </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto navbar-links">
             <b-nav-item
-              class="nav-element"
+              class="nav-element link-with-border"
               @click="gotoAnnouncements"
               v-bind:class="{ active: routeName == '/announcements'}"
             >
               Announcements
             </b-nav-item>
-            <b-nav-item class="nav-element"
+            <b-nav-item class="nav-element link-with-border"
               @click="gotoEvents"
               v-bind:class="{ active: routeName == '/events'}"
             >
               Events
             </b-nav-item>
 
-            <b-nav-item class="nav-element"
+            <b-nav-item class="nav-element link-with-border"
               @click="gotoAbout"
               v-bind:class="{ active: routeName == '/about'}"
             >
               About Us
             </b-nav-item>
             <b-nav-item
-              class="nav-element"
+              class="nav-element link-with-border"
               @click="gotoSponsors"
               v-bind:class="{ active: routeName == '/sponsors'}"
             >
@@ -42,21 +49,21 @@
             </b-nav-item>
 
             <b-nav-item
-              class="nav-element"
+              class="nav-element link-with-border"
               @click="gotoContact"
               v-bind:class="{ active: routeName == '/contact'}"
             >
               Contact
             </b-nav-item>
             <b-nav-item
-              class="nav-element"
+              class="nav-element link-with-border"
               @click="gotoShop"
               v-bind:class="{ active: routeName == '/shop'}"
             >
               Shop
             </b-nav-item>
             <b-nav-item
-              class="nav-element"
+              class="nav-element cart"
               @click="gotoCart"
               v-bind:class="{ active: routeName == '/shopping-bag'}"
             >
@@ -146,9 +153,32 @@ export default {
 </script>
 
 <style lang="scss">
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .checkout-button-redirect {
     margin-top: 5px;
+  }
+
+  .nav-element.cart {
+    display: none;
+  }
+  .shopping-cart-icon {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+  }
+  .shopping-cart-icon i {
+    font-size: 25px;
+  }
+  .nav-link {
+    font-size: 25px !important;
+  }
+  .link-with-border {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+@media screen and (min-width: 992px) {
+  .shopping-cart-icon {
+    display: none;
   }
 }
 .checkout-button-redirect {
@@ -164,6 +194,23 @@ export default {
   letter-spacing: 0.1rem;
   transition: all 0.3s ease-out;
 }
+
+.shopping-cart-icon {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  font-family: IKEABold;
+}
+
+.navbar-toggler-icon {
+  font-size: 20px !important;
+}
+
+.shopping-cart-icon.active {
+  color: black !important;
+}
+
 .checkout-button-redirect:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -174,14 +221,14 @@ export default {
   border-bottom: 3px solid #be0819;
   margin-bottom: 30px;
   .navbar-collapse {
-    text-align: center;
+    text-align: left;
   }
   .navbar-expand-lg {
     border: none;
     margin-bottom: 0;
   }
   .navbar-logo {
-    margin-left: -0.7rem;
+    margin-left: 5px;
     width: 12rem;
   }
   .navbar-logo:hover {
@@ -194,8 +241,8 @@ export default {
   .navbar-light .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.5);
     font-size: 2rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     font-family: IKEABold;
   }
   .nav-link:hover {

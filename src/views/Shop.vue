@@ -44,6 +44,8 @@ h1 {
   font-size: 30px;
   text-align: center;
   margin-top: 2.5%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 h1 span {
