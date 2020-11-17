@@ -35,6 +35,16 @@
         </vueper-slide>
       </vueper-slides>
     </div>
+    <size-chart-modal
+      :item="product.path.split('-').slice(-1)[0]"
+      v-show="isSizeModalVisible"
+      @close="closeSizeModal"
+    />
+    <return-policy-modal
+      :item="product.path.split('-').slice(-1)[0]"
+      v-show="isReturnModalVisible"
+      @close="closeReturnModal"
+    />
     <div class="item-desc">
       <h1 class="product-name">{{ product.name }}</h1>
       <h2 class="product-detail">{{ product.description }}</h2>
@@ -51,10 +61,20 @@
           <label :for="size">{{ size }}</label>
         </span>
       </div>
-      <div>
+      <button
+        type="button"
+        class="size-guide"
+        @click="showSizeModal"
+        v-if="product.path.split('-').slice(-1)[0] != 'card'"
+      >
+        <i class='fas fa-ruler-horizontal' style='font-size:15px'></i>
+        Sizing Guide
+      </button>
+      <div class="buttons">
         <button
           class="add_cart_btn"
-          @click="addToCart(product.name, product.image, product.price, product.sizeSku, product.dbName)"
+          @click="addToCart(product.name,
+          product.image, product.price, product.sizeSku, product.dbName)"
           :disabled="!selectedSize"
         >
           ADD TO BAG
@@ -67,6 +87,18 @@
           VIEW CART
         </button>
       </div>
+      <div class="free-shipping">
+        <i class="fas fa-shipping-fast"></i>
+        Free Shipping on Orders over $30
+      </div>
+      <button
+        type="button"
+        class="returns-guide"
+        @click="showReturnModal"
+      >
+        <i class="fas fa-shield-alt"></i>
+        Returns &amp; Exchange
+      </button>
       <hr class="hr2">
     </div>
   </div>
@@ -76,12 +108,16 @@
 import { VueperSlides, VueperSlide } from 'vueperslides';
 import 'vueperslides/dist/vueperslides.css';
 import axios from 'axios';
+import sizeChartModal from '../components/sizeChartModal.vue';
+import ReturnPolicyModal from '../components/ReturnPolicyModal.vue';
 
 export default {
   props: ['itemPath'],
   components: {
     VueperSlides,
     VueperSlide,
+    sizeChartModal,
+    ReturnPolicyModal,
   },
   data() {
     return {
@@ -89,6 +125,8 @@ export default {
       selectedSize: '',
       itemAdded: false,
       inventory: {},
+      isSizeModalVisible: false,
+      isReturnModalVisible: false,
     };
   },
   methods: {
@@ -106,6 +144,18 @@ export default {
     },
     redirectToCart() {
       this.$router.push('/shopping-bag');
+    },
+    showSizeModal() {
+      this.isSizeModalVisible = true;
+    },
+    closeSizeModal() {
+      this.isSizeModalVisible = false;
+    },
+    showReturnModal() {
+      this.isReturnModalVisible = true;
+    },
+    closeReturnModal() {
+      this.isReturnModalVisible = false;
     },
   },
   created() {
@@ -136,9 +186,17 @@ export default {
   font-family: IKEABold;
   color: #be0819;
 }
+.size-guide {
+  font-size: 15px;
+  font-family: IKEABold;
+  border: none;
+  background: none;
+  margin-bottom: 20px;
+}
 h2 {
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-family: Proxima;
 }
 .flex-container {
   display: flex;
@@ -203,6 +261,8 @@ input[type="checkbox"] + label {
   font-family: IKEABold;
   text-shadow: 1px 1px 0 rgba(0,0,0,0);
   font-size: 1.5rem;
+  min-width: 50px;
+  text-align: center;
 }
 
 input[type="radio"]:checked + label,
@@ -260,17 +320,42 @@ input[type="checkbox"]:checked + label{
   background: rgba(255,255,255,0.5)
 }
 
-.product-name, .product-detail, .product-price, .flex-sizes {
+.product-name, .product-detail, .product-price, .buttons {
   margin-bottom: 20px;
+}
+
+.free-shipping, .returns-guide {
+  font-size: 2rem;
+  font-family: Proxima;
+}
+
+.fa-shipping-fast, .fa-shield-alt {
+  font-size: 2rem;
+}
+
+.flex-sizes {
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 840px) {
   .item-desc {
     margin-top: 10%;
-    width: 240px;
+    width: 270px;
   }
   .item-desc .hr2 {
     display: none;
+  }
+  .returns-guide {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .returns-guide:hover {
+    text-decoration: underline;
+  }
+  .size-guide:hover {
+    text-decoration: underline;
   }
 }
 @media screen and (max-width: 840px) {
@@ -288,6 +373,15 @@ input[type="checkbox"]:checked + label{
     width: 80%;
     border: 0;
     border-top: 1px solid rgba(0,0,0,.1);
+  }
+  .returns-guide {
+    border: none;
+    background: none;
+    padding: 0;
+    text-decoration: underline;
+  }
+  .size-guide {
+    text-decoration: underline;
   }
 }
 </style>

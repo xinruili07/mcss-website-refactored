@@ -16,7 +16,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD7963_PS_v4pmv3.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461943/MCSS/Merch/first-drop/photoshoot/_YWD7987_PS_h8xiub.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -37,7 +37,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD7609_fer2pc.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461944/MCSS/Merch/first-drop/photoshoot/_YWD7586_rzgie6.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 5\'2 ft wearing size M',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -59,7 +59,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD8167_PS_yaxsv3.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD8199_gcfcxg.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -81,7 +81,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD8117_PS_q1c1wx.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605467410/MCSS/Merch/first-drop/photoshoot/_YWD8123_oozxrk.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed by Dian Dian \n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -103,7 +103,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD8232_PS_ezuumz.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605467532/MCSS/Merch/first-drop/photoshoot/_YWD8267_PS_fllgfs.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed by Ivy Chen\n150% Preshrunk Cotton / 50% Polyester Blend \nHeat-Pressed Graphic on Chest \nModel is 6ft wearing size M',
         price: 29,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -125,7 +125,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461944/MCSS/Merch/first-drop/photoshoot/_YWD7891_gu516u.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605467532/MCSS/Merch/first-drop/photoshoot/_YWD8267_PS_fllgfs.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed by Ivy Chen\n150% Preshrunk Cotton / 50% Polyester Blend \nHeat-Pressed Graphic on Chest \nModel is 5\'2ft wearing size M',
         price: 29,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -147,7 +147,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461944/MCSS/Merch/first-drop/photoshoot/_YWD8279_ll7gnx.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461944/MCSS/Merch/first-drop/photoshoot/_YWD8306_svr7ty.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability',
         price: 14,
         size: ['ONE SIZE'],
         sizeSku: {
@@ -165,7 +165,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605467095/MCSS/Merch/first-drop/item-page/fruitsTOTE_1.5_ratio_mg6smu.png' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605462640/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS_anui2w.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability',
         price: 14,
         size: ['ONE SIZE'],
         sizeSku: {
@@ -184,7 +184,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461944/MCSS/Merch/first-drop/photoshoot/_YWD7828_lwlze7.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605461945/MCSS/Merch/first-drop/photoshoot/_YWD7811_myaaei.jpg' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability',
         price: 14,
         size: ['ONE SIZE'],
         sizeSku: {
@@ -203,7 +203,7 @@ export default new Vuex.Store({
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605468388/MCSS/Merch/first-drop/item-page/card-back_f2ciq0.jpg' },
           { image: 'https://res.cloudinary.com/die52atcc/image/upload/v1605468257/MCSS/Merch/first-drop/item-page/Screen_Shot_2020-11-15_at_2.23.20_PM_qnbjrt.png' },
         ],
-        description: '100% Organic soft cotton. \nSelf fabric handles \nSizing: 48cm x 43cm',
+        description: 'Get 10% off orders from 30+ restaurants across Montreal! \n\nAn activation code will be sent to your email.',
         price: 3,
         size: ['E-CARD'],
         sizeSku: {

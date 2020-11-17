@@ -1,6 +1,6 @@
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop">
+    <div class="modal-backdrop" @click="close">
       <div class="modal"
         role="dialog"
         aria-labelledby="modalTitle"
@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   @media screen and (max-width: 1000px) {
     .modal {
       max-width: 70%;
@@ -95,7 +95,8 @@ export default {
     position: static;
     background: white;
     box-shadow: 2px 2px 20px 1px;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     max-height: 500px;
