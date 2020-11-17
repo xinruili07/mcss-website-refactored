@@ -104,7 +104,6 @@ export default {
     return {
       mode: 'payment',
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
-      lineItems: [{ price: process.env.VUE_APP_LINE_ITEM, quantity: 1 }],
       successUrl: process.env.VUE_APP_SUCCESS_URL,
       cancelUrl: process.env.VUE_APP_CANCEL_URL,
     };
@@ -148,7 +147,7 @@ export default {
       });
 
       if (this.shippingPrice()) {
-        items.push({ price: 'price_1HnYhFKCEqBnqoVgm1dSUH8z', quantity: 1 });
+        items.push({ price: 'price_1HnstHKCEqBnqoVgzqnw6rev', quantity: 1 });
       }
       return items;
     },
