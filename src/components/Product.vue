@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xl-4">
+  <b-col sm="12" md="6" lg="4" xl="3" class="avatar">
     <div class="card" @click="goToItem(path)">
       <img :src="image" :alt="name" class="card-img-top">
       <div class="card-body">
@@ -7,7 +7,7 @@
         <div class="card-text">${{ price }}</div>
       </div>
     </div>
-  </div>
+  </b-col>
 </template>
 
 <script>
@@ -25,6 +25,10 @@ export default {
 <style scoped>
 .col-md-4 {
   margin-bottom: 5%;
+}
+
+.column {
+  width: 409px;
 }
 .card {
   border: none;
@@ -47,10 +51,10 @@ export default {
   font-size: 15px;
 }
 img {
-  max-height: 409px;
+  max-height: 306px;
   height: auto;
   width: auto;
-  max-width: 100vw;
+  max-width: 75vw;
   margin-right: auto;
   margin-left: auto;
   display: block;

@@ -1,5 +1,21 @@
 <template>
   <div class="events">
+    <h1>OUR MCSS <span>MERCH IS HERE!</span></h1>
+    <hr class="hr1">
+    <div class="event2">
+      <b-img-lazy
+        src="https://res.cloudinary.com/die52atcc/image/upload/v1605722567/MCSS/Merch/first-drop/tshirt_banner_wkccbu.jpg"
+        alt="New Recruit Fall 2020"
+        style="border-radius: 7px;"
+      />
+      <button
+        class="shop-btn"
+        @click="redirectToShop()"
+      >
+        SHOP NOW
+      </button>
+    </div>
+    <hr class="hr2">
     <h1>OUR MEMBERSHIP CARD <span>IS HERE!</span></h1>
     <hr class="hr1">
     <div class="intro-container-2">
@@ -17,7 +33,7 @@
         <p class="card-text">
           With our MCSS Membership card, students can get numerous discounts
           at various restaurants and stores across the city.
-          Get yours today for only <b>$2.99</b> in our shop.
+          Get yours today for only <b>$5</b> in our shop.
           <br /><br />
           After your purchase, you should receive an email containing the activation code.
           Make sure to check your spam folder if it doesn't arrive in your inbox.
@@ -133,6 +149,9 @@ export default {
     redirectToCard() {
       this.$router.push('/shop/membership-card');
     },
+    redirectToShop() {
+      this.$router.push('/shop');
+    },
   },
 };
 </script>
@@ -173,6 +192,25 @@ export default {
     margin-right: auto;
     display: block;
     min-width: 167px;
+  }
+
+  .shop-btn {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-family: IKEABold;
+    height: 4.5rem;
+    background: #be0819;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-out;
+    width: 20%;
+    margin-top: -20px;
+    z-index: 9;
+    position: relative;
   }
 
   .card-btn:hover {

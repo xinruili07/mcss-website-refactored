@@ -12,7 +12,8 @@
         <vueper-slide
           v-for="(slide, i) in product.displayImages"
           :key="i"
-          :image="slide.image">
+          :image="slide.image"
+          @click.native="print(slide.image)">
         </vueper-slide>
       </vueper-slides>
       <br />
@@ -45,6 +46,13 @@
       v-show="isReturnModalVisible"
       @close="closeReturnModal"
     />
+    <div class="desktop-only">
+      <ImageZoom
+        :image="imageURL"
+        v-show="isImageZoom"
+        @close="closeImageZoom"
+      />
+    </div>
     <div class="item-desc">
       <h1 class="product-name">{{ product.name }}</h1>
       <h2 class="product-detail">{{ product.description }}</h2>
@@ -110,6 +118,7 @@ import 'vueperslides/dist/vueperslides.css';
 import axios from 'axios';
 import sizeChartModal from '../components/sizeChartModal.vue';
 import ReturnPolicyModal from '../components/ReturnPolicyModal.vue';
+import ImageZoom from '../components/ImageZoom.vue';
 
 export default {
   props: ['itemPath'],
@@ -118,6 +127,7 @@ export default {
     VueperSlide,
     sizeChartModal,
     ReturnPolicyModal,
+    ImageZoom,
   },
   data() {
     return {
@@ -127,6 +137,8 @@ export default {
       inventory: {},
       isSizeModalVisible: false,
       isReturnModalVisible: false,
+      isImageZoom: false,
+      imageURL: '',
     };
   },
   methods: {
@@ -156,6 +168,13 @@ export default {
     },
     closeReturnModal() {
       this.isReturnModalVisible = false;
+    },
+    closeImageZoom() {
+      this.isImageZoom = false;
+    },
+    print(image) {
+      this.imageURL = image;
+      this.isImageZoom = true;
     },
   },
   created() {
@@ -201,7 +220,7 @@ h2 {
 .flex-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .flex-sizes {
@@ -320,6 +339,11 @@ input[type="checkbox"]:checked + label{
   background: rgba(255,255,255,0.5)
 }
 
+.vueperslide {
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
+
 .product-name, .product-detail, .product-price, .buttons {
   margin-bottom: 20px;
 }
@@ -340,6 +364,7 @@ input[type="checkbox"]:checked + label{
 @media screen and (min-width: 840px) {
   .item-desc {
     margin-top: 10%;
+    margin-left: 10%;
     width: 270px;
   }
   .item-desc .hr2 {
@@ -382,6 +407,9 @@ input[type="checkbox"]:checked + label{
   }
   .size-guide {
     text-decoration: underline;
+  }
+  .desktop-only {
+    display: none;
   }
 }
 </style>

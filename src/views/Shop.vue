@@ -2,7 +2,7 @@
   <div>
     <div class="banner-img">
       <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/v1605482956/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS_kaguox.jpg"
+        src="https://res.cloudinary.com/die52atcc/image/upload/v1605763379/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS_qlaxgj.jpg"
       />
     </div>
     <h1>MCSS <span>FIRST COLLECTION</span></h1>
@@ -38,6 +38,11 @@ export default {
 </script>
 
 <style scoped>
+
+.row {
+  margin-right: auto;
+  margin-left: auto;
+}
 h1 {
   color: #be0819;
   font-family: IKEABold;
