@@ -5,25 +5,58 @@ import Home from './views/Home.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'main',
+      meta: { layout: 'no-navbar' },
       component: Home,
-    },
-    {
-      path: '/home',
-      name: 'mainPage',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "main" */ './views/MainPage.vue'),
     },
     {
       path: '/success',
       name: 'success',
       component: () => import(/* webpackChunkName: "main" */ './views/Success.vue'),
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import(/* webpackChunkName: "main" */ './views/About.vue'),
+    },
+    {
+      path: '/announcements',
+      name: 'announcements',
+      component: () => import(/* webpackChunkName: "main" */ './views/Announcements.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import(/* webpackChunkName: "main" */ './views/Contact.vue'),
+    },
+    {
+      path: '/events',
+      name: 'events',
+      component: () => import(/* webpackChunkName: "main" */ './views/Events.vue'),
+    },
+    {
+      path: '/sponsors',
+      name: 'sponsors',
+      component: () => import(/* webpackChunkName: "main" */ './views/Sponsors.vue'),
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import(/* webpackChunkName: "main" */ './views/Shop.vue'),
+    },
+    {
+      path: '/shop/:itemPath',
+      name: 'shop-item',
+      component: () => import(/* webpackChunkName: "main" */ './views/Item.vue'),
+    },
+    {
+      path: '/shopping-bag',
+      name: 'shopping-bag',
+      component: () => import(/* webpackChunkName: "main" */ './views/ShoppingCart.vue'),
     },
   ],
 });

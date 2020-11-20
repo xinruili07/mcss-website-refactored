@@ -1,5 +1,21 @@
 <template>
   <div class="events">
+    <h1>OUR MCSS <span>MERCH IS HERE!</span></h1>
+    <hr class="hr1">
+    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
+      <b-img-lazy
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605722567/MCSS/Merch/first-drop/tshirt_banner_wkccbu.jpg"
+        :class="{toggled: toggle}"
+        alt="MCSS Merch"
+        style="border-radius: 7px; border: 1px solid black"
+      />
+      <a class="event-redirect" v-if="toggle" href="/shop">
+        <div class="middle">
+          <h2 style="font-family: IKEABold;" class="check-it-out">SHOP NOW</h2>
+        </div>
+      </a>
+    </div>
+    <hr class="hr2">
     <h1>OUR MEMBERSHIP CARD <span>IS HERE!</span></h1>
     <hr class="hr1">
     <div class="intro-container-2">
@@ -17,8 +33,7 @@
         <p class="card-text">
           With our MCSS Membership card, students can get numerous discounts
           at various restaurants and stores across the city.
-          Get yours today for only <b>$2.99</b> by clicking on
-          <b>"Purchase our Card"</b> on our navigation bar.
+          Get yours today for only <b>$5</b> in our shop.
           <br /><br />
           After your purchase, you should receive an email containing the activation code.
           Make sure to check your spam folder if it doesn't arrive in your inbox.
@@ -26,31 +41,22 @@
           Once you have your activation code, please follow our tutorial
           to activate your membership card:
         </p>
-        <a
-          href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf"
-          class="tutorial-btn"
-          target="_blank"
-        >
-          Go to Tutorial
-        </a>
-      </div>
-    </div>
-    <hr class="hr2">
-
-    <h1>OUR <span>HALLOWEEN</span> EVENT <span>IS HERE!</span></h1>
-    <hr class="hr1">
-    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
-      <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/halloween2020_t5u5cm.jpg"
-        :class="{toggled: toggle}"
-        alt="A Nightmare on Discord Street"
-        style="border-radius: 7px;"
-      />
-      <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
-        <div class="middle">
-          <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
+        <div class="buttons">
+          <button
+            class="card-btn"
+            @click="redirectToCard()"
+          >
+            PURCHASE
+          </button>
+          <a
+            href="https://s3.ca-central-1.amazonaws.com/mcss.ca/Instruction-Manual.pdf"
+            class="tutorial-btn"
+            target="_blank"
+          >
+            GO TO TUTORIAL
+          </a>
         </div>
-      </a>
+      </div>
     </div>
     <hr class="hr2">
 
@@ -139,6 +145,11 @@ export default {
       ],
     };
   },
+  methods: {
+    redirectToCard() {
+      this.$router.push('/shop/membership-card');
+    },
+  },
 };
 </script>
 
@@ -158,6 +169,26 @@ export default {
 
   b {
   font-size: 1.8rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-btn {
+    font-family: IKEABold;
+    height: 4.5rem;
+    background: #be0819;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s ease-out;
+    margin-right: auto;
+    display: block;
+    min-width: 167px;
   }
 
   .check-it-out {
@@ -182,6 +213,10 @@ export default {
     cursor: pointer;
     background: #be0819;
     color: white;
+  }
+
+  .card-btn:hover {
+    opacity: 0.8;
   }
 
   .toggled {
@@ -255,6 +290,18 @@ export default {
       font-family: IKEABold;
       font-size: 1.5rem;
     }
+    .tutorial-btn {
+      width: 25rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-btn {
+      width: 25rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
   }
   @media screen and (min-width: 1000px) {
     .slideshow-container {
@@ -304,6 +351,15 @@ export default {
 
     .tutorial-btn {
       margin-left: 10%;
+      margin-right: auto;
+      width: 40%;
+    }
+
+    .card-btn {
+      margin-left: 10%;
+      margin-right: auto;
+      width: 40%;
+      margin-bottom: 10px;
     }
   }
 
@@ -329,27 +385,23 @@ export default {
 
   .tutorial-btn {
     font-family: IKEABold;
-    width: 25rem;
-    height: 5rem;
+    height: 4.5rem;
     padding: 10px 15px;
-    background: #be0819;
-    color: white;
-    border: none;
-    border-radius: 2rem;
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
     outline: none;
-    font-size: 1.8rem;
-    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease-out;
-    margin-top: 20px;
+    align-items: center;
+    min-width: 167px;
   }
 
   .tutorial-btn:hover {
-    transform: translateY(-0.4rem);
     font-weight: 600;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
-    background: #be0819;
+    background: black;
     color: white;
     text-decoration: none;
   }

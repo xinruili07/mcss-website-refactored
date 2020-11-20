@@ -44,12 +44,12 @@
 </template>
 
 <script>
-import modal from './modal.vue';
+import Modal from '../components/Modal.vue';
 
 export default {
   name: 'contact',
   components: {
-    modal,
+    Modal,
   },
   data() {
     return {

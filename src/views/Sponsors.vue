@@ -39,11 +39,10 @@
             class="scroller-btn"
             v-on:click="scrollDown()"
           >
-            Click here to check out our sponsors map!
+            Click here to check out our sponsors map.
           </button>
           <br /><br />
-          Get yours today for only <b>$2.99</b> by clicking on
-          <b>"Purchase our Card"</b> on our navigation bar.
+          Get yours today for only <b>$5</b> in our shop page!
         </p>
       </div>
     </div>
@@ -439,7 +438,7 @@ export default {
     .intro-text p {
       margin-right: 10%;
       margin-left: 10%;
-      margin-top: 5%;
+      margin-top: 30px;
       font-family: Proxima;
       font-size: 1.8rem
     }
