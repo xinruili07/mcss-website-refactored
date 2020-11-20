@@ -144,9 +144,7 @@ export default {
       return this.$store.getters.StoreCart;
     },
     cartCount() {
-      return this.$store.getters.StoreCart.reduce((total, product) => {
-        return total + product.quantity;
-      }, 0);
+      return this.$store.getters.StoreCart.reduce((total, product) => total + product.quantity, 0);
     },
   },
 };

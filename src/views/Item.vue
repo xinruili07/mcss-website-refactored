@@ -188,7 +188,6 @@ export default {
     } else {
       this.$router.push('/404');
     }
-    console.log(this.product.dbName);
     axios
       .get(`https://mcss-website-backend.herokuapp.com/inventory/${this.product.dbName}`)
       .then((response) => {

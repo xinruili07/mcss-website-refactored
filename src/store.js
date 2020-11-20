@@ -250,7 +250,6 @@ export default new Vuex.Store({
   },
   actions: {
     addItem(context, item) {
-      // console.log(name, image, price, size);
       context.commit('ADD_Item', item);
     },
 

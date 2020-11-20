@@ -81,9 +81,7 @@ export default {
     };
   },
   created() {
-    console.log(this.item);
     this.product = this.sizeGuide[this.item];
-    console.log(this.product);
   },
   methods: {
     close() {

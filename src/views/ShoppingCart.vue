@@ -209,7 +209,6 @@ export default {
         items.push(`${product.itemDbName}_${product.itemSize}:${product.quantity}`);
       });
       const result = items.join();
-      console.log(result);
       return result;
     },
     checkout() {
