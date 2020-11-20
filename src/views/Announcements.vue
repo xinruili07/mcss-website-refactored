@@ -2,18 +2,18 @@
   <div class="events">
     <h1>OUR MCSS <span>MERCH IS HERE!</span></h1>
     <hr class="hr1">
-    <div class="event2">
+    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
       <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/v1605722567/MCSS/Merch/first-drop/tshirt_banner_wkccbu.jpg"
-        alt="New Recruit Fall 2020"
-        style="border-radius: 7px;"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605722567/MCSS/Merch/first-drop/tshirt_banner_wkccbu.jpg"
+        :class="{toggled: toggle}"
+        alt="MCSS Merch"
+        style="border-radius: 7px; border: 1px solid black"
       />
-      <button
-        class="shop-btn"
-        @click="redirectToShop()"
-      >
-        SHOP NOW
-      </button>
+      <a class="event-redirect" v-if="toggle" href="/shop">
+        <div class="middle">
+          <h2 style="font-family: IKEABold;" class="check-it-out">SHOP NOW</h2>
+        </div>
+      </a>
     </div>
     <hr class="hr2">
     <h1>OUR MEMBERSHIP CARD <span>IS HERE!</span></h1>
@@ -149,9 +149,6 @@ export default {
     redirectToCard() {
       this.$router.push('/shop/membership-card');
     },
-    redirectToShop() {
-      this.$router.push('/shop');
-    },
   },
 };
 </script>
@@ -194,23 +191,28 @@ export default {
     min-width: 167px;
   }
 
-  .shop-btn {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    font-family: IKEABold;
-    height: 4.5rem;
+  .check-it-out {
+    font-size: 3rem;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    background-color: white;
+    border:0.1em solid #000000;
+    border-radius:2rem;
+    padding:0.46em 1.6em;
+    transition: all 0.5s;
+    color: #be0819;
+  }
+
+  .check-it-out:hover {
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
     background: #be0819;
     color: white;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1.5rem;
-    transition: all 0.3s ease-out;
-    width: 20%;
-    margin-top: -20px;
-    z-index: 9;
-    position: relative;
   }
 
   .card-btn:hover {

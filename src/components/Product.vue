@@ -59,7 +59,9 @@ img {
   margin-left: auto;
   display: block;
 }
-img:hover {
-  opacity: 0.7;
+@media screen and (min-width: 1000px) {
+  img:hover {
+    opacity: 0.7;
+  }
 }
 </style>

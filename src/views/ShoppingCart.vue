@@ -72,6 +72,14 @@
       </stripe-checkout>
     </div>
     <hr class="hr2">
+    <div class="referral">
+      <h1>Been referred by an exec?</h1>
+      <model-select :options="options"
+        v-model="referral"
+        placeholder="Exec Name">
+      </model-select>
+    </div>
+    <hr class="hr2">
   </div>
   <div class="empty-cart" v-else>
     <h1 style="color: black; margin-bottom: 30px;">
@@ -90,8 +98,10 @@
 
 <script>
 import { StripeCheckout } from 'vue-stripe-checkout';
+import { ModelSelect } from 'vue-search-select';
 import CartTable from '../components/CartTable.vue';
 import CartTableMobile from '../components/CartTableMobile.vue';
+import 'vue-search-select/dist/VueSearchSelect.css';
 
 export default {
   name: 'Shopping',
@@ -99,9 +109,46 @@ export default {
     CartTable,
     CartTableMobile,
     StripeCheckout,
+    ModelSelect,
   },
   data() {
     return {
+      options: [
+        { value: 'amy', text: 'Amy Li' },
+        { value: 'annie', text: 'Annie Sun' },
+        { value: 'dan', text: 'Danielle Zhu' },
+        { value: 'gltor', text: 'Gloria Ma' },
+        { value: 'mike', text: 'Mike He' },
+        { value: 'chris', text: 'Chris Gao' },
+        { value: 'dim', text: 'Dimitri Yang' },
+        { value: 'nancy', text: 'Nancy Xiang' },
+        { value: 'xiran', text: 'Xi Ran Chen' },
+        { value: 'mel', text: 'Melody Zhou' },
+        { value: 'aiyu', text: 'Aiyu Wang' },
+        { value: 'huub', text: 'Huub de Jong' },
+        { value: 'kar', text: 'Karist Ng' },
+        { value: 'jer', text: 'Jeremy Leung' },
+        { value: 'sher', text: 'Sherry Chen' },
+        { value: 'yr', text: 'Young Rock Han' },
+        { value: 'jul', text: 'Julian Qu' },
+        { value: 'yue', text: 'Yuecheng Huang' },
+        { value: 'jia', text: 'Jia Liu' },
+        { value: 'jess', text: 'Jessica Yip' },
+        { value: 'xin', text: 'Xin Rui Li' },
+        { value: 'ivy', text: 'Ivy Chen' },
+        { value: 'vick', text: 'Vicky Dong' },
+        { value: 'dian', text: 'Dian Dian' },
+        { value: 'hatt', text: 'Hattie Chen' },
+        { value: 'andy', text: 'Andy Wang' },
+        { value: 'jenn', text: 'Jennifer Chen' },
+        { value: 'wan', text: 'Wan Er Jin' },
+        { value: 'anita', text: 'Anita Zheng' },
+        { value: 'kev', text: 'Kevin Say' },
+        { value: 'yuh', text: 'Yuheng Liu' },
+        { value: 'emi', text: 'Emily Zhang' },
+        { value: 'owen', text: 'Owen Bai' },
+      ],
+      referral: '',
       mode: 'payment',
       publishableKey: process.env.VUE_APP_PUBLISHABLE_KEY,
       successUrl: process.env.VUE_APP_SUCCESS_URL,
@@ -153,6 +200,11 @@ export default {
     },
     checkoutMetadata() {
       const items = [];
+      if (this.referral && !this.isOnlyMembershipCard()) {
+        items.push(this.referral);
+      } else {
+        items.push('n/a');
+      }
       this.$store.getters.StoreCart.forEach((product) => {
         items.push(`${product.itemDbName}_${product.itemSize}:${product.quantity}`);
       });
@@ -249,7 +301,6 @@ h1 {
 }
 .checkout-button-redirect {
   font-family: IKEABold;
-  width: 25rem;
   height: 4rem;
   background: #be0819;
   color: white;
@@ -257,7 +308,6 @@ h1 {
   border-radius: 5px;
   outline: none;
   font-size: 1.5rem;
-  letter-spacing: 0.1rem;
   transition: all 0.3s ease-out;
   margin-right: auto;
   margin-left: auto;
@@ -274,14 +324,6 @@ h1 {
   text-align: center;
 }
 
-.hr2 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 80%;
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.1);
-}
-
 @media screen and (min-width: 840px) {
   .prices-flexbox {
     display: flex;
@@ -292,6 +334,24 @@ h1 {
   }
   .cart-table-mobile {
     display: none;
+  }
+  .checkout-button-redirect {
+    width: 25%;
+  }
+  .referral {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .hr2 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
   }
 }
 @media screen and (max-width: 840px) {
@@ -304,6 +364,24 @@ h1 {
   }
   .cart-table {
     display: none;
+  }
+  .checkout-button-redirect {
+    width: 80%;
+  }
+  .referral {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .hr2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
   }
 }
 

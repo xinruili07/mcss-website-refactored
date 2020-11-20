@@ -2,7 +2,12 @@
   <div>
     <div class="banner-img">
       <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/v1605763379/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS_qlaxgj.jpg"
+        src="https://res.cloudinary.com/die52atcc/image/upload/v1605822315/MCSS/Merch/banner-desktop_ygyvej.jpg"
+        class="desktop"
+      />
+      <b-img-lazy
+        src="https://res.cloudinary.com/die52atcc/image/upload/v1605822456/MCSS/Merch/banner-mobile_nd4sm1.jpg"
+        class="mobile"
       />
     </div>
     <h1>MCSS <span>FIRST COLLECTION</span></h1>
@@ -38,7 +43,16 @@ export default {
 </script>
 
 <style scoped>
-
+@media screen and (min-width: 840px) {
+  .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 840px) {
+  .desktop {
+    display: none;
+  }
+}
 .row {
   margin-right: auto;
   margin-left: auto;

@@ -10,14 +10,14 @@ export default new Vuex.Store({
       {
         id: 1,
         name: 'Hotpot Tee',
-        image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764203/MCSS/Merch/4_rkv5tr.png',
+        image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764203/MCSS/Merch/4_rkv5tr.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764203/MCSS/Merch/4_rkv5tr.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762336/MCSS/Merch/first-drop/photoshoot/_YWD7963_PS_ealdga.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762335/MCSS/Merch/first-drop/photoshoot/_YWD7987_PS_ii0n3c.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762331/MCSS/Merch/first-drop/photoshoot/_YWD7710_p8ogjy.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764203/MCSS/Merch/4_rkv5tr.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762336/MCSS/Merch/first-drop/photoshoot/_YWD7963_PS_ealdga.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762335/MCSS/Merch/first-drop/photoshoot/_YWD7987_PS_ii0n3c.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762331/MCSS/Merch/first-drop/photoshoot/_YWD7710_p8ogjy.jpg' },
         ],
-        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M',
+        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -32,13 +32,13 @@ export default new Vuex.Store({
       {
         id: 2,
         name: 'Chopstick Tee',
-        image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764331/MCSS/Merch/5_uqeytf.png',
+        image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764331/MCSS/Merch/5_uqeytf.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764331/MCSS/Merch/5_uqeytf.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762332/MCSS/Merch/first-drop/photoshoot/_YWD7586_u34nkj.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762332/MCSS/Merch/first-drop/photoshoot/_YWD7609_sh7xjq.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764331/MCSS/Merch/5_uqeytf.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762332/MCSS/Merch/first-drop/photoshoot/_YWD7586_u34nkj.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762332/MCSS/Merch/first-drop/photoshoot/_YWD7609_sh7xjq.jpg' },
         ],
-        description: 'Designed by Dian Dian\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 5\'2 ft wearing size M',
+        description: 'Designed by Dian Dian\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 5\'2 ft wearing size M \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -54,13 +54,13 @@ export default new Vuex.Store({
         id: 3,
         name: 'Crane Tee',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764330/MCSS/Merch/3_quwvbh.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764330/MCSS/Merch/3_quwvbh.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764330/MCSS/Merch/3_quwvbh.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762339/MCSS/Merch/first-drop/photoshoot/_YWD8167_PS_evvypn.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762810/MCSS/Merch/first-drop/photoshoot/_YWD8199_atxtjc.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764330/MCSS/Merch/3_quwvbh.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762339/MCSS/Merch/first-drop/photoshoot/_YWD8167_PS_evvypn.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762810/MCSS/Merch/first-drop/photoshoot/_YWD8199_atxtjc.jpg' },
         ],
-        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M',
+        description: 'Designed by Ivy Chen\n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -76,13 +76,13 @@ export default new Vuex.Store({
         id: 4,
         name: 'Fruits Tee',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764279/MCSS/Merch/2_vwrrlz.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764279/MCSS/Merch/2_vwrrlz.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764279/MCSS/Merch/2_vwrrlz.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762337/MCSS/Merch/first-drop/photoshoot/_YWD8117_PS_rmquq1.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763215/MCSS/Merch/first-drop/photoshoot/_YWD8123_gfpjqb.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764279/MCSS/Merch/2_vwrrlz.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762337/MCSS/Merch/first-drop/photoshoot/_YWD8117_PS_rmquq1.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763215/MCSS/Merch/first-drop/photoshoot/_YWD8123_gfpjqb.jpg' },
         ],
-        description: 'Designed by Dian Dian \n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M',
+        description: 'Designed by Dian Dian \n100% Cotton \nHeat-Pressed Graphic Print at front \nModel is 6ft wearing size M \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 19,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -98,13 +98,13 @@ export default new Vuex.Store({
         id: 5,
         name: 'White Panda Crewneck',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764532/MCSS/Merch/pandaW_nfiirb.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764532/MCSS/Merch/pandaW_nfiirb.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764532/MCSS/Merch/pandaW_nfiirb.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762339/MCSS/Merch/first-drop/photoshoot/_YWD8232_PS_dwoark.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763014/MCSS/Merch/first-drop/photoshoot/_YWD8267_PS_e7eeyi.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764532/MCSS/Merch/pandaW_nfiirb.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762339/MCSS/Merch/first-drop/photoshoot/_YWD8232_PS_dwoark.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763014/MCSS/Merch/first-drop/photoshoot/_YWD8267_PS_e7eeyi.jpg' },
         ],
-        description: 'Designed by Ivy Chen\n150% Preshrunk Cotton / 50% Polyester Blend \nHeat-Pressed Graphic on Chest \nModel is 6ft wearing size M',
+        description: 'Designed by Ivy Chen\n50% Preshrunk Cotton / 50% Polyester Blend \nHeat-Pressed Graphic on Chest \nModel is 6ft wearing size M \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 29,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -120,14 +120,14 @@ export default new Vuex.Store({
         id: 6,
         name: 'Black Panda Crewneck',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764588/MCSS/Merch/pandaB_bcs4ox.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764588/MCSS/Merch/pandaB_bcs4ox.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764588/MCSS/Merch/pandaB_bcs4ox.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762337/MCSS/Merch/first-drop/photoshoot/_YWD7891_ucpjec.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762335/MCSS/Merch/first-drop/photoshoot/_YWD7880_dkxmb8.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763014/MCSS/Merch/first-drop/photoshoot/_YWD8267_PS_e7eeyi.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764588/MCSS/Merch/pandaB_bcs4ox.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762337/MCSS/Merch/first-drop/photoshoot/_YWD7891_ucpjec.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762335/MCSS/Merch/first-drop/photoshoot/_YWD7880_dkxmb8.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763014/MCSS/Merch/first-drop/photoshoot/_YWD8267_PS_e7eeyi.jpg' },
         ],
-        description: 'Designed by Ivy Chen\n150% Preshrunk Cotton / 50% Polyester Blend \nHeat-Pressed Graphic on Chest \nModel is 5\'2ft wearing size M',
+        description: 'Designed by Ivy Chen\n50% Preshrunk Cotton / 50% Polyester Blend \nHeat-Pressed Graphic on Chest \nModel is 5\'2ft wearing size M \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 29,
         size: ['S', 'M', 'L', 'XL'],
         sizeSku: {
@@ -143,13 +143,13 @@ export default new Vuex.Store({
         id: 7,
         name: 'Crane Tote Bag',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764120/MCSS/Merch/craneTOTE_egrrjq.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764120/MCSS/Merch/craneTOTE_egrrjq.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605764120/MCSS/Merch/craneTOTE_egrrjq.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762340/MCSS/Merch/first-drop/photoshoot/_YWD8279_biewlf.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605765146/MCSS/Merch/first-drop/photoshoot/_YWD8306_xw62ma.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605764120/MCSS/Merch/craneTOTE_egrrjq.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762340/MCSS/Merch/first-drop/photoshoot/_YWD8279_biewlf.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605765146/MCSS/Merch/first-drop/photoshoot/_YWD8306_xw62ma.jpg' },
         ],
-        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability',
+        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 14,
         size: ['ONE SIZE'],
         sizeSku: {
@@ -162,12 +162,12 @@ export default new Vuex.Store({
         id: 8,
         name: 'Fruits Tote Bag',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763931/MCSS/Merch/fruitsTOTE_uhs803.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763931/MCSS/Merch/fruitsTOTE_uhs803.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763931/MCSS/Merch/fruitsTOTE_uhs803.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763518/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS2_cqo75h.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763931/MCSS/Merch/fruitsTOTE_uhs803.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763518/MCSS/Merch/first-drop/photoshoot/_YWD7842_PS2_cqo75h.jpg' },
         ],
-        description: 'Designed By Dian Dian\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability',
+        description: 'Designed By Dian Dian\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 14,
         size: ['ONE SIZE'],
         sizeSku: {
@@ -180,13 +180,13 @@ export default new Vuex.Store({
         id: 9,
         name: 'Hotpot Tote Bag',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763935/MCSS/Merch/hotpotTOTE_zeabbq.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763935/MCSS/Merch/hotpotTOTE_zeabbq.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605763935/MCSS/Merch/hotpotTOTE_zeabbq.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762332/MCSS/Merch/first-drop/photoshoot/_YWD7828_lerbak.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605762331/MCSS/Merch/first-drop/photoshoot/_YWD7811_wc7uv5.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605763935/MCSS/Merch/hotpotTOTE_zeabbq.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762332/MCSS/Merch/first-drop/photoshoot/_YWD7828_lerbak.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605762331/MCSS/Merch/first-drop/photoshoot/_YWD7811_wc7uv5.jpg' },
         ],
-        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability',
+        description: 'Designed By Ivy Chen\n12oz Heavy Cotton Canvas \nBottom Gusset \nReinforced at stress points for prolonged durability \n\n*FOR A LIMITED TIME* \nAll purchases come with a free MCSS Sponsorship E-Card',
         price: 14,
         size: ['ONE SIZE'],
         sizeSku: {
@@ -199,17 +199,17 @@ export default new Vuex.Store({
         id: 10,
         name: 'MCSS Membership Card',
         image:
-          'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605683351/MCSS/Merch/first-drop/mcss-card_yz797m.png',
+          'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605683351/MCSS/Merch/first-drop/mcss-card_yz797m.png',
         displayImages: [
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605683351/MCSS/Merch/first-drop/mcss-card_yz797m.png' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605468388/MCSS/Merch/first-drop/item-page/card-back_f2ciq0.jpg' },
-          { image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605468257/MCSS/Merch/first-drop/item-page/Screen_Shot_2020-11-15_at_2.23.20_PM_qnbjrt.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605683351/MCSS/Merch/first-drop/mcss-card_yz797m.png' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605468388/MCSS/Merch/first-drop/item-page/card-back_f2ciq0.jpg' },
+          { image: 'https://res.cloudinary.com/die52atcc/image/upload/dpr_auto,w_auto/v1605468257/MCSS/Merch/first-drop/item-page/Screen_Shot_2020-11-15_at_2.23.20_PM_qnbjrt.png' },
         ],
         description: 'Get 10% off orders from 30+ restaurants across Montreal! \n\nAn activation code will be sent to your email.',
         price: 5,
         size: ['E-CARD'],
         sizeSku: {
-          'E-CARD': 'price_1Hp6AvKCEqBnqoVgvOH93M9a',
+          'E-CARD': 'price_1HXDz9KCEqBnqoVgoqEewCco',
         },
         path: 'membership-card',
         dbName: 'membership-card',

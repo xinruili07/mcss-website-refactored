@@ -64,7 +64,7 @@
             v-model="selectedSize"
             name="Radios" type="radio"
             :value="size"
-            :disabled="inventory[size] === 0"
+            :disabled="inventory[size] <= 0"
           >
           <label :for="size">{{ size }}</label>
         </span>
@@ -107,8 +107,8 @@
         <i class="fas fa-shield-alt"></i>
         Returns &amp; Exchange
       </button>
-      <hr class="hr2">
     </div>
+    <hr class="hr2">
   </div>
 </template>
 
@@ -361,14 +361,19 @@ input[type="checkbox"]:checked + label{
   margin-bottom: 10px;
 }
 
+.flex-container .hr2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
 @media screen and (min-width: 840px) {
   .item-desc {
-    margin-top: 10%;
+    margin-top: 7%;
     margin-left: 10%;
     width: 270px;
-  }
-  .item-desc .hr2 {
-    display: none;
   }
   .returns-guide {
     border: none;
@@ -391,13 +396,6 @@ input[type="checkbox"]:checked + label{
   .item-desc {
     margin-top: 5%;
     width: 80%;
-  }
-  .item-desc .hr2 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 80%;
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
   }
   .returns-guide {
     border: none;
