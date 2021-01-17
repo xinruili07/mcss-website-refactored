@@ -189,7 +189,7 @@ export default {
       this.$router.push('/404');
     }
     axios
-      .get(`https://mcss-website-backend.herokuapp.com/inventory/${this.product.dbName}`)
+      .get(`https://mcss-website-backend.uk.r.appspot.com/inventory/${this.product.dbName}`)
       .then((response) => {
         this.inventory = response.data;
       })
