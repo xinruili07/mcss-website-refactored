@@ -11,7 +11,7 @@
       />
       <a class="event-redirect" v-if="toggle" href="/shop">
         <div class="middle">
-          <h2 style="font-family: IKEABold;" class="check-it-out">SHOP NOW</h2>
+          <h2 style="font-family: IKEABold;" class="check-it-out" >SOLD OUT</h2>
         </div>
       </a>
     </div>
