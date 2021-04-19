@@ -209,7 +209,7 @@ export default new Vuex.Store({
         price: 5,
         size: ['E-CARD'],
         sizeSku: {
-          'E-CARD': 'price_1HXDz9KCEqBnqoVgoqEewCco',
+          'E-CARD': 'price_1Hp6AvKCEqBnqoVgvOH93M9a',
         },
         path: 'membership-card',
         dbName: 'membership-card',

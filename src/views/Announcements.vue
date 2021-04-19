@@ -5,11 +5,11 @@
     <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
       <b-img-lazy
         src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1605722567/MCSS/Merch/first-drop/tshirt_banner_wkccbu.jpg"
-        :class="{toggled: toggle}"
+        class="toggled"
         alt="MCSS Merch"
         style="border-radius: 7px; border: 1px solid black"
       />
-      <a class="event-redirect" v-if="toggle" href="/shop">
+      <a class="event-redirect" href="/shop">
         <div class="middle">
           <h2 style="font-family: IKEABold;" class="check-it-out" >SOLD OUT</h2>
         </div>
@@ -220,7 +220,7 @@ export default {
   }
 
   .toggled {
-    opacity: 0.4;
+    opacity: 0.6;
     transition: all 0.15s;
   }
 
