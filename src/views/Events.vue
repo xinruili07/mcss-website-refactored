@@ -4,12 +4,12 @@
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
       <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/halloween2020_t5u5cm.jpg"
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618877486/MCSS/Events/dfad.png"
         :class="{toggled: toggle}"
-        alt="A Nightmare on Discord Street"
+        alt="MCSS x DFAD"
         style="border-radius: 7px;"
       />
-      <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/407027924028615" target="_blank">
+      <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/204511511074864/" target="_blank">
         <div class="middle">
           <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
         </div>
@@ -21,11 +21,11 @@
     <div class="slideshow-container">
       <vueper-slides
         lazy lazy-load-on-drag
-        :slide-ratio="236 / 420"
+        :slide-ratio="$vssWidth > 600 ? 640 / 1920 : 236 / 420"
         slide-image-inside
         :touchable="false"
       >
-        <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image">
+        <vueper-slide v-for="(slide, i) in $vssWidth > 600 ? desktop_slides : mobile_slides" :key="i" :image="slide.image">
           <template v-slot:loader>
             <i class="icon icon-loader spinning"></i>
             <span>Loading...</span>
@@ -40,43 +40,65 @@
 <script>
 import { VueperSlides, VueperSlide } from 'vueperslides';
 import 'vueperslides/dist/vueperslides.css';
+import VueScreenSize from 'vue-screen-size'
 
 export default {
   name: 'events',
   components: { VueperSlides, VueperSlide },
+  mixins: [VueScreenSize.VueScreenSizeMixin],
   data() {
     return {
       toggle: false,
-      slides: [
+      desktop_slides: [
         {
-          title: 'MCSS Welcome Party',
+          title: 'A Nightmare on Discord Street',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140020/MCSS/Events/welcome-party_r00waq.png',
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618877760/MCSS/Events/Nightmare_IG_j7g93s.png',
         },
         {
-          title: 'Farewell My Concubine',
+          title: 'Lunar New Year',
           content: 'First Picture',
           // You can also provide a URL for the image.
-          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140021/MCSS/Events/farewell_mvo7k9.jpg',
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618877368/MCSS/Events/lny_2021.jpg',
         },
         {
-          title: 'Sogaeting',
+          title: 'Subtle McGill Dating',
           content: 'Second Picture',
           // You can also provide a URL for the image.
-          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/sogaeting_kqloui.jpg',
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618877411/MCSS/Events/subtle_dating.png',
         },
         {
-          title: 'Ski Trip',
+          title: 'Career Talk',
           content: 'Third Picture',
           // You can also provide a URL for the image.
-          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140019/MCSS/Events/ski-trip-2020_qumfgc.png',
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618876875/MCSS/Events/mcss_career.jpg',
+        },
+      ],
+      mobile_slides: [
+        {
+          title: 'A Nightmare on Discord Street',
+          content: 'First Picture',
+          // You can also provide a URL for the image.
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140018/MCSS/Events/halloween2020_t5u5cm.jpg',
         },
         {
-          title: 'Casino Night',
-          content: 'Fourth Picture',
+          title: 'Lunar New Year',
+          content: 'First Picture',
           // You can also provide a URL for the image.
-          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603140020/MCSS/Events/casino-night-2019_eqk6tm.jpg',
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618879245/MCSS/Events/lny_mobile.jpg',
+        },
+        {
+          title: 'Subtle McGill Dating',
+          content: 'Second Picture',
+          // You can also provide a URL for the image.
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618879326/MCSS/Events/dating_mobile.png',
+        },
+        {
+          title: 'Career Talk',
+          content: 'Third Picture',
+          // You can also provide a URL for the image.
+          image: 'https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618879390/MCSS/Events/career_mobile.jpg',
         },
       ],
     };

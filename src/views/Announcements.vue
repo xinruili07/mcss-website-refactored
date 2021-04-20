@@ -1,5 +1,21 @@
 <template>
   <div class="events">
+    <h1>FUNDRAISER FOR THE <span>ASIAN CANADIAN COMMUNITY</span></h1>
+    <hr class="hr1">
+    <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
+      <b-img-lazy
+        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1618877486/MCSS/Events/dfad.png"
+        :class="{toggled: toggle}"
+        alt="MCSS x DFAD"
+        style="border-radius: 7px;"
+      />
+      <a class="event-redirect" v-if="toggle" href="https://www.facebook.com/events/204511511074864/" target="_blank">
+        <div class="middle">
+          <h2 style="font-family: IKEABold;" class="check-it-out">Check out our event page!</h2>
+        </div>
+      </a>
+    </div>
+    <hr class="hr2">
     <h1>OUR MCSS <span>MERCH IS HERE!</span></h1>
     <hr class="hr1">
     <div class="event-container event2 upcoming" v-on:click="toggle = !toggle">
@@ -69,19 +85,8 @@
         style="border-radius: 7px;"
       />
     </div>
-
     <hr class="hr2">
-    <h1>WINTER 2020 <br><span>NEW RECRUITS</span></h1>
-    <hr class="hr1">
-    <div class="event2">
-      <b-img-lazy
-        src="https://res.cloudinary.com/die52atcc/image/upload/q_auto,f_auto/v1603139984/MCSS/Announcements/New_Recruits_Winter_2020_kmacju.png"
-        alt="New Recruit Winter 2020"
-        style="border-radius: 7px;"
-      />
-    </div>
-
-    <hr class="hr2">
+    <!-- SLIDES
     <div id="sogaeting"><h1>SOGAETING <br><span> FEB 14 2020</span></h1></div>
     <hr class="hr1">
     <div class="slideshow-container">
@@ -98,6 +103,7 @@
       </vueper-slides>
     </div>
     <hr class="hr2">
+    -->
   </div>
 </template>
 

@@ -16,6 +16,7 @@
     "vue-head": "^2.2.0",
     "vue-popup": "^0.2.14",
     "vue-router": "^3.0.3",
+    "vue-screen-size": "^1.0.1",
     "vue-search-select": "^2.9.3",
     "vue-stripe-checkout": "^3.5.7",
     "vueperslides": "^2.10.7",
